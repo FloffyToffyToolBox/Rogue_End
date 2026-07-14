@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "rogue_end:block/lichenroot"
+      },
+      {
+        "model": "rogue_end:block/lichenroot",
+        "y": 90
+      },
+      {
+        "model": "rogue_end:block/lichenroot",
+        "y": 180
+      },
+      {
+        "model": "rogue_end:block/lichenroot",
+        "y": 270
+      }
+    ]
+  }
+}

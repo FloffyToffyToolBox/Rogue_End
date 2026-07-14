@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "rogue_end:block/dark_purpur_bricks"
+  }
+}

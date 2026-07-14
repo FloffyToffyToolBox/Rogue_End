@@ -1,0 +1,56 @@
+package toffy.rogue_end.init;
+
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
+import toffy.rogue_end.RogueEnd;
+
+public class ModItemGroups {
+    private static final RegistryKey<ItemGroup> ITEM_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of(RogueEnd.MOD_ID, "fallfest_group"));
+
+    public static void setup() {
+        Registry.register(Registries.ITEM_GROUP, ITEM_GROUP, FabricItemGroup.builder()
+                .displayName(Text.translatable("itemGroup.tempGroup"))
+                .icon(() -> new ItemStack(ModBlocks.ENDSLATE))
+                .entries((displayContext, entries) -> {
+                    entries.add(ModItems.BACK_STABBER);
+                    entries.add(ModItems.ENDSTEEL_INGOT);
+                    entries.add(ModItems.ENDERSENT_SPAWN_EGG);
+
+                    entries.add(ModBlocks.ENDER_LINK);
+                    entries.add(ModBlocks.END_BULB);
+
+                    entries.add(ModBlocks.CHORUS_LEAVES);
+                    entries.add(ModBlocks.ENDER_ASH);
+                    entries.add(ModBlocks.MAGMA_ROOTS);
+                    entries.add(ModBlocks.END_MAGMA);
+
+                    entries.add(ModBlocks.ENDSLATE);
+
+                    entries.add(ModBlocks.DARK_PURPUR);
+                    entries.add(ModBlocks.ENDSTONE_PILLAR);
+                    entries.add(ModBlocks.PURPUR_WALL);
+
+                    entries.add(ModBlocks.END_BONE);
+                    entries.add(ModBlocks.ENDSTEEL_ORE);
+                    entries.add(ModBlocks.END_BONE_WALL);
+                    entries.add(ModBlocks.END_BONE_SLAB);
+                    entries.add(ModBlocks.END_BONE_STAIRS);
+
+                    entries.add(ModBlocks.DARK_PURPUR_BRICKS);
+                    entries.add(ModBlocks.DARK_PURPUR_BRICK_SLAB);
+                    entries.add(ModBlocks.DARK_PURPUR_BRICK_WALL);
+                    entries.add(ModBlocks.DARK_PURPUR_BRICK_STAIRS);
+
+                    entries.add(ModBlocks.YELLOWROOT);
+                    entries.add(ModBlocks.YELLOWROOT_LICHEN);
+                    entries.add(ModBlocks.LICHENROOT);
+                }).build());
+    }
+}

@@ -1,0 +1,62 @@
+{
+  "variants": {
+    "axis=x": [
+      {
+        "model": "rogue_end:block/endslate",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "rogue_end:block/endslate_mirrored",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "rogue_end:block/endslate",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "rogue_end:block/endslate_mirrored",
+        "x": 90,
+        "y": 90
+      }
+    ],
+    "axis=y": [
+      {
+        "model": "rogue_end:block/endslate"
+      },
+      {
+        "model": "rogue_end:block/endslate_mirrored"
+      },
+      {
+        "model": "rogue_end:block/endslate",
+        "y": 180
+      },
+      {
+        "model": "rogue_end:block/endslate_mirrored",
+        "y": 180
+      }
+    ],
+    "axis=z": [
+      {
+        "model": "rogue_end:block/endslate",
+        "x": 90
+      },
+      {
+        "model": "rogue_end:block/endslate_mirrored",
+        "x": 90
+      },
+      {
+        "model": "rogue_end:block/endslate",
+        "x": 90,
+        "y": 180
+      },
+      {
+        "model": "rogue_end:block/endslate_mirrored",
+        "x": 90,
+        "y": 180
+      }
+    ]
+  }
+}

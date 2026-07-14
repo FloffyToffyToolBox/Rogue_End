@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "package": "toffy.rogue_end.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BlockMixin",
+    "EnderEyeItemMixin",
+    "ExampleMixin",
+    "ItemMixin",
+    "WetSpongeBlockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

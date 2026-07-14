@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "rogue_end:block/lichenroot_bottom",
+    "side": "rogue_end:block/lichenroot_side",
+    "top": "rogue_end:block/lichenroot_top"
+  }
+}

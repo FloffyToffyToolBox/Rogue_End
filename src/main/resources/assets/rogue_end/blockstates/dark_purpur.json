@@ -1,0 +1,62 @@
+{
+  "variants": {
+    "axis=x": [
+      {
+        "model": "rogue_end:block/dark_purpur",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "rogue_end:block/dark_purpur_mirrored",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "rogue_end:block/dark_purpur",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "rogue_end:block/dark_purpur_mirrored",
+        "x": 90,
+        "y": 90
+      }
+    ],
+    "axis=y": [
+      {
+        "model": "rogue_end:block/dark_purpur"
+      },
+      {
+        "model": "rogue_end:block/dark_purpur_mirrored"
+      },
+      {
+        "model": "rogue_end:block/dark_purpur",
+        "y": 180
+      },
+      {
+        "model": "rogue_end:block/dark_purpur_mirrored",
+        "y": 180
+      }
+    ],
+    "axis=z": [
+      {
+        "model": "rogue_end:block/dark_purpur",
+        "x": 90
+      },
+      {
+        "model": "rogue_end:block/dark_purpur_mirrored",
+        "x": 90
+      },
+      {
+        "model": "rogue_end:block/dark_purpur",
+        "x": 90,
+        "y": 180
+      },
+      {
+        "model": "rogue_end:block/dark_purpur_mirrored",
+        "x": 90,
+        "y": 180
+      }
+    ]
+  }
+}

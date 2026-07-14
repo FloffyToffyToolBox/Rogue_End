@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "rogue_end:block/end_bone_slab"
+    },
+    "type=double": {
+      "model": "rogue_end:block/end_bone"
+    },
+    "type=top": {
+      "model": "rogue_end:block/end_bone_slab_top"
+    }
+  }
+}

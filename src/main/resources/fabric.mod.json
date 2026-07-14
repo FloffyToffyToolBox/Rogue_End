@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "rogue_end",
+	"version": "${version}",
+	"name": "Rogue End",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/rogue_end/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"toffy.rogue_end.RogueEnd"
+		],
+		"client": [
+			"toffy.rogue_end.RogueEndClient"
+		],
+		"fabric-datagen": [
+			"toffy.rogue_end.RogueEndDataGenerator"
+		]
+	},
+	"mixins": [
+		"rogue_end.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

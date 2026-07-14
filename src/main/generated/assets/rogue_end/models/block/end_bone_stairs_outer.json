@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "rogue_end:block/end_bone",
+    "side": "rogue_end:block/end_bone",
+    "top": "rogue_end:block/end_bone"
+  }
+}

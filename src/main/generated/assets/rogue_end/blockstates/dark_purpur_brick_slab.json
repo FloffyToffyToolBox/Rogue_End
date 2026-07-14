@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "rogue_end:block/dark_purpur_brick_slab"
+    },
+    "type=double": {
+      "model": "rogue_end:block/dark_purpur_bricks"
+    },
+    "type=top": {
+      "model": "rogue_end:block/dark_purpur_brick_slab_top"
+    }
+  }
+}

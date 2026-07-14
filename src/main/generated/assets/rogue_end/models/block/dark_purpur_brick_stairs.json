@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "rogue_end:block/dark_purpur_bricks",
+    "side": "rogue_end:block/dark_purpur_bricks",
+    "top": "rogue_end:block/dark_purpur_bricks"
+  }
+}

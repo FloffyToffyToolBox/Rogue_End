@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=true": {
+      "model": "rogue_end:block/end_bulb_on"
+    },
+    "lit=false": {
+      "model": "rogue_end:block/end_bulb_off"
+    }
+  }
+}

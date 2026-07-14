@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_side_tall",
+  "textures": {
+    "wall": "rogue_end:block/dark_purpur_bricks"
+  }
+}
