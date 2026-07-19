@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "eye=false": {
+      "model": "rogue_end:block/ender_porter"
+    },
+    "eye=true": {
+      "model": "rogue_end:block/ender_porter_with_eye"
+    }
+  }
+}

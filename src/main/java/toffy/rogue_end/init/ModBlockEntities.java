@@ -10,6 +10,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Util;
 import toffy.rogue_end.RogueEnd;
 import toffy.rogue_end.blocks.EnderLinkBlockEntity;
+import toffy.rogue_end.blocks.EnderPorterBlockEntity;
 import toffy.rogue_end.blocks.RadiusEffectPillarBlockEntity;
 
 public class ModBlockEntities {
@@ -20,6 +21,7 @@ public class ModBlockEntities {
     public static final BlockEntityType<RadiusEffectPillarBlockEntity> RADIUS_EFFECT_PILLAR = create("radius_effect_pillar",BlockEntityType.Builder.create(RadiusEffectPillarBlockEntity::new, ModBlocks.RADIUS_EFFECT_PILLAR_BLOCK));
     public static final BlockEntityType<EnderLinkBlockEntity> ENDER_LINK = create("ender_link",BlockEntityType.Builder.create(EnderLinkBlockEntity::new, ModBlocks.ENDER_LINK));
 
+    public static final BlockEntityType<EnderPorterBlockEntity> ENDER_PORTER = create("ender_porter",BlockEntityType.Builder.create(EnderPorterBlockEntity::new, ModBlocks.ENDER_PORTER));
     private static <T extends BlockEntity> BlockEntityType create(String id, BlockEntityType.Builder<T> builder) {
         Type<?> type = Util.getChoiceType(TypeReferences.BLOCK_ENTITY, id);
         return Registry.register(Registries.BLOCK_ENTITY_TYPE, id, builder.build(type));

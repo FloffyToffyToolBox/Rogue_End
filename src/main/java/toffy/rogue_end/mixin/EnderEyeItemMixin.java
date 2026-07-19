@@ -20,6 +20,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import toffy.rogue_end.blocks.EnderLinkBlock;
+import toffy.rogue_end.blocks.EnderPorterBlock;
 import toffy.rogue_end.init.ModBlocks;
 import toffy.rogue_end.init.ModComponentTypes;
 import toffy.rogue_end.items.EnderEyeComponent;
@@ -53,7 +54,26 @@ public class EnderEyeItemMixin extends ItemMixin {
                 }
             cir.setReturnValue(ActionResult.success(world.isClient));
         }
-    }
+    }    if (world.getBlockState(blockPos).isOf(ModBlocks.ENDER_PORTER)) {
+            if (!world.getBlockState(blockPos).get(EnderPorterBlock.EYE)&&!context.getStack().getComponents().contains(ModComponentTypes.ENDER_EYE)){
+                world.playSound((PlayerEntity)null, blockPos, SoundEvents.ITEM_LODESTONE_COMPASS_LOCK, SoundCategory.PLAYERS, 1.0F, 1.0F);
+                PlayerEntity playerEntity = context.getPlayer();
+                ItemStack itemStack = context.getStack();
+                boolean bl = !playerEntity.isInCreativeMode() && itemStack.getCount() == 1;
+                EnderEyeComponent lodestoneTrackerComponent = new EnderEyeComponent(Optional.of(GlobalPos.create(world.getRegistryKey(), blockPos)), true);
+                if (bl) {
+                    itemStack.set(ModComponentTypes.ENDER_EYE, lodestoneTrackerComponent);
+                } else {
+                    ItemStack itemStack2 = itemStack.copyComponentsToNewStack(Items.ENDER_EYE, 1);
+                    itemStack.decrementUnlessCreative(1, playerEntity);
+                    itemStack2.set(ModComponentTypes.ENDER_EYE, lodestoneTrackerComponent);
+                    if (!playerEntity.getInventory().insertStack(itemStack2)) {
+                        playerEntity.dropItem(itemStack2, false);
+                    }
+                }
+                cir.setReturnValue(ActionResult.success(world.isClient));
+            }
+        }
 }
     @Override
     protected void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType type, CallbackInfo ci) {

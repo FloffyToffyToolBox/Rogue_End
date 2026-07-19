@@ -11,14 +11,12 @@ import net.minecraft.util.ColorCode;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import toffy.rogue_end.RogueEnd;
-import toffy.rogue_end.blocks.EnderLinkBlock;
-import toffy.rogue_end.blocks.MagmaRootBlock;
-import toffy.rogue_end.blocks.RadiusEffectPillarBlock;
-import toffy.rogue_end.blocks.YellowLichenBlock;
+import toffy.rogue_end.blocks.*;
 
 public class ModBlocks {
     public static final Block RADIUS_EFFECT_PILLAR_BLOCK = registerBlock("radius_effect_pillar", new RadiusEffectPillarBlock(AbstractBlock.Settings.copy(Blocks.BEACON)));
     public static final Block ENDER_LINK = registerBlock("ender_link", new EnderLinkBlock(AbstractBlock.Settings.copy(Blocks.REPEATER)));
+    public static final Block ENDER_PORTER = registerBlock("ender_porter", new EnderPorterBlock(AbstractBlock.Settings.copy(Blocks.REPEATER)));
     public static final Block END_BULB = registerBlock("end_bulb",new BulbBlock(AbstractBlock.Settings.copy(Blocks.COPPER_BULB)));
 
     public static final Block ENDER_ASH = registerBlock("ender_ash",new ColoredFallingBlock(new ColorCode(-8356741),AbstractBlock.Settings.copy(Blocks.GRAVEL)));

@@ -24,6 +24,7 @@ public class ModItemGroups {
                     entries.add(ModItems.ENDERSENT_SPAWN_EGG);
 
                     entries.add(ModBlocks.ENDER_LINK);
+                    entries.add(ModBlocks.ENDER_PORTER);
                     entries.add(ModBlocks.END_BULB);
 
                     entries.add(ModBlocks.CHORUS_LEAVES);

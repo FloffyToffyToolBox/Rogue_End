@@ -1,34 +1,22 @@
 package toffy.rogue_end.blocks;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.BlockWithEntity;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.block.jukebox.JukeboxSong;
 import net.minecraft.inventory.SingleStackInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.Clearable;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.GlobalPos;
-import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
 import toffy.rogue_end.init.ModBlockEntities;
 import toffy.rogue_end.init.ModComponentTypes;
 import toffy.rogue_end.items.EnderEyeComponent;
 
-import java.util.Objects;
-
-public class EnderLinkBlockEntity extends BlockEntity implements Clearable, SingleStackInventory.SingleStackBlockEntityInventory {
+public class EnderPorterBlockEntity extends BlockEntity implements Clearable, SingleStackInventory.SingleStackBlockEntityInventory {
     public static final String EYESTACK_NBT_KEY = "eyeStack";
     private ItemStack eyeStack;
-    public EnderLinkBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.ENDER_LINK, pos, state);
+    public EnderPorterBlockEntity(BlockPos pos, BlockState state) {
+        super(ModBlockEntities.ENDER_PORTER, pos, state);
         this.eyeStack = ItemStack.EMPTY;
     }
 
