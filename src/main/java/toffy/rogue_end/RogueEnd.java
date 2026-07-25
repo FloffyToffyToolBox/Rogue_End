@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import toffy.rogue_end.entity.EndersentEntity;
 import toffy.rogue_end.init.*;
+import toffy.rogue_end.world.features.ModFeatures;
 
 public class RogueEnd implements ModInitializer {
 	public static final String MOD_ID = "rogue_end";
@@ -18,6 +19,7 @@ public class RogueEnd implements ModInitializer {
 		ModItems.register();
 		ModComponentTypes.register();
 		ModBlocks.register();
+		ModFeatures.register();
 		ModBlockTags.register();
 		ModItemGroups.setup();
 		ModEntities.registerModEntities();
