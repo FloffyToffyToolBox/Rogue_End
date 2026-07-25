@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "rogue_end:block/smooth_endstone",
+    "side": "rogue_end:block/smooth_endstone",
+    "top": "rogue_end:block/smooth_endstone"
+  }
+}

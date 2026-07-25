@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "rogue_end:block/smooth_endstone_slab"
+    },
+    "type=double": {
+      "model": "rogue_end:block/smooth_endstone"
+    },
+    "type=top": {
+      "model": "rogue_end:block/smooth_endstone_slab_top"
+    }
+  }
+}

@@ -1,6 +1,6 @@
-// 1.21	2026-06-30T17:42:45.2795489	Rogue End/Tags for minecraft:block
-21583be030b01df1692cc57222eddd42ca65f346 data\rogue_end\tags\block\dries_sponge.json
-c678d425209600e7905773c0909fb0984fc0bb42 data\rogue_end\tags\block\magma_root_placeable_on.json
+// 1.21	2026-07-25T19:11:12.5427227	Rogue End/Tags for minecraft:block
 998d1f94e1e828a447e620b1c2dc98cc8db4ec57 data\minecraft\tags\block\climbable.json
+21583be030b01df1692cc57222eddd42ca65f346 data\rogue_end\tags\block\dries_sponge.json
 bb9d339b9cd2db00c728023d2e03e54c4ff4905f data\minecraft\tags\block\walls.json
+c678d425209600e7905773c0909fb0984fc0bb42 data\rogue_end\tags\block\magma_root_placeable_on.json
 2d67f8b90ebcebb29e47631faf0aca122f24d679 data\minecraft\tags\block\mineable\pickaxe.json

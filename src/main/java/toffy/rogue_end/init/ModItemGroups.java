@@ -27,15 +27,25 @@ public class ModItemGroups {
                     entries.add(ModBlocks.ENDER_PORTER);
                     entries.add(ModBlocks.END_BULB);
 
+                    entries.add(ModBlocks.STRIPPED_CHORUS_LOG);
+                    entries.add(ModBlocks.CHORUS_LOG);
+                    entries.add(ModBlocks.CHORUS_PLANKS);
+                    entries.add(ModBlocks.CORRUPTED_PLANKS);
                     entries.add(ModBlocks.CHORUS_LEAVES);
                     entries.add(ModBlocks.ENDER_ASH);
                     entries.add(ModBlocks.MAGMA_ROOTS);
                     entries.add(ModBlocks.END_MAGMA);
+                    entries.add(ModBlocks.CHORAL_BLOOM);
 
                     entries.add(ModBlocks.ENDSLATE);
 
                     entries.add(ModBlocks.DARK_PURPUR);
                     entries.add(ModBlocks.ENDSTONE_PILLAR);
+                    entries.add(ModBlocks.CHISELLED_ENDSTONE_PILLAR);
+                    entries.add(ModBlocks.SMOOTH_ENDSTONE);
+                    entries.add(ModBlocks.SMOOTH_ENDSTONE_SLAB);
+                    entries.add(ModBlocks.SMOOTH_ENDSTONE_STAIRS);
+                    entries.add(ModBlocks.SMOOTH_ENDSTONE_WALL);
                     entries.add(ModBlocks.PURPUR_WALL);
 
                     entries.add(ModBlocks.END_BONE);

@@ -14,13 +14,24 @@ import toffy.rogue_end.RogueEnd;
 import toffy.rogue_end.blocks.*;
 
 public class ModBlocks {
+    public static Block CHORAL_BLOOM = registerBlock("choral_bloom",new ChoralBloomBlock(AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT).luminance((state) -> {
+        return 2;
+    })));
+    public static Block CORRUPTED_PLANKS = registerBlock("corrupted_planks",new PillarBlock(AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS)));
+
+    public static Block CHORUS_PLANKS = registerBlock("chorus_planks",new PillarBlock(AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS)));
+    public static Block CHORUS_LOG = registerBlock("chorus_log",new PillarBlock(AbstractBlock.Settings.copy(Blocks.WARPED_STEM)));
+    public static Block STRIPPED_CHORUS_LOG = registerBlock("stripped_chorus_log",new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_WARPED_STEM)));
+
     public static final Block RADIUS_EFFECT_PILLAR_BLOCK = registerBlock("radius_effect_pillar", new RadiusEffectPillarBlock(AbstractBlock.Settings.copy(Blocks.BEACON)));
     public static final Block ENDER_LINK = registerBlock("ender_link", new EnderLinkBlock(AbstractBlock.Settings.copy(Blocks.REPEATER)));
     public static final Block ENDER_PORTER = registerBlock("ender_porter", new EnderPorterBlock(AbstractBlock.Settings.copy(Blocks.REPEATER)));
     public static final Block END_BULB = registerBlock("end_bulb",new BulbBlock(AbstractBlock.Settings.copy(Blocks.COPPER_BULB)));
 
     public static final Block ENDER_ASH = registerBlock("ender_ash",new ColoredFallingBlock(new ColorCode(-8356741),AbstractBlock.Settings.copy(Blocks.GRAVEL)));
-    public static final Block MAGMA_ROOTS = registerBlock("magma_roots",new MagmaRootBlock(AbstractBlock.Settings.copy(Blocks.WARPED_ROOTS)));
+    public static final Block MAGMA_ROOTS = registerBlock("magma_roots",new MagmaRootBlock(AbstractBlock.Settings.copy(Blocks.WARPED_ROOTS).luminance((state) -> {
+        return 2;
+    })));
     public static final Block END_MAGMA = registerBlock("end_magma",new MagmaBlock(AbstractBlock.Settings.copy(Blocks.MAGMA_BLOCK).postProcess(Blocks::always).emissiveLighting(Blocks::always)));
 
     public static final Block ENDSLATE = registerBlock("endslate",new PillarBlock(AbstractBlock.Settings.copy(Blocks.TUFF)));
@@ -28,7 +39,12 @@ public class ModBlocks {
 
     public static final Block PURPUR_WALL= registerBlock("purpur_wall",new WallBlock(AbstractBlock.Settings.copy(Blocks.TUFF_WALL)));
 
-    public static final Block ENDSTONE_PILLAR= registerBlock("endstone_pillar",new PillarBlock(AbstractBlock.Settings.copy(Blocks.TUFF)));
+    public static final Block ENDSTONE_PILLAR= registerBlock("endstone_pillar",new PillarBlock(AbstractBlock.Settings.copy(Blocks.END_STONE)));
+    public static final Block CHISELLED_ENDSTONE_PILLAR= registerBlock("chiselled_endstone_pillar",new PillarBlock(AbstractBlock.Settings.copy(Blocks.END_STONE)));
+    public static final Block SMOOTH_ENDSTONE= registerBlock("smooth_endstone",new Block(AbstractBlock.Settings.copy(Blocks.END_STONE)));
+    public static final Block SMOOTH_ENDSTONE_WALL= registerBlock("smooth_endstone_wall",new WallBlock(AbstractBlock.Settings.copy(Blocks.TUFF_WALL)));
+    public static final Block SMOOTH_ENDSTONE_SLAB = registerBlock("smooth_endstone_slab",new SlabBlock(AbstractBlock.Settings.copy(Blocks.TUFF)));
+    public static final Block SMOOTH_ENDSTONE_STAIRS = registerBlock("smooth_endstone_stairs",new StairsBlock(SMOOTH_ENDSTONE.getDefaultState(),AbstractBlock.Settings.copy(Blocks.TUFF)));
 
     public static final Block CHORUS_LEAVES = registerBlock("chorus_leaves",new LeavesBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_LEAVES)));
     public static final Block LICHENROOT = registerBlock("lichenroot",new Block(AbstractBlock.Settings.copy(Blocks.END_STONE)));
