@@ -19,6 +19,7 @@ public class RogueEndClient implements ClientModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ENDER_LINK, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ENDER_PORTER, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CHORAL_BLOOM, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.YELLOW_LEAVES, RenderLayer.getCutout());
 		EntityModelLayerRegistry.registerModelLayer(EndersentModel.LAYER_LOCATION, EndersentModel::getTexturedModelData);
 		EntityRendererRegistry.register(ModEntities.ENDERSENT, EndersentRenderer::new);
 	}

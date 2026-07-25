@@ -7,6 +7,7 @@ import net.minecraft.registry.RegistryKeys;
 import toffy.rogue_end.datagen.ModLootTableProvider;
 import toffy.rogue_end.datagen.ModModelProvider;
 import toffy.rogue_end.datagen.ModBlockTagProvider;
+import toffy.rogue_end.datagen.ModRegistryDataGenerator;
 import toffy.rogue_end.world.ModConfiguredFeatures;
 import toffy.rogue_end.world.ModPlacedFeatures;
 
@@ -17,6 +18,7 @@ public class RogueEndDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModBlockTagProvider::new);
 		pack.addProvider(ModLootTableProvider::new);
+		pack.addProvider(ModRegistryDataGenerator::new);
 	}
 	@Override
 	public void buildRegistry(RegistryBuilder registryBuilder){

@@ -20,8 +20,13 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerItemModel(ModBlocks.CHORAL_BLOOM.asItem());
 
+        Identifier identifier = ModelIds.getBlockSubModelId(ModBlocks.CHORAL_BLOOM, "_top");
+        Identifier identifier2 = ModelIds.getBlockSubModelId(ModBlocks.CHORAL_BLOOM, "_bottom");
+        blockStateModelGenerator.registerDoubleBlock(ModBlocks.CHORAL_BLOOM, identifier, identifier2);
+
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHORUS_PLANKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CORRUPTED_PLANKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.YELLOW_LEAVES);
 
         blockStateModelGenerator.registerAxisRotated(ModBlocks.CHORUS_LOG, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.STRIPPED_CHORUS_LOG, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);

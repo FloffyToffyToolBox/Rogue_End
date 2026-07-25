@@ -32,6 +32,7 @@ public class ModItemGroups {
                     entries.add(ModBlocks.CHORUS_PLANKS);
                     entries.add(ModBlocks.CORRUPTED_PLANKS);
                     entries.add(ModBlocks.CHORUS_LEAVES);
+                    entries.add(ModBlocks.YELLOW_LEAVES);
                     entries.add(ModBlocks.ENDER_ASH);
                     entries.add(ModBlocks.MAGMA_ROOTS);
                     entries.add(ModBlocks.END_MAGMA);

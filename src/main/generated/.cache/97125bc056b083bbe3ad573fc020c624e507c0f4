@@ -1,5 +1,6 @@
-// 1.21	2026-07-25T19:11:12.5367384	Rogue End/Model Definitions
+// 1.21	2026-07-25T22:40:30.2391008	Rogue End/Model Definitions
 68bb0b1e3f58d707cb409e74c1fa0748026a310a assets\rogue_end\blockstates\corrupted_planks.json
+ecb532dd36eb2326fbf8f259b4c0267dde1438bd assets\rogue_end\models\block\yellow_leaves.json
 7074c6056d030ca54b79410f76196abcd1e5d0e9 assets\rogue_end\models\item\endstone_pillar.json
 4b8cf1045ad554de461a4f1e7c18ed37db7d9958 assets\rogue_end\models\block\chiselled_endstone_pillar_horizontal.json
 c5d82e6118b55bc8681b3e75e48af9d0559a2195 assets\rogue_end\models\block\dark_purpur_brick_slab.json
@@ -32,6 +33,7 @@ f233b8d1e338cb880288e96a41aceca591256b25 assets\rogue_end\models\block\dark_purp
 0fc4baa2cc1f6dd53b26ae5c3fc499c58252145e assets\rogue_end\blockstates\smooth_endstone.json
 a6ee4f44b43512e69791b235f02e426dd5a2ba3e assets\rogue_end\blockstates\dark_purpur_brick_slab.json
 2f5a87d34e2f03cbc05dd5373921ad25ebf0e000 assets\rogue_end\blockstates\smooth_endstone_slab.json
+50ebd7130d66b4604a347e2e35b2cb87be37c2a0 assets\rogue_end\blockstates\yellow_leaves.json
 e35fbc9d355bc6d884baa000f0f5179167d44d65 assets\rogue_end\blockstates\choral_bloom.json
 37e7d1493ecc325a2adad3581137dfd715f861b7 assets\rogue_end\models\item\end_bone_stairs.json
 2c4d519c8859a182a196079f0a882ce318f73985 assets\rogue_end\models\block\end_bone_wall_side.json
@@ -79,6 +81,7 @@ e2f3daa967839a243cc298a923a2540305664ac6 assets\rogue_end\blockstates\smooth_end
 ef71b8802d951b11bac8515d15b0e6836289fd97 assets\rogue_end\blockstates\end_bone.json
 4028a54c215cf3adbd675eec50d71fb54f2b5d1e assets\rogue_end\blockstates\end_bone_wall.json
 b78a7ea7a1d8580d0d7433102930a444a6e333e1 assets\rogue_end\models\block\end_bone_stairs_inner.json
+c47a93a20169632bb85d5c59efef3cf362e01a9f assets\rogue_end\models\item\yellow_leaves.json
 a2c0d99e5f8aa701d4c64f5918cf843a0dec8019 assets\rogue_end\models\item\end_bone.json
 11aa97d12d973b307e6337b975249baea937e2e2 assets\rogue_end\blockstates\smooth_endstone_wall.json
 21e77ad001f29ae91cc24afd1bab56615ff4c8d8 assets\rogue_end\models\block\chorus_planks.json

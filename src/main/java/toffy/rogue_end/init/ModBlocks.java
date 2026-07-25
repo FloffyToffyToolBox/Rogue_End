@@ -47,6 +47,7 @@ public class ModBlocks {
     public static final Block SMOOTH_ENDSTONE_STAIRS = registerBlock("smooth_endstone_stairs",new StairsBlock(SMOOTH_ENDSTONE.getDefaultState(),AbstractBlock.Settings.copy(Blocks.TUFF)));
 
     public static final Block CHORUS_LEAVES = registerBlock("chorus_leaves",new LeavesBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_LEAVES)));
+    public static final Block YELLOW_LEAVES = registerBlock("yellow_leaves",new LeavesBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_LEAVES)));
     public static final Block LICHENROOT = registerBlock("lichenroot",new Block(AbstractBlock.Settings.copy(Blocks.END_STONE)));
 
     public static final Block END_BONE = registerBlock("end_bone",new Block(AbstractBlock.Settings.copy(Blocks.TUFF)));
