@@ -17,9 +17,23 @@ public class ModBlocks {
     public static Block CHORAL_BLOOM = registerBlock("choral_bloom",new ChoralBloomBlock(AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT).luminance((state) -> {
         return 2;
     })));
+    public static final Block  CORRUPTED_BUTTON = registerBlock("corrupted_button",new ButtonBlock(ModWoodType.CORRUPTED.setType(),30, AbstractBlock.Settings.copy(Blocks.CHERRY_BUTTON).mapColor(MapColor.OAK_TAN)));
+    public static final Block  CORRUPTED_PRESSURE_PLATE = registerBlock("corrupted_pressure_plate",new PressurePlateBlock(ModWoodType.CORRUPTED.setType(), AbstractBlock.Settings.copy(Blocks.CHERRY_BUTTON).mapColor(MapColor.OAK_TAN)));
     public static Block CORRUPTED_PLANKS = registerBlock("corrupted_planks",new PillarBlock(AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS)));
+    public static final Block  CORRUPTED_FENCE = registerBlock("corrupted_fence",new FenceBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_FENCE).mapColor(MapColor.OAK_TAN)));
+    public static final Block  CORRUPTED_FENCEGATE = registerBlock("corrupted_fence_gate",new FenceGateBlock(ModWoodType.CORRUPTED, Block.Settings.copy(Blocks.CHERRY_FENCE_GATE).mapColor(MapColor.OAK_TAN)));
+    public static final Block  CORRUPTED_PLANK_SLAB = registerBlock("corrupted_plank_slab",new SlabBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).mapColor(MapColor.OAK_TAN)));
+    public static final Block  CORRUPTED_PLANK_STAIRS = registerBlock("corrupted_plank_stairs",new StairsBlock( CORRUPTED_PLANKS.getDefaultState(),AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).mapColor(MapColor.OAK_TAN)));
 
+    public static final Block CHORUS_BUTTON = registerBlock("chorus_button",new ButtonBlock(ModWoodType.CHORUS.setType(),30, AbstractBlock.Settings.copy(Blocks.CHERRY_BUTTON).mapColor(MapColor.OAK_TAN)));
+    public static final Block CHORUS_PRESSURE_PLATE = registerBlock("chorus_pressure_plate",new PressurePlateBlock(ModWoodType.CHORUS.setType(), AbstractBlock.Settings.copy(Blocks.CHERRY_BUTTON).mapColor(MapColor.OAK_TAN)));
     public static Block CHORUS_PLANKS = registerBlock("chorus_planks",new PillarBlock(AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS)));
+    public static final Block CHORUS_FENCE = registerBlock("chorus_fence",new FenceBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_FENCE).mapColor(MapColor.OAK_TAN)));
+    public static final Block CHORUS_FENCEGATE = registerBlock("chorus_fence_gate",new FenceGateBlock(ModWoodType.CHORUS, Block.Settings.copy(Blocks.CHERRY_FENCE_GATE).mapColor(MapColor.OAK_TAN)));
+    public static final Block CHORUS_PLANK_SLAB = registerBlock("chorus_plank_slab",new SlabBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).mapColor(MapColor.OAK_TAN)));
+    public static final Block CHORUS_PLANK_STAIRS = registerBlock("chorus_plank_stairs",new StairsBlock(CHORUS_PLANKS.getDefaultState(),AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).mapColor(MapColor.OAK_TAN)));
+
+
     public static Block CHORUS_LOG = registerBlock("chorus_log",new PillarBlock(AbstractBlock.Settings.copy(Blocks.WARPED_STEM)));
     public static Block STRIPPED_CHORUS_LOG = registerBlock("stripped_chorus_log",new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_WARPED_STEM)));
 

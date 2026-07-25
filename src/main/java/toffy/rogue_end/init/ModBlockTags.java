@@ -16,6 +16,8 @@ public class ModBlockTags {
 }
     public static final TagKey<Block> MAGMA_ROOT_PLACEABLE_ON = registerBlockTag("magma_root_placeable_on");
     public static final TagKey<Block> DRIES_SPONGE = registerBlockTag("dries_sponge");
+    public static final TagKey<Block> CORRUPTED_LOGS = registerBlockTag("corrupted_logs");
+    public static final TagKey<Block> CHORUS_LOGS = registerBlockTag("chorus_logs");
     private static TagKey<Block> registerBlockTag(String id) {
         return TagKey.of(RegistryKeys.BLOCK, Identifier.of(RogueEnd.MOD_ID,id));
     }

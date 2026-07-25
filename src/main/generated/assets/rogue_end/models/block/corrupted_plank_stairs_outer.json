@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "rogue_end:block/corrupted_planks",
+    "side": "rogue_end:block/corrupted_planks",
+    "top": "rogue_end:block/corrupted_planks"
+  }
+}

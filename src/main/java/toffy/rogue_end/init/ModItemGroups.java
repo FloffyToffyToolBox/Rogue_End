@@ -29,8 +29,22 @@ public class ModItemGroups {
 
                     entries.add(ModBlocks.STRIPPED_CHORUS_LOG);
                     entries.add(ModBlocks.CHORUS_LOG);
+
                     entries.add(ModBlocks.CHORUS_PLANKS);
+                    entries.add(ModBlocks.CHORUS_FENCE);
+                    entries.add(ModBlocks.CHORUS_FENCEGATE);
+                    entries.add(ModBlocks.CHORUS_PLANK_SLAB);
+                    entries.add(ModBlocks.CHORUS_PLANK_STAIRS);
+                    entries.add(ModBlocks.CHORUS_BUTTON);
+                    entries.add(ModBlocks.CHORUS_PRESSURE_PLATE);
                     entries.add(ModBlocks.CORRUPTED_PLANKS);
+                    entries.add(ModBlocks.CORRUPTED_FENCE);
+                    entries.add(ModBlocks.CORRUPTED_FENCEGATE);
+                    entries.add(ModBlocks.CORRUPTED_PLANK_SLAB);
+                    entries.add(ModBlocks.CORRUPTED_PLANK_STAIRS);
+                    entries.add(ModBlocks.CORRUPTED_BUTTON);
+                    entries.add(ModBlocks.CORRUPTED_PRESSURE_PLATE);
+
                     entries.add(ModBlocks.CHORUS_LEAVES);
                     entries.add(ModBlocks.YELLOW_LEAVES);
                     entries.add(ModBlocks.ENDER_ASH);

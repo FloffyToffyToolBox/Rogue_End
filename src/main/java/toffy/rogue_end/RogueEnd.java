@@ -3,6 +3,7 @@ package toffy.rogue_end;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.client.render.block.entity.SkullBlockEntityRenderer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +25,7 @@ public class RogueEnd implements ModInitializer {
 		ModBlockTags.register();
 		ModItemGroups.setup();
 		ModTrunkPlacerType.register();
+		StrippableBlockRegistry.register(ModBlocks.CHORUS_LOG,ModBlocks.STRIPPED_CHORUS_LOG);
 		ModEntities.registerModEntities();
 		ModBlockEntities.register();
 		ModEntityModelLayers.register();

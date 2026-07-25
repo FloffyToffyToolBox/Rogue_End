@@ -24,8 +24,22 @@ public class ModModelProvider extends FabricModelProvider {
         Identifier identifier2 = ModelIds.getBlockSubModelId(ModBlocks.CHORAL_BLOOM, "_bottom");
         blockStateModelGenerator.registerDoubleBlock(ModBlocks.CHORAL_BLOOM, identifier, identifier2);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHORUS_PLANKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CORRUPTED_PLANKS);
+        BlockStateModelGenerator.BlockTexturePool ChorusPlanksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHORUS_PLANKS);
+        ChorusPlanksPool.fence(ModBlocks.CHORUS_FENCE);
+        ChorusPlanksPool.fenceGate(ModBlocks.CHORUS_FENCEGATE);
+        ChorusPlanksPool.slab(ModBlocks.CHORUS_PLANK_SLAB);
+        ChorusPlanksPool.stairs(ModBlocks.CHORUS_PLANK_STAIRS);
+        ChorusPlanksPool.button(ModBlocks.CHORUS_BUTTON);
+        ChorusPlanksPool.pressurePlate(ModBlocks.CHORUS_PRESSURE_PLATE);
+
+        BlockStateModelGenerator.BlockTexturePool CorruptedPlanksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CORRUPTED_PLANKS);
+        CorruptedPlanksPool.fence(ModBlocks.CORRUPTED_FENCE);
+        CorruptedPlanksPool.fenceGate(ModBlocks.CORRUPTED_FENCEGATE);
+        CorruptedPlanksPool.slab(ModBlocks.CORRUPTED_PLANK_SLAB);
+        CorruptedPlanksPool.stairs(ModBlocks.CORRUPTED_PLANK_STAIRS);
+        CorruptedPlanksPool.button(ModBlocks.CORRUPTED_BUTTON);
+        CorruptedPlanksPool.pressurePlate(ModBlocks.CORRUPTED_PRESSURE_PLATE);
+
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.YELLOW_LEAVES);
 
         blockStateModelGenerator.registerAxisRotated(ModBlocks.CHORUS_LOG, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);

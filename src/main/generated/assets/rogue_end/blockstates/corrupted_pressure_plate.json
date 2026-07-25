@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "rogue_end:block/corrupted_pressure_plate"
+    },
+    "powered=true": {
+      "model": "rogue_end:block/corrupted_pressure_plate_down"
+    }
+  }
+}

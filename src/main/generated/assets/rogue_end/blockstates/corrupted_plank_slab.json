@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "rogue_end:block/corrupted_plank_slab"
+    },
+    "type=double": {
+      "model": "rogue_end:block/corrupted_planks"
+    },
+    "type=top": {
+      "model": "rogue_end:block/corrupted_plank_slab_top"
+    }
+  }
+}
