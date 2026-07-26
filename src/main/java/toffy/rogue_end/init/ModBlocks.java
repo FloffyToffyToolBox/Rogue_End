@@ -1,8 +1,6 @@
 package toffy.rogue_end.init;
 
 import net.minecraft.block.*;
-import net.minecraft.block.enums.NoteBlockInstrument;
-import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -14,9 +12,25 @@ import toffy.rogue_end.RogueEnd;
 import toffy.rogue_end.blocks.*;
 
 public class ModBlocks {
+
+    public static Block CORRUPTED_THORN = registerBlock("corrupted_thorn", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
+    public static Block END_BUSH = registerBlock("end_bush", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
+    public static Block END_SHRUB = registerBlock("end_shrub", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
+    public static Block DRY_END_SHRUB = registerBlock("dry_end_shrub", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
+    public static Block END_GRASS = registerBlock("end_grass", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
+    public static Block DRY_END_GRASS = registerBlock("dry_end_grass", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
     public static Block CHORAL_BLOOM = registerBlock("choral_bloom",new ChoralBloomBlock(AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT).luminance((state) -> {
         return 2;
     })));
+    public static Block CORRUPTED_TUBES = registerBlock("corrupted_tubes",new TallEndPlantBlock(AbstractBlock.Settings.copy(Blocks.LARGE_FERN)));
+    //add Corrupted Tubes
+
+    public static Block ENDER_TUBES = registerBlock("ender_tubes",new TallEndPlantBlock(AbstractBlock.Settings.copy(Blocks.LARGE_FERN)));
+    public static Block SHORT_ENDER_TUBES = registerBlock("short_ender_tubes",new ShortEndPlantBlock(AbstractBlock.Settings.copy(Blocks.FERN)));
+
+    public static Block TALL_END_FERN = registerBlock("tall_end_fern",new TallEndPlantBlock(AbstractBlock.Settings.copy(Blocks.LARGE_FERN)));
+    public static Block END_FERN = registerBlock("end_fern",new ShortEndPlantBlock(AbstractBlock.Settings.copy(Blocks.FERN)));
+
     public static final Block  CORRUPTED_BUTTON = registerBlock("corrupted_button",new ButtonBlock(ModWoodType.CORRUPTED.setType(),30, AbstractBlock.Settings.copy(Blocks.CHERRY_BUTTON).mapColor(MapColor.OAK_TAN)));
     public static final Block  CORRUPTED_PRESSURE_PLATE = registerBlock("corrupted_pressure_plate",new PressurePlateBlock(ModWoodType.CORRUPTED.setType(), AbstractBlock.Settings.copy(Blocks.CHERRY_BUTTON).mapColor(MapColor.OAK_TAN)));
     public static Block CORRUPTED_PLANKS = registerBlock("corrupted_planks",new PillarBlock(AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS)));
@@ -43,12 +57,14 @@ public class ModBlocks {
     public static final Block END_BULB = registerBlock("end_bulb",new BulbBlock(AbstractBlock.Settings.copy(Blocks.COPPER_BULB)));
 
     public static final Block ENDER_ASH = registerBlock("ender_ash",new ColoredFallingBlock(new ColorCode(-8356741),AbstractBlock.Settings.copy(Blocks.GRAVEL)));
-    public static final Block MAGMA_ROOTS = registerBlock("magma_roots",new MagmaRootBlock(AbstractBlock.Settings.copy(Blocks.WARPED_ROOTS).luminance((state) -> {
+    public static final Block MAGMA_ROOTS = registerBlock("magma_roots",new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WARPED_ROOTS).luminance((state) -> {
         return 2;
     })));
     public static final Block END_MAGMA = registerBlock("end_magma",new MagmaBlock(AbstractBlock.Settings.copy(Blocks.MAGMA_BLOCK).postProcess(Blocks::always).emissiveLighting(Blocks::always)));
 
     public static final Block ENDSLATE = registerBlock("endslate",new PillarBlock(AbstractBlock.Settings.copy(Blocks.TUFF)));
+
+    public static final Block CHORAL_ENDSLATE = registerBlock("choral_endslate",new Block(AbstractBlock.Settings.copy(Blocks.TUFF)));
     public static final Block DARK_PURPUR = registerBlock("dark_purpur",new PillarBlock(AbstractBlock.Settings.copy(Blocks.DEEPSLATE)));
 
     public static final Block PURPUR_WALL= registerBlock("purpur_wall",new WallBlock(AbstractBlock.Settings.copy(Blocks.TUFF_WALL)));

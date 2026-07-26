@@ -2,25 +2,21 @@ package toffy.rogue_end.blocks;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import toffy.rogue_end.init.ModBlockTags;
-import toffy.rogue_end.init.ModBlocks;
 
-import static net.minecraft.block.AbstractBlock.createCodec;
-
-public class MagmaRootBlock extends PlantBlock{
-public static final MapCodec<MagmaRootBlock> CODEC = createCodec(MagmaRootBlock::new);
+public class EndPlantBlock extends PlantBlock{
+public static final MapCodec<EndPlantBlock> CODEC = createCodec(EndPlantBlock::new);
 protected static final float field_31235 = 6.0F;
 protected static final VoxelShape SHAPE = Block.createCuboidShape(2.0, 0.0, 2.0, 14.0, 13.0, 14.0);
 
-public MapCodec<MagmaRootBlock> getCodec() {
+public MapCodec<EndPlantBlock> getCodec() {
     return CODEC;
 }
 
-public MagmaRootBlock(AbstractBlock.Settings settings) {
+public EndPlantBlock(AbstractBlock.Settings settings) {
     super(settings);
 }
 

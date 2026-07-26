@@ -19,6 +19,8 @@ public class ModItemGroups {
                 .displayName(Text.translatable("itemGroup.tempGroup"))
                 .icon(() -> new ItemStack(ModBlocks.ENDSLATE))
                 .entries((displayContext, entries) -> {
+
+
                     entries.add(ModItems.BACK_STABBER);
                     entries.add(ModItems.ENDSTEEL_INGOT);
                     entries.add(ModItems.ENDERSENT_SPAWN_EGG);
@@ -50,9 +52,24 @@ public class ModItemGroups {
                     entries.add(ModBlocks.ENDER_ASH);
                     entries.add(ModBlocks.MAGMA_ROOTS);
                     entries.add(ModBlocks.END_MAGMA);
+
+
+                    entries.add(ModBlocks.CORRUPTED_THORN);
+                    entries.add(ModBlocks.END_BUSH);
+                    entries.add(ModBlocks.END_SHRUB);
+                    entries.add(ModBlocks.DRY_END_SHRUB);
+                    entries.add(ModBlocks.END_GRASS);
+                    entries.add(ModBlocks.DRY_END_GRASS);
                     entries.add(ModBlocks.CHORAL_BLOOM);
 
+                    entries.add(ModBlocks.CORRUPTED_TUBES);
+                    entries.add(ModBlocks.ENDER_TUBES);
+                    entries.add(ModBlocks.SHORT_ENDER_TUBES);
+                    entries.add(ModBlocks.TALL_END_FERN);
+                    entries.add(ModBlocks.END_FERN);
+
                     entries.add(ModBlocks.ENDSLATE);
+                    entries.add(ModBlocks.CHORAL_ENDSLATE);
 
                     entries.add(ModBlocks.DARK_PURPUR);
                     entries.add(ModBlocks.ENDSTONE_PILLAR);

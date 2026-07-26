@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "rogue_end:block/short_ender_tubes"
+  }
+}

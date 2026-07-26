@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "rogue_end:block/choral_bloom_top"
+    "layer0": "rogue_end:block/tall_end_fern_top"
   }
 }

@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "rogue_end:block/choral_endslate"
+      },
+      {
+        "model": "rogue_end:block/choral_endslate",
+        "y": 90
+      },
+      {
+        "model": "rogue_end:block/choral_endslate",
+        "y": 180
+      },
+      {
+        "model": "rogue_end:block/choral_endslate",
+        "y": 270
+      }
+    ]
+  }
+}

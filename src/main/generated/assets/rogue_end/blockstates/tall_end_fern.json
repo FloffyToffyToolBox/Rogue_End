@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "rogue_end:block/tall_end_fern_bottom"
+    },
+    "half=upper": {
+      "model": "rogue_end:block/tall_end_fern_top"
+    }
+  }
+}

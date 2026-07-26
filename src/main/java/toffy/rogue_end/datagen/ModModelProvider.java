@@ -2,15 +2,9 @@ package toffy.rogue_end.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.ModelIds;
-import net.minecraft.data.client.TexturedModel;
-import net.minecraft.util.Identifier;
+import net.minecraft.data.client.*;
 import toffy.rogue_end.init.ModBlocks;
-import toffy.rogue_end.init.ModEntities;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -18,11 +12,19 @@ public class ModModelProvider extends FabricModelProvider {
     }
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerItemModel(ModBlocks.CHORAL_BLOOM.asItem());
+        blockStateModelGenerator.registerTintableCross(ModBlocks.CORRUPTED_THORN, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.END_GRASS, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.DRY_END_GRASS, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.DRY_END_SHRUB, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.END_BUSH, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.SHORT_ENDER_TUBES, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.END_FERN, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.END_SHRUB, BlockStateModelGenerator.TintType.NOT_TINTED);
 
-        Identifier identifier = ModelIds.getBlockSubModelId(ModBlocks.CHORAL_BLOOM, "_top");
-        Identifier identifier2 = ModelIds.getBlockSubModelId(ModBlocks.CHORAL_BLOOM, "_bottom");
-        blockStateModelGenerator.registerDoubleBlock(ModBlocks.CHORAL_BLOOM, identifier, identifier2);
+        blockStateModelGenerator.registerDoubleBlock(ModBlocks.CHORAL_BLOOM, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(ModBlocks.CORRUPTED_TUBES,BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(ModBlocks.ENDER_TUBES,BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(ModBlocks.TALL_END_FERN,BlockStateModelGenerator.TintType.NOT_TINTED);
 
         BlockStateModelGenerator.BlockTexturePool ChorusPlanksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHORUS_PLANKS);
         ChorusPlanksPool.fence(ModBlocks.CHORUS_FENCE);
@@ -65,7 +67,6 @@ public class ModModelProvider extends FabricModelProvider {
         DarkPurpur.stairs(ModBlocks.DARK_PURPUR_BRICK_STAIRS);
         DarkPurpur.slab(ModBlocks.DARK_PURPUR_BRICK_SLAB);
     }
-
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
     }

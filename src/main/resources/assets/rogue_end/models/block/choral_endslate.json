@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "rogue_end:block/endslate_top",
+    "side": "rogue_end:block/choral_endslate_side",
+    "top": "rogue_end:block/choral_endslate_top"
+  }
+}

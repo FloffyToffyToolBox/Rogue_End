@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "rogue_end:block/tall_end_fern_top"
+  }
+}

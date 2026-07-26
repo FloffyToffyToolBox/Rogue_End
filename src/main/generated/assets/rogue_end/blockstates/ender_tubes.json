@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "rogue_end:block/ender_tubes_bottom"
+    },
+    "half=upper": {
+      "model": "rogue_end:block/ender_tubes_top"
+    }
+  }
+}
