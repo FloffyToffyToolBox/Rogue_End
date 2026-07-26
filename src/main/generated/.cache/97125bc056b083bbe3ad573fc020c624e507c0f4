@@ -1,4 +1,4 @@
-// 1.21	2026-07-26T16:48:21.0042111	Rogue End/Model Definitions
+// 1.21	2026-07-26T20:06:07.8689905	Rogue End/Model Definitions
 c8f4498867ab82bc38d000ef5bc9544fa882f523 assets\rogue_end\blockstates\end_fern.json
 efe0ed2079391193fc98189843fb67e50cec7774 assets\rogue_end\blockstates\corrupted_fence_gate.json
 68bb0b1e3f58d707cb409e74c1fa0748026a310a assets\rogue_end\blockstates\corrupted_planks.json
@@ -6,8 +6,8 @@ ecb532dd36eb2326fbf8f259b4c0267dde1438bd assets\rogue_end\models\block\yellow_le
 7074c6056d030ca54b79410f76196abcd1e5d0e9 assets\rogue_end\models\item\endstone_pillar.json
 4b8cf1045ad554de461a4f1e7c18ed37db7d9958 assets\rogue_end\models\block\chiselled_endstone_pillar_horizontal.json
 d72ce56531595024d2062132998b2819d4b85ee7 assets\rogue_end\models\item\smooth_endstone_slab.json
-967707c7e11e8cf43cf142dcce39ceb9e88983b5 assets\rogue_end\models\item\corrupted_fence.json
 6f53447f7fd49be963a8fbb0292e094fcacb6a9b assets\rogue_end\models\item\chorus_fence.json
+967707c7e11e8cf43cf142dcce39ceb9e88983b5 assets\rogue_end\models\item\corrupted_fence.json
 8122f0f63c781c7af880712d07c4406120e95f24 assets\rogue_end\models\block\chorus_button_inventory.json
 0d796a65a0bde66a0f61f9249d0e3a5cf4e60472 assets\rogue_end\models\block\smooth_endstone_stairs.json
 d3d0e1b65f64d1c6b0cbd0019837a53eeaca24ff assets\rogue_end\models\block\corrupted_plank_stairs_outer.json
@@ -171,8 +171,8 @@ d9d76801e6d1799ca94a28aecc35f94403f50775 assets\rogue_end\blockstates\chorus_pla
 010862c159560037b9e1db914e74af307a540e95 assets\rogue_end\models\item\dry_end_shrub.json
 e2f3daa967839a243cc298a923a2540305664ac6 assets\rogue_end\blockstates\smooth_endstone_stairs.json
 9aa970c5e9d10cf5ee0ac3975992de7c6ed4916b assets\rogue_end\models\item\chorus_plank_slab.json
-491550a60e3f4f108ad222bce44a81fe682f6f5a assets\rogue_end\models\block\corrupted_fence_post.json
 69ef12979d3c57ead23c6b038c8063f18ea1f661 assets\rogue_end\models\block\dark_purpur_brick_stairs_outer.json
+491550a60e3f4f108ad222bce44a81fe682f6f5a assets\rogue_end\models\block\corrupted_fence_post.json
 1532b5ed64cd0da3c7884482926c110cb5f8352e assets\rogue_end\models\block\chorus_fence_inventory.json
 2b2b9097e57e6daed666b3ec45fe7ba5af8b6dd7 assets\rogue_end\blockstates\short_ender_tubes.json
 4028a54c215cf3adbd675eec50d71fb54f2b5d1e assets\rogue_end\blockstates\end_bone_wall.json

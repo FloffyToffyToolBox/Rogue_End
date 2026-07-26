@@ -47,7 +47,6 @@ public class ChorusTrunkPlacer extends TrunkPlacer {
     }
 
     public List<FoliagePlacer.TreeNode> generate(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, Random random, int height, BlockPos startPos, TreeFeatureConfig config) {
-        setToDirt(world, replacer, random, startPos.down(), config);
         int i = Math.max(0, height - 1 + this.branchStartOffsetFromTop.get(random));
         int j = Math.max(0, height - 1 + this.secondBranchStartOffsetFromTop.get(random));
         if (j >= i) {

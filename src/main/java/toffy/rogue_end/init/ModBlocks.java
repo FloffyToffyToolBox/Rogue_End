@@ -20,13 +20,19 @@ public class ModBlocks {
     public static Block END_GRASS = registerBlock("end_grass", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
     public static Block DRY_END_GRASS = registerBlock("dry_end_grass", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
     public static Block CHORAL_BLOOM = registerBlock("choral_bloom",new ChoralBloomBlock(AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT).luminance((state) -> {
-        return 2;
+        return 3;
     })));
-    public static Block CORRUPTED_TUBES = registerBlock("corrupted_tubes",new TallEndPlantBlock(AbstractBlock.Settings.copy(Blocks.LARGE_FERN)));
+    public static Block CORRUPTED_TUBES = registerBlock("corrupted_tubes",new TallEndPlantBlock(AbstractBlock.Settings.copy(Blocks.LARGE_FERN).luminance((state) -> {
+        return 5;
+    })));
     //add Corrupted Tubes
 
-    public static Block ENDER_TUBES = registerBlock("ender_tubes",new TallEndPlantBlock(AbstractBlock.Settings.copy(Blocks.LARGE_FERN)));
-    public static Block SHORT_ENDER_TUBES = registerBlock("short_ender_tubes",new ShortEndPlantBlock(AbstractBlock.Settings.copy(Blocks.FERN)));
+    public static Block ENDER_TUBES = registerBlock("ender_tubes",new TallEndPlantBlock(AbstractBlock.Settings.copy(Blocks.LARGE_FERN).luminance((state) -> {
+        return 6;
+    })));
+    public static Block SHORT_ENDER_TUBES = registerBlock("short_ender_tubes",new ShortEndPlantBlock(AbstractBlock.Settings.copy(Blocks.FERN).luminance((state) -> {
+        return 4;
+    })));
 
     public static Block TALL_END_FERN = registerBlock("tall_end_fern",new TallEndPlantBlock(AbstractBlock.Settings.copy(Blocks.LARGE_FERN)));
     public static Block END_FERN = registerBlock("end_fern",new ShortEndPlantBlock(AbstractBlock.Settings.copy(Blocks.FERN)));
