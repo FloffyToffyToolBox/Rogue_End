@@ -10,6 +10,7 @@ import toffy.rogue_end.datagen.ModBlockTagProvider;
 import toffy.rogue_end.datagen.ModRegistryDataGenerator;
 import toffy.rogue_end.world.ModConfiguredFeatures;
 import toffy.rogue_end.world.ModPlacedFeatures;
+import toffy.rogue_end.world.biome.ModBiomes;
 
 public class RogueEndDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -24,5 +25,6 @@ public class RogueEndDataGenerator implements DataGeneratorEntrypoint {
 	public void buildRegistry(RegistryBuilder registryBuilder){
 		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.BIOME, ModBiomes::bootstrap);
 	}
 }
