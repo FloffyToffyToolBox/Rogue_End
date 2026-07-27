@@ -1,4 +1,4 @@
-// 1.21	2026-07-27T17:04:17.2225173	Rogue End/Model Definitions
+// 1.21	2026-07-27T18:49:14.4913888	Rogue End/Model Definitions
 c8f4498867ab82bc38d000ef5bc9544fa882f523 assets\rogue_end\blockstates\end_fern.json
 efe0ed2079391193fc98189843fb67e50cec7774 assets\rogue_end\blockstates\corrupted_fence_gate.json
 68bb0b1e3f58d707cb409e74c1fa0748026a310a assets\rogue_end\blockstates\corrupted_planks.json
@@ -88,8 +88,8 @@ db5eba7995ca9a9541b89d511d273802cd44afb9 assets\rogue_end\models\block\corrupted
 c4acb0e0f69d80b70d8b63d38dbf7a5ed15f77a0 assets\minecraft\models\block\purpur_block.json
 95926c85c86ecbc744b3faf82cb4dd6ed8a592fd assets\rogue_end\models\block\corrupted_fence_gate_wall_open.json
 642440fac8e197fd11a10f2e94f05a71229e2b46 assets\rogue_end\models\block\end_fern.json
-0752543bc603560b9b8ccc6719d6a8d3a9973c80 assets\rogue_end\models\block\corrupted_pressure_plate_down.json
 e2ea261d292b0b04ad2058640d65a701e1007adb assets\rogue_end\models\block\purpur_wall_inventory.json
+0752543bc603560b9b8ccc6719d6a8d3a9973c80 assets\rogue_end\models\block\corrupted_pressure_plate_down.json
 1222c4bcc692fdb67338ca9126bc417a761e1402 assets\rogue_end\models\item\corrupted_fence_gate.json
 7ab721a178617492b1ca3301d06fcbe2899a8b42 assets\rogue_end\models\block\chorus_plank_stairs_outer.json
 3b74d90b2f05ac841e51f7998e0eaa9599a06143 assets\rogue_end\models\item\dry_end_grass.json

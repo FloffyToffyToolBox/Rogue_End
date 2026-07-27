@@ -26,5 +26,26 @@ public class ModWorldGeneration {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_HIGHLANDS),
                 GenerationStep.Feature.VEGETAL_DECORATION,
                 ModPlacedFeatures.END_SHRUB);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_HIGHLANDS),
+                GenerationStep.Feature.VEGETAL_DECORATION,
+                ModPlacedFeatures.END_FERN);
+
+        //end wilds
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomes.ENDER_WILDS),
+                GenerationStep.Feature.VEGETAL_DECORATION,
+                ModPlacedFeatures.END_GRASS);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomes.ENDER_WILDS),
+                GenerationStep.Feature.VEGETAL_DECORATION,
+                ModPlacedFeatures.END_FERN);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomes.ENDER_WILDS),
+                GenerationStep.Feature.VEGETAL_DECORATION,
+                ModPlacedFeatures.ENDER_TUBES);
+
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomes.CORRUPTED_FOREST),
+                GenerationStep.Feature.VEGETAL_DECORATION,
+                ModPlacedFeatures.CORRUPTED_TUBES);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomes.CORRUPTED_FOREST),
+                GenerationStep.Feature.VEGETAL_DECORATION,
+                ModPlacedFeatures.CHORAL_BLOOMS);
     }
 }

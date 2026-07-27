@@ -1,10 +1,10 @@
-// 1.21	2026-07-27T17:04:17.2275033	Rogue End/Tags for minecraft:block
+// 1.21	2026-07-27T18:49:14.498369	Rogue End/Tags for minecraft:block
 21583be030b01df1692cc57222eddd42ca65f346 data\rogue_end\tags\block\dries_sponge.json
 808eeabd8caec42f82492aa3b87fbb21106482e8 data\minecraft\tags\block\logs.json
 f31db6adb618d6e429ab8cf11496868ae7c6bd30 data\minecraft\tags\block\wooden_slabs.json
 bb9d339b9cd2db00c728023d2e03e54c4ff4905f data\minecraft\tags\block\walls.json
 75ee0584ac0c92cfaa24dc14df94c264cb4ba0b8 data\minecraft\tags\block\fence_gates.json
-1dc9b3526c2427dbb80f90b0b14b45f6b11da061 data\rogue_end\tags\block\magma_root_placeable_on.json
+295fe4e54da820fda5b26d5e3a926a87abd3f5b0 data\rogue_end\tags\block\magma_root_placeable_on.json
 cf7abce4eb89ef56133f3970e15b25e8a6b8c6f3 data\rogue_end\tags\block\chorus_plant_can_replace.json
 808eeabd8caec42f82492aa3b87fbb21106482e8 data\rogue_end\tags\block\chorus_logs.json
 2d67f8b90ebcebb29e47631faf0aca122f24d679 data\minecraft\tags\block\mineable\pickaxe.json

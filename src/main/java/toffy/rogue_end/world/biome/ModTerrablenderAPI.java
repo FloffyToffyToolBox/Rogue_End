@@ -9,6 +9,8 @@ import terrablender.api.TerraBlenderApi;
 public class ModTerrablenderAPI implements TerraBlenderApi {
     @Override
     public void onTerraBlenderInitialized() {
-        EndBiomeRegistry.registerHighlandsBiome(ModBiomes.CORRUPTED_FOREST, 10);
+        EndBiomeRegistry.registerHighlandsBiome(ModBiomes.CORRUPTED_FOREST, 1);
+        EndBiomeRegistry.registerHighlandsBiome(ModBiomes.ENDER_WILDS, 1);
+        EndBiomeRegistry.registerHighlandsBiome(ModBiomes.END_DELTAS, 1);
     }
 }

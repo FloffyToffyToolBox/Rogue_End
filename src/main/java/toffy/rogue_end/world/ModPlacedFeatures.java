@@ -19,21 +19,36 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> END_BONE_BLOBS = registerKey("end_bone_blobs");
 
     public static final RegistryKey<PlacedFeature> CHORAL_BLOOMS = registerKey("choral_blooms");
+
+
+
+    public static final RegistryKey<PlacedFeature> CORRUPTED_TUBES = registerKey("corrupted_tubes");
+    public static final RegistryKey<PlacedFeature> ENDER_TUBES = registerKey("ender_tubes");
+    public static final RegistryKey<PlacedFeature> END_GRASS = registerKey("end_grass");
     public static final RegistryKey<PlacedFeature> END_SHRUB = registerKey("end_shrub");
+    public static final RegistryKey<PlacedFeature> END_FERN = registerKey("end_fern");
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
-        RegistryEntry<ConfiguredFeature<?, ?>> registryEntry1 = configuredFeatures.getOrThrow(ModConfiguredFeatures.ENDSLATE_BLOB_KEY);
-        RegistryEntry<ConfiguredFeature<?, ?>> registryEntry2 = configuredFeatures.getOrThrow(ModConfiguredFeatures.DARK_PURPUR_BLOB_KEY);
-        RegistryEntry<ConfiguredFeature<?, ?>> registryEntry3 = configuredFeatures.getOrThrow(ModConfiguredFeatures.END_BONE_KEY);
+        RegistryEntry<ConfiguredFeature<?, ?>> endslate_blobs = configuredFeatures.getOrThrow(ModConfiguredFeatures.ENDSLATE_BLOB_KEY);
+        RegistryEntry<ConfiguredFeature<?, ?>> dark_purpur_blobs = configuredFeatures.getOrThrow(ModConfiguredFeatures.DARK_PURPUR_BLOB_KEY);
+        RegistryEntry<ConfiguredFeature<?, ?>> end_bone_blobs = configuredFeatures.getOrThrow(ModConfiguredFeatures.END_BONE_KEY);
 
-        RegistryEntry<ConfiguredFeature<?, ?>> registryEntry4 = configuredFeatures.getOrThrow(ModConfiguredFeatures.CHORAL_BLOOM_KEY);
-        RegistryEntry<ConfiguredFeature<?, ?>> registryEntry5 = configuredFeatures.getOrThrow(ModConfiguredFeatures.END_SHRUB_KEY);
-        PlacedFeatures.register(context, ENDSLATE_BLOBS, registryEntry1,  new PlacementModifier[]{CountPlacementModifier.of(25), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.aboveBottom(35)), BiomePlacementModifier.of()});
-        PlacedFeatures.register(context, DARK_PURPUR_BLOBS, registryEntry2,  new PlacementModifier[]{CountPlacementModifier.of(25), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.aboveBottom(25)), BiomePlacementModifier.of()});
-        PlacedFeatures.register(context, END_BONE_BLOBS, registryEntry3,  new PlacementModifier[]{CountPlacementModifier.of(25), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.aboveBottom(15)), BiomePlacementModifier.of()});
+        RegistryEntry<ConfiguredFeature<?, ?>> choral_blooms = configuredFeatures.getOrThrow(ModConfiguredFeatures.CHORAL_BLOOM_KEY);
+        RegistryEntry<ConfiguredFeature<?, ?>> corrupted_tubes = configuredFeatures.getOrThrow(ModConfiguredFeatures.CORRUPTED_TUBE_PATCH_KEY);
+        RegistryEntry<ConfiguredFeature<?, ?>> ender_tubes = configuredFeatures.getOrThrow(ModConfiguredFeatures.ENDER_TUBE_PATCH_KEY);
+        RegistryEntry<ConfiguredFeature<?, ?>> end_shrub = configuredFeatures.getOrThrow(ModConfiguredFeatures.END_SHRUB_KEY);
+        RegistryEntry<ConfiguredFeature<?, ?>> end_grass = configuredFeatures.getOrThrow(ModConfiguredFeatures.END_GRASS_KEY);
+        RegistryEntry<ConfiguredFeature<?, ?>> end_fern = configuredFeatures.getOrThrow(ModConfiguredFeatures.END_FERN_KEY);
+        PlacedFeatures.register(context, ENDSLATE_BLOBS, endslate_blobs,  new PlacementModifier[]{CountPlacementModifier.of(25), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.aboveBottom(35)), BiomePlacementModifier.of()});
+        PlacedFeatures.register(context, DARK_PURPUR_BLOBS, dark_purpur_blobs,  new PlacementModifier[]{CountPlacementModifier.of(25), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.aboveBottom(25)), BiomePlacementModifier.of()});
+        PlacedFeatures.register(context, END_BONE_BLOBS, end_bone_blobs,  new PlacementModifier[]{CountPlacementModifier.of(25), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.aboveBottom(15)), BiomePlacementModifier.of()});
 
-        PlacedFeatures.register(context, CHORAL_BLOOMS, registryEntry4, new PlacementModifier[]{RarityFilterPlacementModifier.of(32), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()});
-        PlacedFeatures.register(context, END_SHRUB, registryEntry5, new PlacementModifier[]{NoiseThresholdCountPlacementModifier.of(-0.8, 5, 10), SquarePlacementModifier.of(), PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP, BiomePlacementModifier.of()});
+        PlacedFeatures.register(context, CHORAL_BLOOMS, choral_blooms, new PlacementModifier[]{RarityFilterPlacementModifier.of(32), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()});
+        PlacedFeatures.register(context, CORRUPTED_TUBES, corrupted_tubes, new PlacementModifier[]{RarityFilterPlacementModifier.of(32), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()});
+        PlacedFeatures.register(context, ENDER_TUBES, ender_tubes, new PlacementModifier[]{RarityFilterPlacementModifier.of(32), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()});
+        PlacedFeatures.register(context, END_SHRUB, end_shrub, new PlacementModifier[]{NoiseThresholdCountPlacementModifier.of(-0.8, 5, 10), SquarePlacementModifier.of(), PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP, BiomePlacementModifier.of()});
+        PlacedFeatures.register(context, END_GRASS, end_grass, new PlacementModifier[]{NoiseThresholdCountPlacementModifier.of(-0.8, 5, 10), SquarePlacementModifier.of(), PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP, BiomePlacementModifier.of()});
+        PlacedFeatures.register(context, END_FERN, end_fern, new PlacementModifier[]{RarityFilterPlacementModifier.of(32), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()});
     }
 
 
