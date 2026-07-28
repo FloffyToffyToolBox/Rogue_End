@@ -22,6 +22,7 @@ public class ModItemGroups {
 
 
                     entries.add(ModItems.BACK_STABBER);
+                    entries.add(ModItems.CORRUPTED_VOID_AMULET);
                     entries.add(ModItems.ENDSTEEL_INGOT);
                     entries.add(ModItems.ENDERSENT_SPAWN_EGG);
 

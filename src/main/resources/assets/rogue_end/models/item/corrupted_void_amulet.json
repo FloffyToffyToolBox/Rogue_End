@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "rogue_end:item/corrupted_void_amulet"
+  }
+}
