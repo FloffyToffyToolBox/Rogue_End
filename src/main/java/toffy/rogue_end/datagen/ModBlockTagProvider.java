@@ -24,7 +24,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.END_BONE).add(ModBlocks.END_BONE_WALL).add(ModBlocks.END_BONE_SLAB).add(ModBlocks.END_BONE_STAIRS)
                 .add(ModBlocks.ENDSLATE)
                 .add(ModBlocks.DARK_PURPUR)
-                .add(ModBlocks.DARK_PURPUR_BRICKS).add(ModBlocks.DARK_PURPUR_BRICK_SLAB).add(ModBlocks.DARK_PURPUR_BRICK_STAIRS).add(ModBlocks.DARK_PURPUR_BRICK_WALL);
+                .add(ModBlocks.DARK_PURPUR_BRICKS).add(ModBlocks.DARK_PURPUR_BRICK_SLAB).add(ModBlocks.DARK_PURPUR_BRICK_STAIRS).add(ModBlocks.DARK_PURPUR_BRICK_WALL)
+                .add(ModBlocks.ENDSTEEL_ORE)
+                .add(ModBlocks.LICHENROOT).add(ModBlocks.ENDSTONE_PILLAR).add(ModBlocks.CHISELLED_ENDSTONE_PILLAR)
+                .add(ModBlocks.SMOOTH_ENDSTONE).add(ModBlocks.SMOOTH_ENDSTONE_WALL).add(ModBlocks.SMOOTH_ENDSTONE_SLAB).add(ModBlocks.SMOOTH_ENDSTONE_STAIRS)
+                .add(ModBlocks.PURPUR_WALL)
+                .add(ModBlocks.CHORAL_ENDSLATE).add(ModBlocks.END_MAGMA);
 
         getOrCreateTagBuilder(BlockTags.SLABS).add(ModBlocks.SMOOTH_ENDSTONE_SLAB).add(ModBlocks.END_BONE_SLAB).add(ModBlocks.DARK_PURPUR_BRICK_SLAB);
         getOrCreateTagBuilder(BlockTags.STAIRS).add(ModBlocks.SMOOTH_ENDSTONE_STAIRS).add(ModBlocks.END_BONE_STAIRS).add(ModBlocks.DARK_PURPUR_BRICK_STAIRS);

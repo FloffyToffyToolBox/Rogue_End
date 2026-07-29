@@ -13,6 +13,7 @@ import toffy.rogue_end.blocks.*;
 
 public class ModBlocks {
 
+    public static final Block END_MIASMA = registerMiasmaBlock("end_miasma",new Block(AbstractBlock.Settings.copy(Blocks.PURPLE_WOOL)));
     public static Block CORRUPTED_THORN = registerBlock("corrupted_thorn", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
     public static Block END_BUSH = registerBlock("end_bush", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
     public static Block END_SHRUB = registerBlock("end_shrub", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
@@ -109,6 +110,14 @@ public class ModBlocks {
     }
     public static Block registerBlock(String id, net.minecraft.block.Block block) {
         registerBlockItem(id, block);
+        return Registry.register(Registries.BLOCK, Identifier.of(RogueEnd.MOD_ID, id), block);
+    }
+    private static Item registerMiasmaBlockItem(String name, Block block) {
+        return Registry.register(Registries.ITEM, Identifier.of(RogueEnd.MOD_ID, name),
+                new MiasmaBlockItem(block, new Item.Settings()));
+    }
+    public static Block registerMiasmaBlock(String id, net.minecraft.block.Block block) {
+        registerMiasmaBlockItem(id, block);
         return Registry.register(Registries.BLOCK, Identifier.of(RogueEnd.MOD_ID, id), block);
     }
     public static Block registerHeadBlock(String id, net.minecraft.block.Block block) {

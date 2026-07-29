@@ -9,6 +9,17 @@
     "rogue_end:dark_purpur_bricks",
     "rogue_end:dark_purpur_brick_slab",
     "rogue_end:dark_purpur_brick_stairs",
-    "rogue_end:dark_purpur_brick_wall"
+    "rogue_end:dark_purpur_brick_wall",
+    "rogue_end:endsteel_ore",
+    "rogue_end:lichenroot",
+    "rogue_end:endstone_pillar",
+    "rogue_end:chiselled_endstone_pillar",
+    "rogue_end:smooth_endstone",
+    "rogue_end:smooth_endstone_wall",
+    "rogue_end:smooth_endstone_slab",
+    "rogue_end:smooth_endstone_stairs",
+    "rogue_end:purpur_wall",
+    "rogue_end:choral_endslate",
+    "rogue_end:end_magma"
   ]
 }

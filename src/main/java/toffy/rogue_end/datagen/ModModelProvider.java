@@ -43,6 +43,7 @@ public class ModModelProvider extends FabricModelProvider {
         CorruptedPlanksPool.pressurePlate(ModBlocks.CORRUPTED_PRESSURE_PLATE);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.YELLOW_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_MIASMA);
 
         blockStateModelGenerator.registerAxisRotated(ModBlocks.CHORUS_LOG, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.STRIPPED_CHORUS_LOG, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);

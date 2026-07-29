@@ -20,6 +20,7 @@ public class ModItemGroups {
                 .icon(() -> new ItemStack(ModBlocks.ENDSLATE))
                 .entries((displayContext, entries) -> {
 
+                    entries.add(ModBlocks.END_MIASMA);
 
                     entries.add(ModItems.BACK_STABBER);
                     entries.add(ModItems.CORRUPTED_VOID_AMULET);

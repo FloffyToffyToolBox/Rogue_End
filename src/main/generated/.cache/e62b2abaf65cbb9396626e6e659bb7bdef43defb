@@ -1,4 +1,4 @@
-// 1.21	2026-07-27T18:49:14.498369	Rogue End/Tags for minecraft:block
+// 1.21	2026-07-29T16:58:50.0133728	Rogue End/Tags for minecraft:block
 21583be030b01df1692cc57222eddd42ca65f346 data\rogue_end\tags\block\dries_sponge.json
 808eeabd8caec42f82492aa3b87fbb21106482e8 data\minecraft\tags\block\logs.json
 f31db6adb618d6e429ab8cf11496868ae7c6bd30 data\minecraft\tags\block\wooden_slabs.json
@@ -7,7 +7,7 @@ bb9d339b9cd2db00c728023d2e03e54c4ff4905f data\minecraft\tags\block\walls.json
 295fe4e54da820fda5b26d5e3a926a87abd3f5b0 data\rogue_end\tags\block\magma_root_placeable_on.json
 cf7abce4eb89ef56133f3970e15b25e8a6b8c6f3 data\rogue_end\tags\block\chorus_plant_can_replace.json
 808eeabd8caec42f82492aa3b87fbb21106482e8 data\rogue_end\tags\block\chorus_logs.json
-2d67f8b90ebcebb29e47631faf0aca122f24d679 data\minecraft\tags\block\mineable\pickaxe.json
+d6e8ad8d68bca6afa12660b7df8343c8eda69be4 data\minecraft\tags\block\mineable\pickaxe.json
 998d1f94e1e828a447e620b1c2dc98cc8db4ec57 data\minecraft\tags\block\climbable.json
 322d291543406269f0179f04bf26d647e418fe90 data\minecraft\tags\block\wooden_buttons.json
 00284e89b54e19d4ff449d1f70bbf62b28f2bbc7 data\minecraft\tags\block\slabs.json
