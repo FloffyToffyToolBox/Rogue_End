@@ -21,7 +21,11 @@ public class ModSurfaceRules {
                                 MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR,
                                 MaterialRules.sequence(
                                         CHORAL_ENDLSATE
-                                ))
+                                )),
+                                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR_WITH_SURFACE_DEPTH_RANGE_6,
+                                        MaterialRules.sequence(
+                                                ENDLSATE
+                                        ))
                         )
                 ),
                 MaterialRules.condition(

@@ -1,0 +1,27 @@
+{
+  "feature": "rogue_end:smooth_end_stone_blobs",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 10
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "max_inclusive": {
+          "above_bottom": 50
+        },
+        "min_inclusive": {
+          "above_bottom": 25
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

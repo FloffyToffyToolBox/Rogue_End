@@ -52,7 +52,6 @@ public class ChorusTrunkPlacer extends TrunkPlacer {
         if (j >= i) {
             ++j;
         }
-
         int k = this.branchCount.get(random);
         boolean bl = k == 3;
         boolean bl2 = k >= 2;

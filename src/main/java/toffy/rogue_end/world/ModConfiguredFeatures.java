@@ -1,6 +1,5 @@
 package toffy.rogue_end.world;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
@@ -9,27 +8,22 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DataPool;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
-import net.minecraft.util.math.intprovider.IntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
-import net.minecraft.util.math.intprovider.WeightedListIntProvider;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.*;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
-import net.minecraft.world.gen.trunk.CherryTrunkPlacer;
-import net.minecraft.world.gen.trunk.ForkingTrunkPlacer;
 import toffy.rogue_end.RogueEnd;
 import toffy.rogue_end.init.ModBlocks;
 import toffy.rogue_end.world.features.ChorusTrunkPlacer;
 import toffy.rogue_end.world.features.ModFeatures;
 
-import java.util.List;
-
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> ENDSLATE_BLOB_KEY = registerKey("endslate_blob");
     public static final RegistryKey<ConfiguredFeature<?,?>> DARK_PURPUR_BLOB_KEY = registerKey("dark_purpur_blob");
     public static final RegistryKey<ConfiguredFeature<?,?>> END_BONE_KEY = registerKey("end_bone");
+    public static final RegistryKey<ConfiguredFeature<?,?>> SMOOTH_END_STONE_BLOBS = registerKey("smooth_end_stone_blobs");
 
 
     public static final RegistryKey<ConfiguredFeature<?,?>> CORRUPTED_TUBE_PATCH_KEY = registerKey("corrupted_tube_patch");
@@ -42,11 +36,11 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> END_DELTA_KEY = registerKey("end_delta");
     public static final RegistryKey<ConfiguredFeature<?,?>> DARK_COLUMN_KEY = registerKey("dark_column");
 
-    public static final RegistryKey<ConfiguredFeature<?,?>> CHORUS_TREE_KEY = registerKey("chorus_tree");
+    public static final RegistryKey<ConfiguredFeature<?,?>> YELLOW_TREE_KEY = registerKey("chorus_tree");
 
     private static TreeFeatureConfig.Builder chorus() {
         return (new TreeFeatureConfig.Builder(BlockStateProvider.of(ModBlocks.CHORUS_LOG),
-                new ChorusTrunkPlacer(7, 2, 0, UniformIntProvider.create(1,2), UniformIntProvider.create(1, 5), UniformIntProvider.create(-2, -1), UniformIntProvider.create(-3, -2)), BlockStateProvider.of(ModBlocks.CHORUS_LEAVES),
+                new ChorusTrunkPlacer(7, 2, 0, UniformIntProvider.create(1,2), UniformIntProvider.create(1, 5), UniformIntProvider.create(-2, -1), UniformIntProvider.create(-3, -2)), BlockStateProvider.of(ModBlocks.YELLOW_LEAVES),
                 new LargeOakFoliagePlacer(UniformIntProvider.create(1,2), ConstantIntProvider.create(0), 3),
                 new TwoLayersFeatureSize(1, 0, 2))).ignoreVines();
     }
@@ -63,17 +57,17 @@ public class ModConfiguredFeatures {
         register(context,END_FERN_KEY,Feature.RANDOM_PATCH, ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
                 new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(DataPool.<BlockState>builder().add(ModBlocks.TALL_END_FERN.getDefaultState(), 1).add(ModBlocks.END_FERN.getDefaultState(), 3)))));
         ConfiguredFeatures.register(context, ENDSLATE_BLOB_KEY, Feature.NETHERRACK_REPLACE_BLOBS, new ReplaceBlobsFeatureConfig(Blocks.END_STONE.getDefaultState(), ModBlocks.ENDSLATE.getDefaultState(), UniformIntProvider.create(3, 7)));
-
+        ConfiguredFeatures.register(context, SMOOTH_END_STONE_BLOBS, Feature.NETHERRACK_REPLACE_BLOBS, new ReplaceBlobsFeatureConfig(Blocks.END_STONE.getDefaultState(), ModBlocks.SMOOTH_ENDSTONE.getDefaultState(), UniformIntProvider.create(7, 11)));
         ConfiguredFeatures.register(context, DARK_PURPUR_BLOB_KEY, Feature.NETHERRACK_REPLACE_BLOBS, new ReplaceBlobsFeatureConfig(Blocks.END_STONE.getDefaultState(), ModBlocks.DARK_PURPUR.getDefaultState(), UniformIntProvider.create(4, 8)));
         ConfiguredFeatures.register(context, END_BONE_KEY, Feature.NETHERRACK_REPLACE_BLOBS, new ReplaceBlobsFeatureConfig(Blocks.END_STONE.getDefaultState(), ModBlocks.END_BONE.getDefaultState(), UniformIntProvider.create(5, 9)));
 
-        register(context, CHORUS_TREE_KEY, Feature.TREE, chorus().build());
+        register(context, YELLOW_TREE_KEY, Feature.TREE, chorus().build());
 
         register(context, MAGMA_ROOT_PATCH_KEY, Feature.RANDOM_PATCH, ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.MAGMA_ROOTS))));
         register(context, CHORAL_BLOOM_KEY, Feature.RANDOM_PATCH, ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.CHORAL_BLOOM))));
         register(context, CORRUPTED_TUBE_PATCH_KEY, Feature.RANDOM_PATCH, ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.CORRUPTED_TUBES))));
-        register(context, END_DELTA_KEY, Feature.DELTA_FEATURE, new DeltaFeatureConfig(Blocks.LAVA.getDefaultState(), ModBlocks.END_MAGMA.getDefaultState(), UniformIntProvider.create(3, 7), UniformIntProvider.create(0, 2)));
-        register(context, DARK_COLUMN_KEY, ModFeatures.END_COLUMNS_FEATURE, new BasaltColumnsFeatureConfig(ConstantIntProvider.create(1), UniformIntProvider.create(1, 2)));
+        register(context, END_DELTA_KEY, Feature.DELTA_FEATURE, new DeltaFeatureConfig(ModBlocks.END_MAGMA.getDefaultState(), ModBlocks.END_MAGMA.getDefaultState(), UniformIntProvider.create(1, 4), UniformIntProvider.create(0, 2)));
+        register(context, DARK_COLUMN_KEY, ModFeatures.END_COLUMNS_FEATURE, new BasaltColumnsFeatureConfig(ConstantIntProvider.create(1), UniformIntProvider.create(1, 3)));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
