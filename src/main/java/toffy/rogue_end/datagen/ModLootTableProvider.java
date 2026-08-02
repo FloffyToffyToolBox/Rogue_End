@@ -78,6 +78,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.ENDSTEEL_ORE, oreDrops(ModBlocks.ENDSTEEL_ORE, ModItems.ENDSTEEL_INGOT));
 
+        addDrop(ModBlocks.BOUNCE_BLOOM);
         addDrop(ModBlocks.END_BONE);
         addDrop(ModBlocks.END_BONE_WALL);
         addDrop(ModBlocks.END_BONE_SLAB, (slabDrops(ModBlocks.END_BONE_SLAB)));

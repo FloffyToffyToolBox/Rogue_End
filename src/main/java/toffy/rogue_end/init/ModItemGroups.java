@@ -56,6 +56,7 @@ public class ModItemGroups {
                     entries.add(ModBlocks.END_MAGMA);
 
 
+                    entries.add(ModBlocks.BOUNCE_BLOOM);
                     entries.add(ModBlocks.CORRUPTED_THORN);
                     entries.add(ModBlocks.END_BUSH);
                     entries.add(ModBlocks.END_SHRUB);

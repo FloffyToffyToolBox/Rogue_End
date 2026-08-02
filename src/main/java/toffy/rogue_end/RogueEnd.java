@@ -24,6 +24,7 @@ public class RogueEnd implements ModInitializer {
 	public void onInitialize() {
 		ModItems.register();
 		ModComponentTypes.register();
+		ModSoundEvents.register();
 		ModBlocks.register();
 		ModFeatures.register();
 		ModBlockTags.register();

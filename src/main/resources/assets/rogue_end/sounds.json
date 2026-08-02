@@ -1,0 +1,14 @@
+{
+  "bounce_bloom_jump": {
+    "subtitle": "sounds.rogue_end.bounce_bloom_jump",
+    "sounds": [
+      "rogue_end:bounce_bloom_jump"
+    ]
+  },
+  "bounce_bloom_land": {
+    "subtitle": "sounds.rogue_end.bounce_bloom_land",
+    "sounds": [
+      "rogue_end:bounce_bloom_land"
+    ]
+  }
+}

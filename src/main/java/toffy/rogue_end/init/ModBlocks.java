@@ -1,6 +1,7 @@
 package toffy.rogue_end.init;
 
 import net.minecraft.block.*;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -12,6 +13,7 @@ import toffy.rogue_end.RogueEnd;
 import toffy.rogue_end.blocks.*;
 
 public class ModBlocks {
+    public static Block BOUNCE_BLOOM = registerBlock("bounce_bloom", new BounceBloomBlock(AbstractBlock.Settings.copy(Blocks.OCHRE_FROGLIGHT).breakInstantly().jumpVelocityMultiplier(2).sounds(ModSoundEvents.BOUNCE_BLOOM_SOUNDS).nonOpaque().suffocates(Blocks::never).solidBlock(Blocks::never).pistonBehavior(PistonBehavior.DESTROY)));
 
     public static final Block END_MIASMA = registerMiasmaBlock("end_miasma",new Block(AbstractBlock.Settings.copy(Blocks.PURPLE_WOOL)));
     public static Block CORRUPTED_THORN = registerBlock("corrupted_thorn", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
