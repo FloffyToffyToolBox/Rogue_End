@@ -1,4 +1,4 @@
-// 1.21	2026-08-02T16:09:55.6893996	Rogue End/Model Definitions
+// 1.21	2026-08-03T23:19:27.1591722	Rogue End/Model Definitions
 c8f4498867ab82bc38d000ef5bc9544fa882f523 assets\rogue_end\blockstates\end_fern.json
 efe0ed2079391193fc98189843fb67e50cec7774 assets\rogue_end\blockstates\corrupted_fence_gate.json
 68bb0b1e3f58d707cb409e74c1fa0748026a310a assets\rogue_end\blockstates\corrupted_planks.json
@@ -152,8 +152,8 @@ d4bc47af3f1f4c4d0c4a97ee247785c3c0250d6d assets\rogue_end\models\block\corrupted
 d11f7a9fd5cd1fb522860458657514f44340ba6a assets\rogue_end\models\block\chorus_plank_slab_top.json
 72dd5198b29cf5089b0f801c806ecb8d124deb62 assets\rogue_end\models\item\corrupted_button.json
 4080c5bdf3d6c542071a1abd29c067812f9a1937 assets\rogue_end\models\block\end_bone_stairs_outer.json
-2f660edb2f004a238797446059eec6df58960a91 assets\rogue_end\blockstates\chorus_plank_stairs.json
 77dfac033b39c06f60d8f0a02d99cda2381a76bf assets\rogue_end\blockstates\corrupted_pressure_plate.json
+2f660edb2f004a238797446059eec6df58960a91 assets\rogue_end\blockstates\chorus_plank_stairs.json
 9db3834c71873b209946fed89c1f708056ef5b59 assets\rogue_end\blockstates\endstone_pillar.json
 9ea8a88888ce866fccfb12662f02fbc8336debfb assets\rogue_end\blockstates\corrupted_tubes.json
 ab78a7928680155e07b27d05b4e7a4e0e2b1a46b assets\rogue_end\models\item\short_ender_tubes.json

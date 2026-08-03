@@ -4,10 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
-import toffy.rogue_end.datagen.ModLootTableProvider;
-import toffy.rogue_end.datagen.ModModelProvider;
-import toffy.rogue_end.datagen.ModBlockTagProvider;
-import toffy.rogue_end.datagen.ModRegistryDataGenerator;
+import toffy.rogue_end.datagen.*;
 import toffy.rogue_end.world.ModConfiguredFeatures;
 import toffy.rogue_end.world.ModPlacedFeatures;
 import toffy.rogue_end.world.biome.ModBiomes;
@@ -20,6 +17,7 @@ public class RogueEndDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModBlockTagProvider::new);
 		pack.addProvider(ModLootTableProvider::new);
 		pack.addProvider(ModRegistryDataGenerator::new);
+		pack.addProvider(ModLanguageProvider::new);
 	}
 	@Override
 	public void buildRegistry(RegistryBuilder registryBuilder){

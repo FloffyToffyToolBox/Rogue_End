@@ -88,7 +88,7 @@ public class BackstabberItem extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-        tooltip.add(Text.translatable("tooltip.fallfest.hoglin_dagger.tooltip").withColor(43520));
+        tooltip.add(Text.translatable("tooltip.rogue_end.backstabber.tooltip").withColor(43520));
         super.appendTooltip(stack, context, tooltip, type);
     }
 
