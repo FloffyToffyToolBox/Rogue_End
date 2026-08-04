@@ -3,6 +3,7 @@ package toffy.rogue_end.init;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -23,6 +24,17 @@ public class ModItemGroups {
                     entries.add(ModBlocks.END_MIASMA);
 
                     entries.add(ModItems.BACK_STABBER);
+                    entries.add(ModItems.ENDSTEEL_SWORD);
+                    entries.add(ModItems.ENDSTEEL_AXE);
+                    entries.add(ModItems.ENDSTEEL_PICKAXE);
+                    entries.add(ModItems.ENDSTEEL_SHOVEL);
+                    entries.add(ModItems.ENDSTEEL_HOE);
+
+                    entries.add(ModItems.ENDSTEEL_BOOTS);
+                    entries.add(ModItems.ENDSTEEL_LEGGINGS);
+                    entries.add(ModItems.ENDSTEEL_CHESTPLATE);
+                    entries.add(ModItems.ENDSTEEL_HELMET);
+
                     entries.add(ModItems.CORRUPTED_VOID_AMULET);
                     entries.add(ModItems.ENDSTEEL_INGOT);
                     entries.add(ModItems.ENDERSENT_SPAWN_EGG);

@@ -4,7 +4,9 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.client.*;
+import net.minecraft.item.Items;
 import toffy.rogue_end.init.ModBlocks;
+import toffy.rogue_end.init.ModItems;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -70,6 +72,16 @@ public class ModModelProvider extends FabricModelProvider {
     }
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-    }
+        itemModelGenerator.register(ModItems.ENDSTEEL_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.ENDSTEEL_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.ENDSTEEL_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.ENDSTEEL_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.ENDSTEEL_HOE, Models.HANDHELD);
 
+
+        itemModelGenerator.register(ModItems.ENDSTEEL_BOOTS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ENDSTEEL_HELMET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ENDSTEEL_CHESTPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ENDSTEEL_LEGGINGS, Models.GENERATED);
+    }
 }

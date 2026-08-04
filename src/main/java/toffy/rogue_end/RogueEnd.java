@@ -29,6 +29,7 @@ public class RogueEnd implements ModInitializer {
 		ModFeatures.register();
 		ModBlockTags.register();
 		ModItemGroups.setup();
+		ModArmourMaterials.register();
 		ModTrunkPlacerType.register();
 		StrippableBlockRegistry.register(ModBlocks.CHORUS_LOG,ModBlocks.STRIPPED_CHORUS_LOG);
 		ModEntities.registerModEntities();
