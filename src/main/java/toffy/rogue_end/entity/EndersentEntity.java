@@ -52,7 +52,7 @@ public class EndersentEntity extends HostileEntity {
         this.setPathfindingPenalty(PathNodeType.WATER, -1.0F);
     }
     public static DefaultAttributeContainer.Builder createEndersentAttributes() {
-        return HostileEntity.createHostileAttributes().add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE,0.95).add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.25).add(EntityAttributes.GENERIC_MAX_HEALTH, 300.0).add(EntityAttributes.GENERIC_FOLLOW_RANGE, 40.0).add(EntityAttributes.GENERIC_ARMOR, 4.0);
+        return HostileEntity.createHostileAttributes().add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE,0.95).add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.35).add(EntityAttributes.GENERIC_MAX_HEALTH, 300.0).add(EntityAttributes.GENERIC_FOLLOW_RANGE, 40.0).add(EntityAttributes.GENERIC_ARMOR, 4.0);
     }
     @Override
     protected void initGoals() {
@@ -298,7 +298,7 @@ public class EndersentEntity extends HostileEntity {
 
         public boolean canStart() {
             long l = this.mob.getWorld().getTime();
-            if (l - this.lastUpdateTime < 20L) {
+            if (l - this.lastUpdateTime < 10L) {
                 return false;
             } else {
                 this.lastUpdateTime = l;
@@ -339,7 +339,8 @@ public class EndersentEntity extends HostileEntity {
         public void tick() {
             if (mob.getTarget()!=null)this.mob.getLookControl().lookAt(mob.getTarget(), 30.0F, 30.0F);
             if (progress==15){
-                this.mob.getWorld().createExplosion(this.mob, (DamageSource)null, new AdvancedExplosionBehavior(false, true, Optional.of(2F), Registries.BLOCK.getEntryList(BlockTags.BLOCKS_WIND_CHARGE_EXPLOSIONS).map(Function.identity())), this.mob.getX(), this.mob.getY(), this.mob.getZ(), 3F, false, World.ExplosionSourceType.TRIGGER, ParticleTypes.GUST_EMITTER_SMALL, ParticleTypes.GUST_EMITTER_LARGE, SoundEvents.ENTITY_WIND_CHARGE_WIND_BURST);
+
+                this.mob.getWorld().createExplosion(this.mob, (DamageSource)null, new AdvancedExplosionBehavior(false, true, Optional.of(2F), Registries.BLOCK.getEntryList(BlockTags.BLOCKS_WIND_CHARGE_EXPLOSIONS).map(Function.identity())), this.mob.getX(), this.mob.getY(), this.mob.getZ(), 2F, false, World.ExplosionSourceType.TRIGGER, ParticleTypes.GUST_EMITTER_SMALL, ParticleTypes.GUST_EMITTER_LARGE, SoundEvents.ENTITY_WIND_CHARGE_WIND_BURST);
             }
             progress++;
         }
