@@ -22,4 +22,8 @@ public class ItemMixin {
     protected void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType type, CallbackInfo ci) {
         //Leave empty
     }
+    @Inject(method = "hasGlint", at = @At("RETURN"),cancellable = true)
+    protected void hasGlint(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
+        //Leave empty
+    }
 }

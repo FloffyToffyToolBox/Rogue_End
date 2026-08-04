@@ -1,0 +1,11 @@
+{
+  "values": [
+    "rogue_end:end_grass",
+    "rogue_end:end_shrub",
+    "rogue_end:end_bush",
+    "rogue_end:dry_end_shrub",
+    "rogue_end:dry_end_grass",
+    "rogue_end:end_fern",
+    "rogue_end:tall_end_fern"
+  ]
+}

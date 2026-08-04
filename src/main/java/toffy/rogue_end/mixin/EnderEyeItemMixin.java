@@ -74,15 +74,24 @@ public class EnderEyeItemMixin extends ItemMixin {
                 cir.setReturnValue(ActionResult.success(world.isClient));
             }
         }
-}
+    }
     @Override
     protected void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType type, CallbackInfo ci) {
         EnderEyeComponent enderEyeComponent = (EnderEyeComponent)stack.get(ModComponentTypes.ENDER_EYE);
         if (enderEyeComponent!=null) {
-                if (enderEyeComponent.target().isPresent()) {
-                tooltip.add(Text.of(String.valueOf(enderEyeComponent.target().get().pos())));
+            if (enderEyeComponent.target().isPresent()) {
+                    BlockPos pos = enderEyeComponent.target().get().pos();
+                    int x =pos.getX();
+                    int y =pos.getY();
+                    int z =pos.getZ();
+                tooltip.add(Text.of("X : " + String.valueOf(x) + ", Y : " + String.valueOf(y) + ", Z : " + String.valueOf(z)));
                 Objects.requireNonNull(tooltip);
             }
         }
+    }
+
+    @Override
+    protected void hasGlint(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
+        if (stack.contains(ModComponentTypes.ENDER_EYE)) cir.setReturnValue(true);
     }
 }

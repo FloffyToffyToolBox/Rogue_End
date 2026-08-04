@@ -49,5 +49,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.PLANKS).add(ModBlocks.CHORUS_PLANKS).add(ModBlocks.CORRUPTED_PLANKS);
         getOrCreateTagBuilder(ModBlockTags.CHORUS_LOGS).add(ModBlocks.CHORUS_LOG).add(ModBlocks.STRIPPED_CHORUS_LOG);
         getOrCreateTagBuilder(ModBlockTags.CHORUS_PLANT_CAN_REPLACE).add(ModBlocks.END_GRASS).add(ModBlocks.DRY_END_GRASS).add(ModBlocks.DRY_END_SHRUB).add(ModBlocks.END_SHRUB).add(ModBlocks.END_BUSH);
+        getOrCreateTagBuilder(BlockTags.SWORD_EFFICIENT).add(ModBlocks.END_GRASS,ModBlocks.END_SHRUB,ModBlocks.END_BUSH,ModBlocks.DRY_END_SHRUB,ModBlocks.DRY_END_GRASS,ModBlocks.END_FERN,ModBlocks.TALL_END_FERN);
+        getOrCreateTagBuilder(BlockTags.AXE_MINEABLE).add(ModBlocks.END_GRASS,ModBlocks.END_SHRUB,ModBlocks.END_BUSH,ModBlocks.DRY_END_SHRUB,ModBlocks.DRY_END_GRASS,ModBlocks.END_FERN,ModBlocks.TALL_END_FERN);
+        getOrCreateTagBuilder(BlockTags.REPLACEABLE).add(ModBlocks.END_GRASS,ModBlocks.END_SHRUB,ModBlocks.END_BUSH,ModBlocks.DRY_END_SHRUB,ModBlocks.DRY_END_GRASS,ModBlocks.END_FERN,ModBlocks.TALL_END_FERN);
     }
 }

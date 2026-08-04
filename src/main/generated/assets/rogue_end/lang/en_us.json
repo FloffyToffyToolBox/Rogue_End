@@ -35,6 +35,7 @@
   "block.rogue_end.end_fern": "End Fern",
   "block.rogue_end.end_grass": "End Grass",
   "block.rogue_end.end_magma": "End Magma",
+  "block.rogue_end.end_miasma": "End Miasma",
   "block.rogue_end.end_shrub": "End Shrub",
   "block.rogue_end.ender_ash": "Ender Ash",
   "block.rogue_end.ender_link": "Ender Link",
@@ -61,5 +62,7 @@
   "item.rogue_end.endersent_spawn_egg": "Endersent Spawn Egg",
   "item.rogue_end.endsteel_ingot": "Endsteel Ingot",
   "item.rogue_end.purified_void_amulet": "Purified Void Amulet",
+  "sounds.rogue_end.bounce_bloom_jump": "Player jumps on Bounce Bloom",
+  "sounds.rogue_end.bounce_bloom_land": "Player lands on Bounce Bloom",
   "tooltip.rogue_end.backstabber.tooltip": "+Backstab Damage"
 }

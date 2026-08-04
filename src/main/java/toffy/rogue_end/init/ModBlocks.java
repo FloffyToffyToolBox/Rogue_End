@@ -20,12 +20,12 @@ public class ModBlocks {
                     .suffocates(Blocks::never).solidBlock(Blocks::never).pistonBehavior(PistonBehavior.DESTROY).nonOpaque().blockVision(Blocks::never)));
 
     public static final Block END_MIASMA = registerMiasmaBlock("end_miasma",new Block(AbstractBlock.Settings.copy(Blocks.PURPLE_WOOL)));
-    public static Block CORRUPTED_THORN = registerBlock("corrupted_thorn", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
-    public static Block END_BUSH = registerBlock("end_bush", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
-    public static Block END_SHRUB = registerBlock("end_shrub", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
-    public static Block DRY_END_SHRUB = registerBlock("dry_end_shrub", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
-    public static Block END_GRASS = registerBlock("end_grass", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
-    public static Block DRY_END_GRASS = registerBlock("dry_end_grass", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
+    public static Block CORRUPTED_THORN = registerBlock("corrupted_thorn", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE).replaceable()));
+    public static Block END_BUSH = registerBlock("end_bush", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE).replaceable()));
+    public static Block END_SHRUB = registerBlock("end_shrub", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE).replaceable()));
+    public static Block DRY_END_SHRUB = registerBlock("dry_end_shrub", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE).replaceable()));
+    public static Block END_GRASS = registerBlock("end_grass", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE).replaceable()));
+    public static Block DRY_END_GRASS = registerBlock("dry_end_grass", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE).replaceable()));
     public static Block CHORAL_BLOOM = registerBlock("choral_bloom",new ChoralBloomBlock(AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT).luminance((state) -> {
         return 3;
     })));

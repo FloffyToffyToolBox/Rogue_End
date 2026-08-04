@@ -11,6 +11,7 @@ import net.minecraft.registry.RegistryWrapper;
 import toffy.rogue_end.init.ModBlocks;
 import toffy.rogue_end.init.ModItemGroups;
 import toffy.rogue_end.init.ModItems;
+import toffy.rogue_end.init.ModSoundEvents;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -22,6 +23,10 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder) {
+
+        translationBuilder.add("sounds.rogue_end.bounce_bloom_jump","Player jumps on Bounce Bloom");
+        translationBuilder.add("sounds.rogue_end.bounce_bloom_land","Player lands on Bounce Bloom");
+
         translationBuilder.add(ModItems.BACK_STABBER,"Back Stabber");
         translationBuilder.add("tooltip.rogue_end.backstabber.tooltip","+Backstab Damage");
         translationBuilder.add(ModItems.CORRUPTED_VOID_AMULET,"Corrupted Void Amulet");
@@ -44,6 +49,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 
         translationBuilder.add(ModBlocks.MAGMA_ROOTS,"Magma Roots");
         translationBuilder.add(ModBlocks.END_MAGMA,"End Magma");
+        translationBuilder.add(ModBlocks.END_MIASMA,"End Miasma");
 
         translationBuilder.add(ModBlocks.BOUNCE_BLOOM,"Bounce Bloom");
         translationBuilder.add(ModBlocks.CORRUPTED_THORN,"Corrupted Thorn");
