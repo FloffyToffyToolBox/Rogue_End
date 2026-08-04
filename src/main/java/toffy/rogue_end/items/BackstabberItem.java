@@ -80,10 +80,8 @@ public class BackstabberItem extends Item {
     }
 
     public boolean ShouldBackStab(Entity target, Entity attacker) {
-        Vector3f bodyDir = new Vector3f((float) Math.cos(target.getBodyYaw()), (float) 0,(float)Math.sin(target.getBodyYaw())).normalize();
         Vector3f headDir = target.getHorizontalFacing().getUnitVector().normalize();
-        Vector3f avgDir = new Vector3f(bodyDir.x+headDir.x,bodyDir.y+headDir.y,bodyDir.z+headDir.z);
-        return (avgDir.normalize().dot(Objects.requireNonNull(attacker).getHorizontalFacing().getUnitVector().normalize())>0.25);
+        return (headDir.normalize().dot(Objects.requireNonNull(attacker).getHorizontalFacing().getUnitVector().normalize())>0.125);
     }
 
     @Override
@@ -93,7 +91,7 @@ public class BackstabberItem extends Item {
     }
 
     public float getBonusAttackDamage(Entity target, float baseAttackDamage, DamageSource damageSource) {
-        return ShouldBackStab(target, damageSource.getAttacker())? 10000 : 0;
+        return ShouldBackStab(target, damageSource.getAttacker())? 10 : 0;
     }
 
     @Override
