@@ -1,7 +1,20 @@
 {
   "variants": {
-    "": {
-      "model": "rogue_end:block/yellowroot"
-    }
+    "" : [
+      {
+        "model": "rogue_end:block/yellowroot"
+      },
+      {
+        "model": "rogue_end:block/yellowroot_mirrored"
+      },
+      {
+        "model": "rogue_end:block/yellowroot",
+        "y": 90
+      },
+      {
+        "model": "rogue_end:block/yellowroot_mirrored",
+        "y": 90
+      }
+    ]
   }
 }

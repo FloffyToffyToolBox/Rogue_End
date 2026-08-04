@@ -10,6 +10,7 @@ import toffy.rogue_end.init.ModBlocks;
 public class ModSurfaceRules {
     static MaterialRule CHORAL_ENDLSATE = MaterialRules.block(ModBlocks.CHORAL_ENDSLATE.getDefaultState());
     static MaterialRule LICHENROOT = MaterialRules.block(ModBlocks.LICHENROOT.getDefaultState());
+    static MaterialRule SMOOTH_ENDSTONE = MaterialRules.block(ModBlocks.SMOOTH_ENDSTONE.getDefaultState());
     static MaterialRule DARK_PURPUR = MaterialRules.block(ModBlocks.DARK_PURPUR.getDefaultState());
     static MaterialRule ENDLSATE = MaterialRules.block(ModBlocks.ENDSLATE.getDefaultState());
     public static MaterialRule end()
@@ -34,6 +35,10 @@ public class ModSurfaceRules {
                                 MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR,
                                         MaterialRules.sequence(
                                                 LICHENROOT
+                                        )),
+                                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR_WITH_SURFACE_DEPTH_RANGE_6,
+                                        MaterialRules.sequence(
+                                                SMOOTH_ENDSTONE
                                         ))
                         )
                 ),

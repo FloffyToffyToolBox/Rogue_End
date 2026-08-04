@@ -6,6 +6,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.ColorCode;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
@@ -13,7 +14,10 @@ import toffy.rogue_end.RogueEnd;
 import toffy.rogue_end.blocks.*;
 
 public class ModBlocks {
-    public static Block BOUNCE_BLOOM = registerBlock("bounce_bloom", new BounceBloomBlock(AbstractBlock.Settings.copy(Blocks.OCHRE_FROGLIGHT).breakInstantly().jumpVelocityMultiplier(2).sounds(ModSoundEvents.BOUNCE_BLOOM_SOUNDS).nonOpaque().suffocates(Blocks::never).solidBlock(Blocks::never).pistonBehavior(PistonBehavior.DESTROY)));
+    public static Block BOUNCE_BLOOM = registerBlock("bounce_bloom", new BounceBloomBlock(
+            AbstractBlock.Settings.create().mapColor(MapColor.PALE_YELLOW).strength(0.3F).luminance((state) -> {return 15;})
+                    .sounds(BlockSoundGroup.FROGLIGHT).breakInstantly().jumpVelocityMultiplier(2).sounds(ModSoundEvents.BOUNCE_BLOOM_SOUNDS)
+                    .suffocates(Blocks::never).solidBlock(Blocks::never).pistonBehavior(PistonBehavior.DESTROY).nonOpaque().blockVision(Blocks::never)));
 
     public static final Block END_MIASMA = registerMiasmaBlock("end_miasma",new Block(AbstractBlock.Settings.copy(Blocks.PURPLE_WOOL)));
     public static Block CORRUPTED_THORN = registerBlock("corrupted_thorn", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));

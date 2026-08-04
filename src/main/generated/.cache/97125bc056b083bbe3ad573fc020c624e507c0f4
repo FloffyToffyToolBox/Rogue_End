@@ -1,4 +1,4 @@
-// 1.21	2026-08-04T15:58:05.7455762	Rogue End/Model Definitions
+// 1.21	2026-08-04T19:14:06.0139127	Rogue End/Model Definitions
 c8f4498867ab82bc38d000ef5bc9544fa882f523 assets\rogue_end\blockstates\end_fern.json
 efe0ed2079391193fc98189843fb67e50cec7774 assets\rogue_end\blockstates\corrupted_fence_gate.json
 68bb0b1e3f58d707cb409e74c1fa0748026a310a assets\rogue_end\blockstates\corrupted_planks.json
@@ -6,8 +6,8 @@ ecb532dd36eb2326fbf8f259b4c0267dde1438bd assets\rogue_end\models\block\yellow_le
 7074c6056d030ca54b79410f76196abcd1e5d0e9 assets\rogue_end\models\item\endstone_pillar.json
 4b8cf1045ad554de461a4f1e7c18ed37db7d9958 assets\rogue_end\models\block\chiselled_endstone_pillar_horizontal.json
 d72ce56531595024d2062132998b2819d4b85ee7 assets\rogue_end\models\item\smooth_endstone_slab.json
-6f53447f7fd49be963a8fbb0292e094fcacb6a9b assets\rogue_end\models\item\chorus_fence.json
 967707c7e11e8cf43cf142dcce39ceb9e88983b5 assets\rogue_end\models\item\corrupted_fence.json
+6f53447f7fd49be963a8fbb0292e094fcacb6a9b assets\rogue_end\models\item\chorus_fence.json
 8122f0f63c781c7af880712d07c4406120e95f24 assets\rogue_end\models\block\chorus_button_inventory.json
 0d796a65a0bde66a0f61f9249d0e3a5cf4e60472 assets\rogue_end\models\block\smooth_endstone_stairs.json
 d3d0e1b65f64d1c6b0cbd0019837a53eeaca24ff assets\rogue_end\models\block\corrupted_plank_stairs_outer.json
@@ -88,8 +88,8 @@ e204ffeceb0c04f900adfdc03fb3ca2a3fadd91d assets\rogue_end\models\block\smooth_en
 79c7057f7f27b7083b7ecc26e930ed1b6c780301 assets\rogue_end\models\block\chorus_button_pressed.json
 db5eba7995ca9a9541b89d511d273802cd44afb9 assets\rogue_end\models\block\corrupted_button.json
 c4acb0e0f69d80b70d8b63d38dbf7a5ed15f77a0 assets\minecraft\models\block\purpur_block.json
-642440fac8e197fd11a10f2e94f05a71229e2b46 assets\rogue_end\models\block\end_fern.json
 95926c85c86ecbc744b3faf82cb4dd6ed8a592fd assets\rogue_end\models\block\corrupted_fence_gate_wall_open.json
+642440fac8e197fd11a10f2e94f05a71229e2b46 assets\rogue_end\models\block\end_fern.json
 e2ea261d292b0b04ad2058640d65a701e1007adb assets\rogue_end\models\block\purpur_wall_inventory.json
 0752543bc603560b9b8ccc6719d6a8d3a9973c80 assets\rogue_end\models\block\corrupted_pressure_plate_down.json
 1222c4bcc692fdb67338ca9126bc417a761e1402 assets\rogue_end\models\item\corrupted_fence_gate.json

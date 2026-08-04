@@ -1,4 +1,4 @@
-// 1.21	2026-08-04T15:58:05.7515605	Rogue End/Block Loot Tables
+// 1.21	2026-08-04T19:14:06.0208949	Rogue End/Block Loot Tables
 4ed7fc6358e08c3b57a7c1100d703f90b67c8084 data\rogue_end\loot_table\blocks\end_grass.json
 54e50a14303cf2415ea34ff48666a2b28863e8fc data\rogue_end\loot_table\blocks\corrupted_fence.json
 ccbe9ffc02ae07ffbe154e895eb4568002e44eeb data\rogue_end\loot_table\blocks\yellowroot_lichen.json
@@ -29,8 +29,8 @@ d5a446eb9f15951cf84d3588fc7dbb8103b90cad data\rogue_end\loot_table\blocks\chorus
 0b9861adb7b1294f10d08a1e6dcb6336f60b8553 data\rogue_end\loot_table\blocks\corrupted_pressure_plate.json
 0ecc171424cf98acaa996e277dd4cf0253dd13be data\rogue_end\loot_table\blocks\endsteel_ore.json
 5642ead392c8fc85b03c3070d0dfbd6833f62f0b data\rogue_end\loot_table\blocks\chorus_plank_slab.json
-3fa390adfa608dab07ebbe5be62edf826c56dc60 data\rogue_end\loot_table\blocks\end_fern.json
 193186e884db28ac93fd5c2f9a6eb4e1c304367c data\rogue_end\loot_table\blocks\dry_end_shrub.json
+3fa390adfa608dab07ebbe5be62edf826c56dc60 data\rogue_end\loot_table\blocks\end_fern.json
 26d78c8824f668fde15270da6500b0cfb1787af9 data\rogue_end\loot_table\blocks\yellowroot.json
 e87af14bb40eedef2edbb5f9ced80e952adf5d7e data\rogue_end\loot_table\blocks\chiselled_endstone_pillar.json
 4aa1cd432a17254ed8d91ade809d4fe2a4d6880a data\rogue_end\loot_table\blocks\magma_roots.json
