@@ -20,6 +20,7 @@ import net.minecraft.state.property.Property;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ItemActionResult;
+import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.GlobalPos;
@@ -48,7 +49,11 @@ public class EnderLinkBlock extends BlockWithEntity {
         super(settings);
         this.setDefaultState(this.stateManager.getDefaultState().with(POWERED, false).with(LIT, false).with(EYE,false));
     }
-
+    @Override
+    protected void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
+        ItemScatterer.onStateReplaced(state, newState, world, pos);
+        super.onStateReplaced(state, world, pos, newState, moved);
+    }
     @Override
     public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
         super.onPlaced(world, pos, state, placer, itemStack);
@@ -65,14 +70,52 @@ public class EnderLinkBlock extends BlockWithEntity {
         if (stack.isOf(Items.ENDER_EYE)){
             if (stack.contains(ModComponentTypes.ENDER_EYE)){
                 if (Objects.requireNonNull(stack.get(ModComponentTypes.ENDER_EYE)).tracked()) {
-                    ((EnderLinkBlockEntity) Objects.requireNonNull(world.getBlockEntity(pos))).setStack(stack);
-                    world.setBlockState(pos, state.with(EYE, true));
-                    return ItemActionResult.CONSUME;
+                    if (!(Boolean)state.get(EYE)) {
+                        ItemStack itemStack = player.getStackInHand(hand);
+                        if (!world.isClient) {
+                            ItemStack itemStack1 = itemStack.splitUnlessCreative(1, player);
+                            BlockEntity blockEntity = world.getBlockEntity(pos);
+                            if (blockEntity instanceof EnderLinkBlockEntity) {
+                                ((EnderLinkBlockEntity) blockEntity).setStack(itemStack1);
+                                world.setBlockState(pos, state.with(EYE, true));GlobalPos receiverPos = ((EnderLinkBlockEntity) Objects.requireNonNull(world.getBlockEntity(pos))).getReceiverPos().target().get();;
+                                if (receiverPos.dimension()==world.getRegistryKey())
+                                {
+                                    if (world.getBlockState(receiverPos.pos()).isOf(ModBlocks.ENDER_LINK)){
+                                        world.setBlockState(receiverPos.pos(),world.getBlockState(receiverPos.pos()).with(LIT,world.isReceivingRedstonePower(pos)));
+                                    }
+                                }
+                                return ItemActionResult.CONSUME;
+                            }
+                        }
+                    }
                 }
             }
         }
-        return ItemActionResult.FAIL;
+        return ItemActionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
     }
+
+    @Override
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
+        BlockEntity var7 = world.getBlockEntity(pos);
+        if (var7 instanceof EnderLinkBlockEntity) {
+            if (state.get(EYE)) {
+                if (!world.isClient) {
+                    GlobalPos receiverPos = ((EnderLinkBlockEntity) Objects.requireNonNull(world.getBlockEntity(pos))).getReceiverPos().target().get();;
+                    if (receiverPos.dimension()==world.getRegistryKey())
+                    {
+                        if (world.getBlockState(receiverPos.pos()).isOf(ModBlocks.ENDER_LINK)){
+                            world.setBlockState(receiverPos.pos(),world.getBlockState(receiverPos.pos()).with(LIT,false));
+                        }
+                    }
+                }
+                ((EnderLinkBlockEntity)var7).dropEye();
+                world.setBlockState(pos,state.with(EYE,false));
+                return ActionResult.success(world.isClient);
+            }
+        }
+        return ActionResult.PASS;
+    }
+
     protected void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify) {
         if (world instanceof ServerWorld serverWorld) {
             this.update(state, serverWorld, pos);
@@ -86,8 +129,7 @@ public class EnderLinkBlock extends BlockWithEntity {
         boolean bl = world.isReceivingRedstonePower(pos);
         if (bl != (Boolean)state.get(POWERED)) {
             world.setBlockState(pos, (BlockState)state.with(POWERED, bl), 3);
-            if (state.get(EYE)){
-                GlobalPos receiverPos = ((EnderLinkBlockEntity) Objects.requireNonNull(world.getBlockEntity(pos))).getReceiverPos().target().get();;
+            if (state.get(EYE)){        GlobalPos receiverPos = ((EnderLinkBlockEntity) Objects.requireNonNull(world.getBlockEntity(pos))).getReceiverPos().target().get();;
                 if (receiverPos.dimension()==world.getRegistryKey())
                 {
                     if (world.getBlockState(receiverPos.pos()).isOf(ModBlocks.ENDER_LINK)){

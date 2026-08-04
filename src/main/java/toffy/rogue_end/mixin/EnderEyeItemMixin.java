@@ -36,7 +36,7 @@ public class EnderEyeItemMixin extends ItemMixin {
     BlockPos blockPos = context.getBlockPos();
     World world = context.getWorld();
     if (world.getBlockState(blockPos).isOf(ModBlocks.ENDER_LINK)) {
-            if (!world.getBlockState(blockPos).get(EnderLinkBlock.EYE)&&!context.getStack().getComponents().contains(ModComponentTypes.ENDER_EYE)){
+            if (!context.getStack().getComponents().contains(ModComponentTypes.ENDER_EYE)){
                 world.playSound((PlayerEntity)null, blockPos, SoundEvents.ITEM_LODESTONE_COMPASS_LOCK, SoundCategory.PLAYERS, 1.0F, 1.0F);
                 PlayerEntity playerEntity = context.getPlayer();
                 ItemStack itemStack = context.getStack();
@@ -55,7 +55,7 @@ public class EnderEyeItemMixin extends ItemMixin {
             cir.setReturnValue(ActionResult.success(world.isClient));
         }
     }    if (world.getBlockState(blockPos).isOf(ModBlocks.ENDER_PORTER)) {
-            if (!world.getBlockState(blockPos).get(EnderPorterBlock.EYE)&&!context.getStack().getComponents().contains(ModComponentTypes.ENDER_EYE)){
+            if (!context.getStack().getComponents().contains(ModComponentTypes.ENDER_EYE)){
                 world.playSound((PlayerEntity)null, blockPos, SoundEvents.ITEM_LODESTONE_COMPASS_LOCK, SoundCategory.PLAYERS, 1.0F, 1.0F);
                 PlayerEntity playerEntity = context.getPlayer();
                 ItemStack itemStack = context.getStack();

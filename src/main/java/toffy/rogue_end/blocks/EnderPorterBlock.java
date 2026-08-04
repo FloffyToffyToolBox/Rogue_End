@@ -15,8 +15,10 @@ import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.state.property.Property;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ItemActionResult;
+import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.GlobalPos;
@@ -59,19 +61,47 @@ public class EnderPorterBlock extends BlockWithEntity {
         if (stack.isOf(Items.ENDER_EYE)){
             if (stack.contains(ModComponentTypes.ENDER_EYE)){
                 if (Objects.requireNonNull(stack.get(ModComponentTypes.ENDER_EYE)).tracked()) {
-                    ((EnderPorterBlockEntity) Objects.requireNonNull(world.getBlockEntity(pos))).setStack(stack);
-                    world.setBlockState(pos, state.with(EYE, true));
-                    return ItemActionResult.CONSUME;
+                    if (!(Boolean)state.get(EYE)) {
+                        ItemStack itemStack = player.getStackInHand(hand);
+                        if (!world.isClient) {
+                            ItemStack itemStack1 = itemStack.splitUnlessCreative(1, player);
+                            BlockEntity blockEntity = world.getBlockEntity(pos);
+                            if (blockEntity instanceof EnderPorterBlockEntity) {
+                                ((EnderPorterBlockEntity) blockEntity).setStack(itemStack1);
+                                world.setBlockState(pos, state.with(EYE, true));
+                                return ItemActionResult.CONSUME;
+                            }
+                        }
+                    }
                 }
             }
         }
-        return ItemActionResult.FAIL;
+        return ItemActionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+    }
+    @Override
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
+        BlockEntity var7 = world.getBlockEntity(pos);
+        if (var7 instanceof EnderPorterBlockEntity) {
+            if (state.get(EYE)) {
+                ((EnderPorterBlockEntity)var7).dropEye();
+                world.setBlockState(pos,state.with(EYE,false));
+                return ActionResult.success(world.isClient);
+            }
+        }
+        return ActionResult.PASS;
     }
     protected void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify) {
         if (world instanceof ServerWorld serverWorld) {
             this.update(state, serverWorld, pos);
         }
     }
+
+    @Override
+    protected void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
+        ItemScatterer.onStateReplaced(state, newState, world, pos);
+        super.onStateReplaced(state, world, pos, newState, moved);
+    }
+
     protected boolean hasSidedTransparency(BlockState state) {
         return true;
     }

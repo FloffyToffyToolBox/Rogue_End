@@ -1,13 +1,17 @@
 package toffy.rogue_end.blocks;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.block.JukeboxBlock;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.entity.ItemEntity;
 import net.minecraft.inventory.SingleStackInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Clearable;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.event.GameEvent;
 import toffy.rogue_end.init.ModBlockEntities;
 import toffy.rogue_end.init.ModComponentTypes;
 import toffy.rogue_end.items.EnderEyeComponent;
@@ -20,6 +24,13 @@ public class EnderPorterBlockEntity extends BlockEntity implements Clearable, Si
         this.eyeStack = ItemStack.EMPTY;
     }
 
+    private void onStackChanged(boolean hasEye) {
+        if (this.world != null && this.world.getBlockState(this.getPos()) == this.getCachedState()) {
+            this.world.setBlockState(this.getPos(), (BlockState)this.getCachedState().with(EnderPorterBlock.EYE, hasEye), 2);
+            this.world.emitGameEvent(GameEvent.BLOCK_CHANGE, this.getPos(), GameEvent.Emitter.of(this.getCachedState()));
+        }
+    }
+
     @Override
     protected void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
         super.writeNbt(nbt, registryLookup);
@@ -27,7 +38,25 @@ public class EnderPorterBlockEntity extends BlockEntity implements Clearable, Si
             nbt.put("eyeStack", this.getStack().encode(registryLookup));
         }
     }
-
+    public ItemStack decreaseStack(int count) {
+        ItemStack itemStack = this.eyeStack;
+        this.setStack(ItemStack.EMPTY);
+        return itemStack;
+    }
+    public void dropEye() {
+        if (this.world != null && !this.world.isClient) {
+            BlockPos blockPos = this.getPos();
+            ItemStack itemStack = this.getStack();
+            if (!itemStack.isEmpty()) {
+                Vec3d vec3d = Vec3d.add(blockPos, 0.5, 1.01, 0.5).addRandom(this.world.random, 0.7F);
+                ItemStack itemStack2 = itemStack.copy();
+                ItemEntity itemEntity = new ItemEntity(this.world, vec3d.getX(), vec3d.getY(), vec3d.getZ(), itemStack2);
+                itemEntity.setToDefaultPickupDelay();
+                this.decreaseStack(1);
+                this.world.spawnEntity(itemEntity);
+            }
+        }
+    }
     @Override
     protected void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
         super.readNbt(nbt, registryLookup);
@@ -55,5 +84,7 @@ public class EnderPorterBlockEntity extends BlockEntity implements Clearable, Si
     @Override
     public void setStack(ItemStack stack) {
         eyeStack=stack;
+        boolean bl = !this.eyeStack.isEmpty();
+        this.onStackChanged(bl);
     }
 }
