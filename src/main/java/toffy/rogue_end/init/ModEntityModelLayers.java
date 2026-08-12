@@ -9,12 +9,15 @@ public class ModEntityModelLayers {
     private static EntityModelLayer registerMain(String id) {
     return register(id, "main");
 }
+
     public static void register() {
         RogueEnd.LOGGER.debug("Registering blocks for " + RogueEnd.MOD_ID);
     }
+
     private static EntityModelLayer register(String id, String layer) {
         return create(id, layer);
     }
+
     private static EntityModelLayer create(String id, String layer) {
         return new EntityModelLayer(Identifier.ofVanilla(id), layer);
     }

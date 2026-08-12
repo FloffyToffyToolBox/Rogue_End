@@ -20,7 +20,7 @@ public class ModBlocks {
                     .suffocates(Blocks::never).solidBlock(Blocks::never).pistonBehavior(PistonBehavior.DESTROY).nonOpaque().blockVision(Blocks::never)));
 
     public static final Block END_MIASMA = registerMiasmaBlock("end_miasma",new Block(AbstractBlock.Settings.copy(Blocks.PURPLE_WOOL)));
-    public static final Block CORRUPTED_THORN = registerBlock("corrupted_thorn", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE).replaceable()));
+    public static final Block CORRUPTED_THORN = registerBlock("corrupted_thorn", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE).replaceable().mapColor(MapColor.PURPLE)));
     public static final Block END_BUSH = registerBlock("end_bush", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE).replaceable()));
     public static final Block END_SHRUB = registerBlock("end_shrub", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE).replaceable()));
     public static final Block DRY_END_SHRUB = registerBlock("dry_end_shrub", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE).replaceable()));
@@ -28,18 +28,18 @@ public class ModBlocks {
     public static final Block DRY_END_GRASS = registerBlock("dry_end_grass", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE).replaceable()));
     public static final Block CHORAL_BLOOM = registerBlock("choral_bloom",new ChoralBloomBlock(AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT).luminance((state) -> {
         return 3;
-    })));
+    }).mapColor(MapColor.TERRACOTTA_PURPLE)));
     public static final Block CORRUPTED_TUBES = registerBlock("corrupted_tubes",new TallEndPlantBlock(AbstractBlock.Settings.copy(Blocks.LARGE_FERN).luminance((state) -> {
         return 5;
-    })));
+    }).mapColor(MapColor.TERRACOTTA_PURPLE)));
     //add Corrupted Tubes
 
     public static final Block ENDER_TUBES = registerBlock("ender_tubes",new TallEndPlantBlock(AbstractBlock.Settings.copy(Blocks.LARGE_FERN).luminance((state) -> {
         return 6;
-    })));
+    }).mapColor(MapColor.YELLOW)));
     public static final Block SHORT_ENDER_TUBES = registerBlock("short_ender_tubes",new ShortEndPlantBlock(AbstractBlock.Settings.copy(Blocks.FERN).luminance((state) -> {
         return 4;
-    })));
+    }).mapColor(MapColor.YELLOW)));
 
     public static final Block TALL_END_FERN = registerBlock("tall_end_fern",new TallEndPlantBlock(AbstractBlock.Settings.copy(Blocks.LARGE_FERN)));
     public static final Block END_FERN = registerBlock("end_fern",new ShortEndPlantBlock(AbstractBlock.Settings.copy(Blocks.FERN)));
@@ -64,21 +64,21 @@ public class ModBlocks {
     public static final Block CHORUS_DOOR = registerBlock("chorus_door", new DoorBlock(ModWoodType.CHORUS.setType(), AbstractBlock.Settings.copy(Blocks.CRIMSON_DOOR).mapColor(MapColor.LIGHT_BLUE)));
     public static final Block CHORUS_TRAPDOOR = registerBlock("chorus_trapdoor", new TrapdoorBlock(ModWoodType.CHORUS.setType(), AbstractBlock.Settings.copy(Blocks.CRIMSON_TRAPDOOR).mapColor(MapColor.LIGHT_BLUE)));
 
-    public static final Block CHORUS_LOG = registerBlock("chorus_log",new PillarBlock(AbstractBlock.Settings.copy(Blocks.WARPED_STEM)));
-    public static final Block STRIPPED_CHORUS_LOG = registerBlock("stripped_chorus_log",new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_WARPED_STEM)));
+    public static final Block CHORUS_LOG = registerBlock("chorus_log",new PillarBlock(AbstractBlock.Settings.copy(Blocks.WARPED_STEM).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block STRIPPED_CHORUS_LOG = registerBlock("stripped_chorus_log",new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_WARPED_STEM).mapColor(MapColor.LIGHT_BLUE)));
 
     public static final Block RADIUS_EFFECT_PILLAR_BLOCK = registerBlock("radius_effect_pillar", new RadiusEffectPillarBlock(AbstractBlock.Settings.copy(Blocks.BEACON)));
     public static final Block ENDER_LINK = registerBlock("ender_link", new EnderLinkBlock(AbstractBlock.Settings.copy(Blocks.REPEATER)));
     public static final Block ENDER_PORTER = registerBlock("ender_porter", new EnderPorterBlock(AbstractBlock.Settings.copy(Blocks.REPEATER)));
     public static final Block END_BULB = registerBlock("end_bulb",new BulbBlock(AbstractBlock.Settings.copy(Blocks.COPPER_BULB)));
 
-    public static final Block ENDER_ASH = registerBlock("ender_ash",new ColoredFallingBlock(new ColorCode(-8356741),AbstractBlock.Settings.copy(Blocks.GRAVEL)));
+    public static final Block ENDER_ASH = registerBlock("ender_ash",new ColoredFallingBlock(new ColorCode(-8356741),AbstractBlock.Settings.copy(Blocks.GRAVEL).mapColor(MapColor.TERRACOTTA_GRAY)));
     public static final Block MAGMA_ROOTS = registerBlock("magma_roots",new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WARPED_ROOTS).luminance((state) -> {
         return 2;
     })));
     public static final Block END_MAGMA = registerBlock("end_magma",new MagmaBlock(AbstractBlock.Settings.copy(Blocks.MAGMA_BLOCK).postProcess(Blocks::always).emissiveLighting(Blocks::always)));
 
-    public static final Block ENDSLATE = registerBlock("endslate",new PillarBlock(AbstractBlock.Settings.copy(Blocks.TUFF)));
+    public static final Block ENDSLATE = registerBlock("endslate",new PillarBlock(AbstractBlock.Settings.copy(Blocks.TUFF).mapColor(MapColor.TERRACOTTA_LIME)));
 
     public static final Block CHORAL_ENDSLATE = registerBlock("choral_endslate",new Block(AbstractBlock.Settings.copy(Blocks.TUFF)));
     public static final Block DARK_PURPUR = registerBlock("dark_purpur",new PillarBlock(AbstractBlock.Settings.copy(Blocks.DEEPSLATE)));
@@ -86,29 +86,29 @@ public class ModBlocks {
     public static final Block PURPUR_WALL= registerBlock("purpur_wall",new WallBlock(AbstractBlock.Settings.copy(Blocks.TUFF_WALL)));
 
     public static final Block ENDSTONE_PILLAR= registerBlock("endstone_pillar",new PillarBlock(AbstractBlock.Settings.copy(Blocks.END_STONE)));
-    public static final Block CHISELLED_ENDSTONE_PILLAR= registerBlock("chiselled_endstone_pillar",new PillarBlock(AbstractBlock.Settings.copy(Blocks.END_STONE)));
-    public static final Block SMOOTH_ENDSTONE= registerBlock("smooth_endstone",new Block(AbstractBlock.Settings.copy(Blocks.END_STONE)));
-    public static final Block SMOOTH_ENDSTONE_WALL= registerBlock("smooth_endstone_wall",new WallBlock(AbstractBlock.Settings.copy(Blocks.TUFF_WALL)));
-    public static final Block SMOOTH_ENDSTONE_SLAB = registerBlock("smooth_endstone_slab",new SlabBlock(AbstractBlock.Settings.copy(Blocks.TUFF)));
-    public static final Block SMOOTH_ENDSTONE_STAIRS = registerBlock("smooth_endstone_stairs",new StairsBlock(SMOOTH_ENDSTONE.getDefaultState(),AbstractBlock.Settings.copy(Blocks.TUFF)));
+    public static final Block CHISELLED_ENDSTONE_PILLAR= registerBlock("chiselled_endstone_pillar",new PillarBlock(AbstractBlock.Settings.copy(Blocks.END_STONE).mapColor(MapColor.PALE_YELLOW)));
+    public static final Block SMOOTH_ENDSTONE= registerBlock("smooth_endstone",new Block(AbstractBlock.Settings.copy(Blocks.END_STONE).mapColor(MapColor.PALE_YELLOW)));
+    public static final Block SMOOTH_ENDSTONE_WALL= registerBlock("smooth_endstone_wall",new WallBlock(AbstractBlock.Settings.copy(Blocks.TUFF_WALL).mapColor(MapColor.PALE_YELLOW)));
+    public static final Block SMOOTH_ENDSTONE_SLAB = registerBlock("smooth_endstone_slab",new SlabBlock(AbstractBlock.Settings.copy(Blocks.TUFF).mapColor(MapColor.PALE_YELLOW)));
+    public static final Block SMOOTH_ENDSTONE_STAIRS = registerBlock("smooth_endstone_stairs",new StairsBlock(SMOOTH_ENDSTONE.getDefaultState(),AbstractBlock.Settings.copy(Blocks.TUFF).mapColor(MapColor.PALE_YELLOW)));
 
-    public static final Block CHORUS_LEAVES = registerBlock("chorus_leaves",new LeavesBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_LEAVES)));
-    public static final Block YELLOW_LEAVES = registerBlock("yellow_leaves",new LeavesBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_LEAVES)));
-    public static final Block LICHENROOT = registerBlock("lichenroot",new Block(AbstractBlock.Settings.copy(Blocks.END_STONE)));
+    public static final Block CHORUS_LEAVES = registerBlock("chorus_leaves",new LeavesBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_LEAVES).mapColor(MapColor.PINK)));
+    public static final Block YELLOW_LEAVES = registerBlock("yellow_leaves",new LeavesBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_LEAVES).mapColor(MapColor.YELLOW)));
+    public static final Block LICHENROOT = registerBlock("lichenroot",new Block(AbstractBlock.Settings.copy(Blocks.END_STONE).mapColor(MapColor.YELLOW)));
 
-    public static final Block END_BONE = registerBlock("end_bone",new Block(AbstractBlock.Settings.copy(Blocks.TUFF)));
-    public static final Block ENDSTEEL_ORE = registerBlock("endsteel_ore",new ExperienceDroppingBlock(UniformIntProvider.create(3, 7),AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE)));
-    public static final Block END_BONE_WALL= registerBlock("end_bone_wall",new WallBlock(AbstractBlock.Settings.copy(Blocks.TUFF_WALL)));
-    public static final Block END_BONE_SLAB = registerBlock("end_bone_slab",new SlabBlock(AbstractBlock.Settings.copy(Blocks.TUFF)));
-    public static final Block END_BONE_STAIRS = registerBlock("end_bone_stairs",new StairsBlock(END_BONE.getDefaultState(),AbstractBlock.Settings.copy(Blocks.TUFF)));
+    public static final Block END_BONE = registerBlock("end_bone",new Block(AbstractBlock.Settings.copy(Blocks.TUFF).mapColor(MapColor.DEEPSLATE_GRAY)));
+    public static final Block ENDSTEEL_ORE = registerBlock("endsteel_ore",new ExperienceDroppingBlock(UniformIntProvider.create(3, 7),AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).mapColor(MapColor.DEEPSLATE_GRAY)));
+    public static final Block END_BONE_WALL= registerBlock("end_bone_wall",new WallBlock(AbstractBlock.Settings.copy(Blocks.TUFF_WALL).mapColor(MapColor.DEEPSLATE_GRAY)));
+    public static final Block END_BONE_SLAB = registerBlock("end_bone_slab",new SlabBlock(AbstractBlock.Settings.copy(Blocks.TUFF).mapColor(MapColor.DEEPSLATE_GRAY)));
+    public static final Block END_BONE_STAIRS = registerBlock("end_bone_stairs",new StairsBlock(END_BONE.getDefaultState(),AbstractBlock.Settings.copy(Blocks.TUFF).mapColor(MapColor.DEEPSLATE_GRAY)));
 
-    public static final Block DARK_PURPUR_BRICKS = registerBlock("dark_purpur_bricks",new Block(AbstractBlock.Settings.copy(Blocks.TUFF)));
-    public static final Block DARK_PURPUR_BRICK_WALL= registerBlock("dark_purpur_brick_wall",new WallBlock(AbstractBlock.Settings.copy(Blocks.TUFF)));
-    public static final Block DARK_PURPUR_BRICK_SLAB = registerBlock("dark_purpur_brick_slab",new SlabBlock(AbstractBlock.Settings.copy(Blocks.TUFF)));
-    public static final Block DARK_PURPUR_BRICK_STAIRS = registerBlock("dark_purpur_brick_stairs",new StairsBlock(END_BONE.getDefaultState(),AbstractBlock.Settings.copy(Blocks.TUFF)));
+    public static final Block DARK_PURPUR_BRICKS = registerBlock("dark_purpur_bricks",new Block(AbstractBlock.Settings.copy(Blocks.TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block DARK_PURPUR_BRICK_WALL= registerBlock("dark_purpur_brick_wall",new WallBlock(AbstractBlock.Settings.copy(Blocks.TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block DARK_PURPUR_BRICK_SLAB = registerBlock("dark_purpur_brick_slab",new SlabBlock(AbstractBlock.Settings.copy(Blocks.TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block DARK_PURPUR_BRICK_STAIRS = registerBlock("dark_purpur_brick_stairs",new StairsBlock(END_BONE.getDefaultState(),AbstractBlock.Settings.copy(Blocks.TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
 
-    public static final Block YELLOWROOT = registerBlock("yellowroot",new Block(AbstractBlock.Settings.copy(Blocks.MOSS_BLOCK)));
-    public static final Block YELLOWROOT_LICHEN = registerBlock("yellowroot_lichen",new YellowLichenBlock(AbstractBlock.Settings.copy(Blocks.VINE)));
+    public static final Block YELLOWROOT = registerBlock("yellowroot",new Block(AbstractBlock.Settings.copy(Blocks.MOSS_BLOCK).mapColor(MapColor.YELLOW)));
+    public static final Block YELLOWROOT_LICHEN = registerBlock("yellowroot_lichen",new YellowLichenBlock(AbstractBlock.Settings.copy(Blocks.VINE).mapColor(MapColor.YELLOW)));
     public static void register() {
 
         RogueEnd.LOGGER.debug("Registering blocks for " + RogueEnd.MOD_ID);
