@@ -23,6 +23,7 @@ public class RogueEnd implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.register();
+		ModPotions.register();
 		ModComponentTypes.register();
 		ModSoundEvents.register();
 		ModBlocks.register();
