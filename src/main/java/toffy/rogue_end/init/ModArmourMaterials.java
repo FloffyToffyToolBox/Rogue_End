@@ -55,10 +55,10 @@ public class ModArmourMaterials {
 
     static {
         ENDSTEEL = register("endsteel", (EnumMap)Util.make(new EnumMap(Type.class), (map) -> {
-            map.put(Type.BOOTS, 3);
-            map.put(Type.LEGGINGS, 6);
-            map.put(Type.CHESTPLATE, 8);
-            map.put(Type.HELMET, 3);
+            map.put(Type.BOOTS, 4);
+            map.put(Type.LEGGINGS, 7);
+            map.put(Type.CHESTPLATE, 9);
+            map.put(Type.HELMET, 4);
             map.put(Type.BODY, 11);
         }), 10, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 1.0F, () -> {
             return Ingredient.ofItems(new ItemConvertible[]{ModItems.ENDSTEEL_INGOT});

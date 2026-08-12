@@ -12,8 +12,8 @@ import toffy.rogue_end.init.ModPotions;
 
 @Mixin(BrewingRecipeRegistry.class)
 public class BrewingRecipeRegistryMixin {
-    @Inject(method = "registerDefaults", at = @At("Tail"))
-    public static void registerDefaults(BrewingRecipeRegistry.Builder builder, CallbackInfo callbackInfo){
+    @Inject(method = "registerDefaults", at = @At("TAIL"))
+    private static void registerDefaults(BrewingRecipeRegistry.Builder builder, CallbackInfo callbackInfo){
         builder.registerPotionRecipe(Potions.AWKWARD, Items.SHULKER_SHELL, ModPotions.LEVITATION);
         builder.registerPotionRecipe(ModPotions.LEVITATION, Items.REDSTONE, ModPotions.LONG_LEVITATION);
     }

@@ -1,4 +1,4 @@
-// 1.21	2026-08-04T23:02:58.7808101	Rogue End/Block Loot Tables
+// 1.21.1	2026-08-12T17:11:12.1086851	Rogue End/Block Loot Tables
 4ed7fc6358e08c3b57a7c1100d703f90b67c8084 data\rogue_end\loot_table\blocks\end_grass.json
 54e50a14303cf2415ea34ff48666a2b28863e8fc data\rogue_end\loot_table\blocks\corrupted_fence.json
 ccbe9ffc02ae07ffbe154e895eb4568002e44eeb data\rogue_end\loot_table\blocks\yellowroot_lichen.json
@@ -48,8 +48,8 @@ fc3cd8f4faee1ca2a2f058475f88658fafc1c101 data\rogue_end\loot_table\blocks\end_bo
 6dd4c5bfc881dc08c422841741409872b09ea8e6 data\rogue_end\loot_table\blocks\ender_tubes.json
 d375dedfc4c9bf06ea4b1109d3450ed73a5edca6 data\rogue_end\loot_table\blocks\corrupted_plank_stairs.json
 9d17d41613afad389f43d696fcf3c39d304b5d59 data\rogue_end\loot_table\blocks\chorus_plank_stairs.json
-9c857ba796b8af7611f73e0eba0d99c5545a4374 data\rogue_end\loot_table\blocks\corrupted_button.json
 d96bc64cf97222c134146a0ae1f7abeba029624e data\rogue_end\loot_table\blocks\chorus_planks.json
+9c857ba796b8af7611f73e0eba0d99c5545a4374 data\rogue_end\loot_table\blocks\corrupted_button.json
 75e5994baf160585de82eee953435d5cc3365f54 data\rogue_end\loot_table\blocks\purpur_wall.json
 f94307cb175425c6ad7d47056ab2494ecabc8066 data\rogue_end\loot_table\blocks\chorus_fence.json
 e3394a9fbea6a283e7b2e624529d37ef01e8e2f6 data\rogue_end\loot_table\blocks\end_bone_slab.json

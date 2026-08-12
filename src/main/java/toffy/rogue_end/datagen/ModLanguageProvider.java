@@ -27,6 +27,17 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("sounds.rogue_end.bounce_bloom_jump","Player jumps on Bounce Bloom");
         translationBuilder.add("sounds.rogue_end.bounce_bloom_land","Player lands on Bounce Bloom");
 
+        translationBuilder.add(ModItems.ENDSTEEL_SWORD,"Endsteel Sword");
+        translationBuilder.add(ModItems.ENDSTEEL_PICKAXE,"Endsteel Pickaxe");
+        translationBuilder.add(ModItems.ENDSTEEL_AXE,"Endsteel Axe");
+        translationBuilder.add(ModItems.ENDSTEEL_HOE,"Endsteel Hoe");
+        translationBuilder.add(ModItems.ENDSTEEL_SHOVEL,"Endsteel Shovel");
+
+        translationBuilder.add(ModItems.ENDSTEEL_HELMET,"Endsteel Helmet");
+        translationBuilder.add(ModItems.ENDSTEEL_CHESTPLATE,"Endsteel Chestplate");
+        translationBuilder.add(ModItems.ENDSTEEL_LEGGINGS,"Endsteel Leggings");
+        translationBuilder.add(ModItems.ENDSTEEL_BOOTS,"Endsteel Boots");
+
         translationBuilder.add(ModItems.BACK_STABBER,"Back Stabber");
         translationBuilder.add("tooltip.rogue_end.backstabber.tooltip","+Backstab Damage");
         translationBuilder.add(ModItems.CORRUPTED_VOID_AMULET,"Corrupted Void Amulet");

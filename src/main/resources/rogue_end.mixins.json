@@ -4,6 +4,7 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "BlockMixin",
+    "BrewingRecipeRegistryMixin",
     "ChorusPlantFeatureMixin",
     "EnderEyeItemMixin",
     "ExampleMixin",
@@ -16,5 +17,8 @@
   },
   "overwrites": {
     "requireAnnotations": true
-  }
+  },
+  "client": [
+    "InGameHudMixin"
+  ]
 }
