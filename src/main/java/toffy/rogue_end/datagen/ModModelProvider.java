@@ -36,6 +36,11 @@ public class ModModelProvider extends FabricModelProvider {
         ChorusPlanksPool.button(ModBlocks.CHORUS_BUTTON);
         ChorusPlanksPool.pressurePlate(ModBlocks.CHORUS_PRESSURE_PLATE);
 
+        blockStateModelGenerator.registerDoor(ModBlocks.CHORUS_DOOR);
+        blockStateModelGenerator.registerDoor(ModBlocks.CORRUPTED_DOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.CHORUS_TRAPDOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.CORRUPTED_TRAPDOOR);
+
         BlockStateModelGenerator.BlockTexturePool CorruptedPlanksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CORRUPTED_PLANKS);
         CorruptedPlanksPool.fence(ModBlocks.CORRUPTED_FENCE);
         CorruptedPlanksPool.fenceGate(ModBlocks.CORRUPTED_FENCEGATE);

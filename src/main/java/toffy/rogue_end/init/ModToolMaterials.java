@@ -15,7 +15,7 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
 
-    ENDSTEEL(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 1561, 56-.0f, 4.0F, 15, () -> {
+    ENDSTEEL(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 1561, 56-.0f, 5.0F, 15, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{ModItems.ENDSTEEL_INGOT});
     });
 

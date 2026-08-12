@@ -1,7 +1,8 @@
-// 1.21.1	2026-08-12T17:11:12.1106804	Rogue End/Tags for minecraft:block
+// 1.21.1	2026-08-12T19:18:39.3149021	Rogue End/Tags for minecraft:block
+21583be030b01df1692cc57222eddd42ca65f346 data\rogue_end\tags\block\dries_sponge.json
 808eeabd8caec42f82492aa3b87fbb21106482e8 data\minecraft\tags\block\logs.json
 f31db6adb618d6e429ab8cf11496868ae7c6bd30 data\minecraft\tags\block\wooden_slabs.json
-21583be030b01df1692cc57222eddd42ca65f346 data\rogue_end\tags\block\dries_sponge.json
+00028f13e0b8a1cd36f116a8f27187858da79a12 data\minecraft\tags\block\wooden_doors.json
 bb9d339b9cd2db00c728023d2e03e54c4ff4905f data\minecraft\tags\block\walls.json
 75ee0584ac0c92cfaa24dc14df94c264cb4ba0b8 data\minecraft\tags\block\fence_gates.json
 84f980ca7f535f71d5067b9ead8e654a1d5069ed data\rogue_end\tags\block\magma_root_placeable_on.json
@@ -11,6 +12,7 @@ f3814a8678f77b77386bb7bdacdba77883034644 data\minecraft\tags\block\sword_efficie
 d6e8ad8d68bca6afa12660b7df8343c8eda69be4 data\minecraft\tags\block\mineable\pickaxe.json
 f3814a8678f77b77386bb7bdacdba77883034644 data\minecraft\tags\block\mineable\axe.json
 998d1f94e1e828a447e620b1c2dc98cc8db4ec57 data\minecraft\tags\block\climbable.json
+c71686842e01e9340d14fe563ebcf6704e12664e data\minecraft\tags\block\wooden_trapdoors.json
 322d291543406269f0179f04bf26d647e418fe90 data\minecraft\tags\block\wooden_buttons.json
 00284e89b54e19d4ff449d1f70bbf62b28f2bbc7 data\minecraft\tags\block\slabs.json
 dc3a67debc2933860248633526c74f60120e863f data\minecraft\tags\block\planks.json

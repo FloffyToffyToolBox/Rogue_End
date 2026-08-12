@@ -14,55 +14,58 @@ import toffy.rogue_end.RogueEnd;
 import toffy.rogue_end.blocks.*;
 
 public class ModBlocks {
-    public static Block BOUNCE_BLOOM = registerBlock("bounce_bloom", new BounceBloomBlock(
+    public static final Block BOUNCE_BLOOM = registerBlock("bounce_bloom", new BounceBloomBlock(
             AbstractBlock.Settings.create().mapColor(MapColor.PALE_YELLOW).strength(0.3F).luminance((state) -> {return 15;})
                     .sounds(BlockSoundGroup.FROGLIGHT).breakInstantly().jumpVelocityMultiplier(2).sounds(ModSoundEvents.BOUNCE_BLOOM_SOUNDS)
                     .suffocates(Blocks::never).solidBlock(Blocks::never).pistonBehavior(PistonBehavior.DESTROY).nonOpaque().blockVision(Blocks::never)));
 
     public static final Block END_MIASMA = registerMiasmaBlock("end_miasma",new Block(AbstractBlock.Settings.copy(Blocks.PURPLE_WOOL)));
-    public static Block CORRUPTED_THORN = registerBlock("corrupted_thorn", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE).replaceable()));
-    public static Block END_BUSH = registerBlock("end_bush", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE).replaceable()));
-    public static Block END_SHRUB = registerBlock("end_shrub", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE).replaceable()));
-    public static Block DRY_END_SHRUB = registerBlock("dry_end_shrub", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE).replaceable()));
-    public static Block END_GRASS = registerBlock("end_grass", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE).replaceable()));
-    public static Block DRY_END_GRASS = registerBlock("dry_end_grass", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE).replaceable()));
-    public static Block CHORAL_BLOOM = registerBlock("choral_bloom",new ChoralBloomBlock(AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT).luminance((state) -> {
+    public static final Block CORRUPTED_THORN = registerBlock("corrupted_thorn", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE).replaceable()));
+    public static final Block END_BUSH = registerBlock("end_bush", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE).replaceable()));
+    public static final Block END_SHRUB = registerBlock("end_shrub", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE).replaceable()));
+    public static final Block DRY_END_SHRUB = registerBlock("dry_end_shrub", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE).replaceable()));
+    public static final Block END_GRASS = registerBlock("end_grass", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE).replaceable()));
+    public static final Block DRY_END_GRASS = registerBlock("dry_end_grass", new EndPlantBlock(AbstractBlock.Settings.copy(Blocks.WITHER_ROSE).replaceable()));
+    public static final Block CHORAL_BLOOM = registerBlock("choral_bloom",new ChoralBloomBlock(AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT).luminance((state) -> {
         return 3;
     })));
-    public static Block CORRUPTED_TUBES = registerBlock("corrupted_tubes",new TallEndPlantBlock(AbstractBlock.Settings.copy(Blocks.LARGE_FERN).luminance((state) -> {
+    public static final Block CORRUPTED_TUBES = registerBlock("corrupted_tubes",new TallEndPlantBlock(AbstractBlock.Settings.copy(Blocks.LARGE_FERN).luminance((state) -> {
         return 5;
     })));
     //add Corrupted Tubes
 
-    public static Block ENDER_TUBES = registerBlock("ender_tubes",new TallEndPlantBlock(AbstractBlock.Settings.copy(Blocks.LARGE_FERN).luminance((state) -> {
+    public static final Block ENDER_TUBES = registerBlock("ender_tubes",new TallEndPlantBlock(AbstractBlock.Settings.copy(Blocks.LARGE_FERN).luminance((state) -> {
         return 6;
     })));
-    public static Block SHORT_ENDER_TUBES = registerBlock("short_ender_tubes",new ShortEndPlantBlock(AbstractBlock.Settings.copy(Blocks.FERN).luminance((state) -> {
+    public static final Block SHORT_ENDER_TUBES = registerBlock("short_ender_tubes",new ShortEndPlantBlock(AbstractBlock.Settings.copy(Blocks.FERN).luminance((state) -> {
         return 4;
     })));
 
-    public static Block TALL_END_FERN = registerBlock("tall_end_fern",new TallEndPlantBlock(AbstractBlock.Settings.copy(Blocks.LARGE_FERN)));
-    public static Block END_FERN = registerBlock("end_fern",new ShortEndPlantBlock(AbstractBlock.Settings.copy(Blocks.FERN)));
+    public static final Block TALL_END_FERN = registerBlock("tall_end_fern",new TallEndPlantBlock(AbstractBlock.Settings.copy(Blocks.LARGE_FERN)));
+    public static final Block END_FERN = registerBlock("end_fern",new ShortEndPlantBlock(AbstractBlock.Settings.copy(Blocks.FERN)));
 
-    public static final Block  CORRUPTED_BUTTON = registerBlock("corrupted_button",new ButtonBlock(ModWoodType.CORRUPTED.setType(),30, AbstractBlock.Settings.copy(Blocks.CHERRY_BUTTON).mapColor(MapColor.OAK_TAN)));
-    public static final Block  CORRUPTED_PRESSURE_PLATE = registerBlock("corrupted_pressure_plate",new PressurePlateBlock(ModWoodType.CORRUPTED.setType(), AbstractBlock.Settings.copy(Blocks.CHERRY_BUTTON).mapColor(MapColor.OAK_TAN)));
-    public static Block CORRUPTED_PLANKS = registerBlock("corrupted_planks",new PillarBlock(AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS)));
-    public static final Block  CORRUPTED_FENCE = registerBlock("corrupted_fence",new FenceBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_FENCE).mapColor(MapColor.OAK_TAN)));
-    public static final Block  CORRUPTED_FENCEGATE = registerBlock("corrupted_fence_gate",new FenceGateBlock(ModWoodType.CORRUPTED, Block.Settings.copy(Blocks.CHERRY_FENCE_GATE).mapColor(MapColor.OAK_TAN)));
-    public static final Block  CORRUPTED_PLANK_SLAB = registerBlock("corrupted_plank_slab",new SlabBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).mapColor(MapColor.OAK_TAN)));
-    public static final Block  CORRUPTED_PLANK_STAIRS = registerBlock("corrupted_plank_stairs",new StairsBlock( CORRUPTED_PLANKS.getDefaultState(),AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).mapColor(MapColor.OAK_TAN)));
+    public static final Block CORRUPTED_BUTTON = registerBlock("corrupted_button",new ButtonBlock(ModWoodType.CORRUPTED.setType(),30, AbstractBlock.Settings.copy(Blocks.CHERRY_BUTTON).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block CORRUPTED_PRESSURE_PLATE = registerBlock("corrupted_pressure_plate",new PressurePlateBlock(ModWoodType.CORRUPTED.setType(), AbstractBlock.Settings.copy(Blocks.CHERRY_BUTTON).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block CORRUPTED_PLANKS = registerBlock("corrupted_planks",new PillarBlock(AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block CORRUPTED_FENCE = registerBlock("corrupted_fence",new FenceBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_FENCE).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block CORRUPTED_FENCEGATE = registerBlock("corrupted_fence_gate",new FenceGateBlock(ModWoodType.CORRUPTED, Block.Settings.copy(Blocks.CHERRY_FENCE_GATE).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block CORRUPTED_PLANK_SLAB = registerBlock("corrupted_plank_slab",new SlabBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block CORRUPTED_PLANK_STAIRS = registerBlock("corrupted_plank_stairs",new StairsBlock( CORRUPTED_PLANKS.getDefaultState(),AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block CORRUPTED_DOOR = registerBlock("corrupted_door", new DoorBlock(ModWoodType.CORRUPTED.setType(), AbstractBlock.Settings.copy(Blocks.CRIMSON_DOOR).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block CORRUPTED_TRAPDOOR = registerBlock("corrupted_trapdoor", new TrapdoorBlock(ModWoodType.CORRUPTED.setType(), AbstractBlock.Settings.copy(Blocks.CRIMSON_TRAPDOOR).mapColor(MapColor.TERRACOTTA_PURPLE)));
 
-    public static final Block CHORUS_BUTTON = registerBlock("chorus_button",new ButtonBlock(ModWoodType.CHORUS.setType(),30, AbstractBlock.Settings.copy(Blocks.CHERRY_BUTTON).mapColor(MapColor.OAK_TAN)));
-    public static final Block CHORUS_PRESSURE_PLATE = registerBlock("chorus_pressure_plate",new PressurePlateBlock(ModWoodType.CHORUS.setType(), AbstractBlock.Settings.copy(Blocks.CHERRY_BUTTON).mapColor(MapColor.OAK_TAN)));
-    public static Block CHORUS_PLANKS = registerBlock("chorus_planks",new PillarBlock(AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS)));
-    public static final Block CHORUS_FENCE = registerBlock("chorus_fence",new FenceBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_FENCE).mapColor(MapColor.OAK_TAN)));
-    public static final Block CHORUS_FENCEGATE = registerBlock("chorus_fence_gate",new FenceGateBlock(ModWoodType.CHORUS, Block.Settings.copy(Blocks.CHERRY_FENCE_GATE).mapColor(MapColor.OAK_TAN)));
-    public static final Block CHORUS_PLANK_SLAB = registerBlock("chorus_plank_slab",new SlabBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).mapColor(MapColor.OAK_TAN)));
-    public static final Block CHORUS_PLANK_STAIRS = registerBlock("chorus_plank_stairs",new StairsBlock(CHORUS_PLANKS.getDefaultState(),AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).mapColor(MapColor.OAK_TAN)));
+    public static final Block CHORUS_BUTTON = registerBlock("chorus_button",new ButtonBlock(ModWoodType.CHORUS.setType(),30, AbstractBlock.Settings.copy(Blocks.CHERRY_BUTTON).mapColor(MapColor.LIGHT_BLUE)));
+    public static final Block CHORUS_PRESSURE_PLATE = registerBlock("chorus_pressure_plate",new PressurePlateBlock(ModWoodType.CHORUS.setType(), AbstractBlock.Settings.copy(Blocks.CHERRY_BUTTON).mapColor(MapColor.LIGHT_BLUE)));
+    public static final Block CHORUS_PLANKS = registerBlock("chorus_planks",new PillarBlock(AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).mapColor(MapColor.LIGHT_BLUE)));
+    public static final Block CHORUS_FENCE = registerBlock("chorus_fence",new FenceBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_FENCE).mapColor(MapColor.LIGHT_BLUE)));
+    public static final Block CHORUS_FENCEGATE = registerBlock("chorus_fence_gate",new FenceGateBlock(ModWoodType.CHORUS, Block.Settings.copy(Blocks.CHERRY_FENCE_GATE).mapColor(MapColor.LIGHT_BLUE)));
+    public static final Block CHORUS_PLANK_SLAB = registerBlock("chorus_plank_slab",new SlabBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).mapColor(MapColor.LIGHT_BLUE)));
+    public static final Block CHORUS_PLANK_STAIRS = registerBlock("chorus_plank_stairs",new StairsBlock(CHORUS_PLANKS.getDefaultState(),AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).mapColor(MapColor.LIGHT_BLUE)));
+    public static final Block CHORUS_DOOR = registerBlock("chorus_door", new DoorBlock(ModWoodType.CHORUS.setType(), AbstractBlock.Settings.copy(Blocks.CRIMSON_DOOR).mapColor(MapColor.LIGHT_BLUE)));
+    public static final Block CHORUS_TRAPDOOR = registerBlock("chorus_trapdoor", new TrapdoorBlock(ModWoodType.CHORUS.setType(), AbstractBlock.Settings.copy(Blocks.CRIMSON_TRAPDOOR).mapColor(MapColor.LIGHT_BLUE)));
 
-
-    public static Block CHORUS_LOG = registerBlock("chorus_log",new PillarBlock(AbstractBlock.Settings.copy(Blocks.WARPED_STEM)));
-    public static Block STRIPPED_CHORUS_LOG = registerBlock("stripped_chorus_log",new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_WARPED_STEM)));
+    public static final Block CHORUS_LOG = registerBlock("chorus_log",new PillarBlock(AbstractBlock.Settings.copy(Blocks.WARPED_STEM)));
+    public static final Block STRIPPED_CHORUS_LOG = registerBlock("stripped_chorus_log",new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_WARPED_STEM)));
 
     public static final Block RADIUS_EFFECT_PILLAR_BLOCK = registerBlock("radius_effect_pillar", new RadiusEffectPillarBlock(AbstractBlock.Settings.copy(Blocks.BEACON)));
     public static final Block ENDER_LINK = registerBlock("ender_link", new EnderLinkBlock(AbstractBlock.Settings.copy(Blocks.REPEATER)));

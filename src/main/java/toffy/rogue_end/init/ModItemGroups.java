@@ -53,6 +53,9 @@ public class ModItemGroups {
                     entries.add(ModBlocks.CHORUS_PLANK_STAIRS);
                     entries.add(ModBlocks.CHORUS_BUTTON);
                     entries.add(ModBlocks.CHORUS_PRESSURE_PLATE);
+                    entries.add(ModBlocks.CHORUS_DOOR);
+                    entries.add(ModBlocks.CHORUS_TRAPDOOR);
+
                     entries.add(ModBlocks.CORRUPTED_PLANKS);
                     entries.add(ModBlocks.CORRUPTED_FENCE);
                     entries.add(ModBlocks.CORRUPTED_FENCEGATE);
@@ -60,6 +63,8 @@ public class ModItemGroups {
                     entries.add(ModBlocks.CORRUPTED_PLANK_STAIRS);
                     entries.add(ModBlocks.CORRUPTED_BUTTON);
                     entries.add(ModBlocks.CORRUPTED_PRESSURE_PLATE);
+                    entries.add(ModBlocks.CORRUPTED_DOOR);
+                    entries.add(ModBlocks.CORRUPTED_TRAPDOOR);
 
                     entries.add(ModBlocks.CHORUS_LEAVES);
                     entries.add(ModBlocks.YELLOW_LEAVES);

@@ -53,6 +53,9 @@ public class RogueEndClient implements ClientModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.END_GRASS, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DRY_END_GRASS, RenderLayer.getCutout());
 
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CHORUS_DOOR, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CORRUPTED_DOOR, RenderLayer.getCutout());
+
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CORRUPTED_TUBES, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ENDER_TUBES, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SHORT_ENDER_TUBES, RenderLayer.getCutout());

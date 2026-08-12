@@ -40,6 +40,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(ModBlockTags.DRIES_SPONGE).add(ModBlocks.END_MAGMA).add(Blocks.MAGMA_BLOCK).add(Blocks.LAVA).add(Blocks.LAVA_CAULDRON);
 
         getOrCreateTagBuilder(BlockTags.LOGS).add(ModBlocks.CHORUS_LOG).add(ModBlocks.STRIPPED_CHORUS_LOG);
+        getOrCreateTagBuilder(BlockTags.WOODEN_DOORS).add(ModBlocks.CHORUS_TRAPDOOR).add(ModBlocks.CORRUPTED_TRAPDOOR);
+        getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS).add(ModBlocks.CHORUS_DOOR).add(ModBlocks.CORRUPTED_DOOR);
         getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS).add(ModBlocks.CHORUS_BUTTON).add(ModBlocks.CORRUPTED_BUTTON);
         getOrCreateTagBuilder(BlockTags.WOODEN_FENCES).add(ModBlocks.CHORUS_FENCE).add(ModBlocks.CORRUPTED_FENCE);
         getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(ModBlocks.CHORUS_FENCEGATE).add(ModBlocks.CORRUPTED_FENCEGATE);
