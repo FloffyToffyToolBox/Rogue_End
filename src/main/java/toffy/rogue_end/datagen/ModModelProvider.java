@@ -77,6 +77,7 @@ public class ModModelProvider extends FabricModelProvider {
     }
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        itemModelGenerator.register(ModItems.PURIFIED_VOID_AMULET, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ENDSTEEL_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ENDSTEEL_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ENDSTEEL_PICKAXE, Models.HANDHELD);

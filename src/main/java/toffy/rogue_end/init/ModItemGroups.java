@@ -35,8 +35,9 @@ public class ModItemGroups {
                     entries.add(ModItems.ENDSTEEL_CHESTPLATE);
                     entries.add(ModItems.ENDSTEEL_HELMET);
 
-                    entries.add(ModItems.CORRUPTED_VOID_AMULET);
                     entries.add(ModItems.ENDSTEEL_INGOT);
+                    entries.add(ModItems.CORRUPTED_VOID_AMULET);
+                    entries.add(ModItems.PURIFIED_VOID_AMULET);
                     entries.add(ModItems.ENDERSENT_SPAWN_EGG);
 
                     entries.add(ModBlocks.ENDER_LINK);

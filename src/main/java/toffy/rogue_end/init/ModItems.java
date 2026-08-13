@@ -13,6 +13,7 @@ import net.minecraft.util.math.Direction;
 import toffy.rogue_end.RogueEnd;
 import toffy.rogue_end.items.BackstabberItem;
 import toffy.rogue_end.items.CorruptedAmuletItem;
+import toffy.rogue_end.items.PurifiedAmuletItem;
 
 public class ModItems {
     public static final Item ENDSTEEL_HELMET = registerItem((String)"endsteel_helmet", (Item)(new ArmorItem(ModArmourMaterials.ENDSTEEL, net.minecraft.item.ArmorItem.Type.HELMET, (new Item.Settings()).maxDamage(net.minecraft.item.ArmorItem.Type.HELMET.getMaxDamage(33)))));
@@ -36,7 +37,7 @@ public class ModItems {
     public static final Item ENDSTEEL_INGOT = registerItem("endsteel_ingot", (new Item(new Item.Settings())));
     public static final Item ENDERSENT_SPAWN_EGG= registerItem("endersent_spawn_egg", (new SpawnEggItem(ModEntities.ENDERSENT,0,1447446, new Item.Settings())));
 
-    public static final Item PURIFIED_VOID_AMULET = registerItem("purified_void_amulet", (new Item(new Item.Settings().maxCount(1).fireproof())));
+    public static final Item PURIFIED_VOID_AMULET = registerItem("purified_void_amulet", (new PurifiedAmuletItem(new Item.Settings().maxCount(1).fireproof())));
     public static final Item CORRUPTED_VOID_AMULET = registerItem("corrupted_void_amulet", (new CorruptedAmuletItem(new Item.Settings().maxCount(1).fireproof())));
 
     public static void register() {
