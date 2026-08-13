@@ -14,6 +14,7 @@ import toffy.rogue_end.init.*;
 import toffy.rogue_end.world.biome.ModSurfaceRules;
 import toffy.rogue_end.world.biome.ModWorldGeneration;
 import toffy.rogue_end.world.features.ModFeatures;
+import toffy.rogue_end.world.features.ModTreeDecoratorType;
 import toffy.rogue_end.world.features.ModTrunkPlacerType;
 
 public class RogueEnd implements ModInitializer {
@@ -32,6 +33,7 @@ public class RogueEnd implements ModInitializer {
 		ModItemGroups.setup();
 		ModArmourMaterials.register();
 		ModTrunkPlacerType.register();
+		ModTreeDecoratorType.register();
 		StrippableBlockRegistry.register(ModBlocks.CHORUS_LOG,ModBlocks.STRIPPED_CHORUS_LOG);
 		ModEntities.registerModEntities();
 		ModBlockEntities.register();

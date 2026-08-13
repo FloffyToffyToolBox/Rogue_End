@@ -18,8 +18,7 @@ public class ModTrunkPlacerType<P extends TrunkPlacer> {
         this.codec = codec;
     }
     public static void register() {
-
-        RogueEnd.LOGGER.debug("Registering blocks for " + RogueEnd.MOD_ID);
+        RogueEnd.LOGGER.debug("Registering trunk placer types for " + RogueEnd.MOD_ID);
     }
     public MapCodec<P> getCodec() {
         return this.codec;

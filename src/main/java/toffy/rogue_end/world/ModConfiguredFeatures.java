@@ -1,5 +1,6 @@
 package toffy.rogue_end.world;
 
+import com.google.common.collect.ImmutableList;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
@@ -14,9 +15,11 @@ import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.*;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
+import net.minecraft.world.gen.treedecorator.LeavesVineTreeDecorator;
 import toffy.rogue_end.RogueEnd;
 import toffy.rogue_end.init.ModBlocks;
 import toffy.rogue_end.world.features.ChorusTrunkPlacer;
+import toffy.rogue_end.world.features.LeavesYellowVineTreeDecorator;
 import toffy.rogue_end.world.features.ModFeatures;
 
 public class ModConfiguredFeatures {
@@ -40,9 +43,11 @@ public class ModConfiguredFeatures {
 
     private static TreeFeatureConfig.Builder chorus() {
         return (new TreeFeatureConfig.Builder(BlockStateProvider.of(ModBlocks.CHORUS_LOG),
-                new ChorusTrunkPlacer(7, 2, 0, UniformIntProvider.create(1,2), UniformIntProvider.create(1, 5), UniformIntProvider.create(-2, -1), UniformIntProvider.create(-3, -2)), BlockStateProvider.of(ModBlocks.YELLOW_LEAVES),
-                new LargeOakFoliagePlacer(UniformIntProvider.create(1,2), ConstantIntProvider.create(0), 3),
-                new TwoLayersFeatureSize(1, 0, 2))).ignoreVines();
+                new ChorusTrunkPlacer(6, 1, 0, UniformIntProvider.create(1, 2), UniformIntProvider.create(1, 4),
+                        UniformIntProvider.create(-2, -1), UniformIntProvider.create(-4, -3)), BlockStateProvider.of(ModBlocks.YELLOW_LEAVES),
+                new RandomSpreadFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), ConstantIntProvider.create(3),75) {
+                },
+                new TwoLayersFeatureSize(1, 0, 2))).decorators(ImmutableList.of(new LeavesYellowVineTreeDecorator(0.25F)));
     }
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         register(context,END_SHRUB_KEY,Feature.RANDOM_PATCH, ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
