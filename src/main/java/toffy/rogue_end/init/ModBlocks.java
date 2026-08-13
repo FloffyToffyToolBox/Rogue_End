@@ -64,6 +64,8 @@ public class ModBlocks {
     public static final Block CHORUS_DOOR = registerBlock("chorus_door", new DoorBlock(ModWoodType.CHORUS.setType(), AbstractBlock.Settings.copy(Blocks.CRIMSON_DOOR).mapColor(MapColor.LIGHT_BLUE)));
     public static final Block CHORUS_TRAPDOOR = registerBlock("chorus_trapdoor", new TrapdoorBlock(ModWoodType.CHORUS.setType(), AbstractBlock.Settings.copy(Blocks.CRIMSON_TRAPDOOR).mapColor(MapColor.LIGHT_BLUE)));
 
+    public static final Block YELLOW_LOG = registerBlock("yellow_log",new PillarBlock(AbstractBlock.Settings.copy(Blocks.WARPED_STEM).mapColor(MapColor.TERRACOTTA_LIGHT_GRAY)));
+
     public static final Block CHORUS_LOG = registerBlock("chorus_log",new PillarBlock(AbstractBlock.Settings.copy(Blocks.WARPED_STEM).mapColor(MapColor.TERRACOTTA_PURPLE)));
     public static final Block STRIPPED_CHORUS_LOG = registerBlock("stripped_chorus_log",new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_WARPED_STEM).mapColor(MapColor.LIGHT_BLUE)));
 
@@ -108,6 +110,7 @@ public class ModBlocks {
     public static final Block DARK_PURPUR_BRICK_STAIRS = registerBlock("dark_purpur_brick_stairs",new StairsBlock(END_BONE.getDefaultState(),AbstractBlock.Settings.copy(Blocks.TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
 
     public static final Block YELLOWROOT = registerBlock("yellowroot",new Block(AbstractBlock.Settings.copy(Blocks.MOSS_BLOCK).mapColor(MapColor.YELLOW)));
+    public static final Block YELLOWROOT_MAW = registerBlock("yellowroot_maw",new YellowRootMaw(AbstractBlock.Settings.copy(Blocks.MOSS_BLOCK).mapColor(MapColor.YELLOW)));
     public static final Block YELLOWROOT_LICHEN = registerBlock("yellowroot_lichen",new YellowLichenBlock(AbstractBlock.Settings.copy(Blocks.VINE).mapColor(MapColor.YELLOW)));
     public static void register() {
 

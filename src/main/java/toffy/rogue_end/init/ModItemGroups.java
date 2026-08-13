@@ -46,6 +46,7 @@ public class ModItemGroups {
 
                     entries.add(ModBlocks.STRIPPED_CHORUS_LOG);
                     entries.add(ModBlocks.CHORUS_LOG);
+                    entries.add(ModBlocks.YELLOW_LOG);
 
                     entries.add(ModBlocks.CHORUS_PLANKS);
                     entries.add(ModBlocks.CHORUS_FENCE);
@@ -113,6 +114,7 @@ public class ModItemGroups {
                     entries.add(ModBlocks.DARK_PURPUR_BRICK_STAIRS);
 
                     entries.add(ModBlocks.YELLOWROOT);
+                    entries.add(ModBlocks.YELLOWROOT_MAW);
                     entries.add(ModBlocks.YELLOWROOT_LICHEN);
                     entries.add(ModBlocks.LICHENROOT);
                 }).build());

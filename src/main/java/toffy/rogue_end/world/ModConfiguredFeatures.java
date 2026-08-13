@@ -42,7 +42,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> YELLOW_TREE_KEY = registerKey("chorus_tree");
 
     private static TreeFeatureConfig.Builder chorus() {
-        return (new TreeFeatureConfig.Builder(BlockStateProvider.of(ModBlocks.CHORUS_LOG),
+        return (new TreeFeatureConfig.Builder(BlockStateProvider.of(ModBlocks.YELLOW_LOG),
                 new ChorusTrunkPlacer(6, 1, 0, UniformIntProvider.create(1, 2), UniformIntProvider.create(1, 4),
                         UniformIntProvider.create(-2, -1), UniformIntProvider.create(-4, -3)), BlockStateProvider.of(ModBlocks.YELLOW_LEAVES),
                 new RandomSpreadFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), ConstantIntProvider.create(3),75) {

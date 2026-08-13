@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_top",
+  "textures": {
+    "side": "rogue_end:block/yellowroot",
+    "top": "rogue_end:block/yellowroot_maw"
+  }
+}

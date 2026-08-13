@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "rogue_end:block/yellowroot_maw"
+      },
+      {
+        "model": "rogue_end:block/yellowroot_maw",
+        "y": 90
+      },
+      {
+        "model": "rogue_end:block/yellowroot_maw",
+        "y": 180
+      },
+      {
+        "model": "rogue_end:block/yellowroot_maw",
+        "y": 270
+      }
+    ]
+  }
+}
