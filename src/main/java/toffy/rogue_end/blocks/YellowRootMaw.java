@@ -9,6 +9,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.TrackedPosition;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
@@ -16,6 +17,7 @@ import net.minecraft.state.property.Property;
 import net.minecraft.util.function.BooleanBiFunction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
@@ -50,6 +52,12 @@ public class YellowRootMaw extends Block {
                 world.setBlockState(pos,state.with(TRIGGERED,true));
             }
         }
+    }
+
+    @Override
+    protected void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+        world.setBlockState(pos,state.with(TRIGGERED,false));
+        super.randomTick(state, world, pos, random);
     }
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {

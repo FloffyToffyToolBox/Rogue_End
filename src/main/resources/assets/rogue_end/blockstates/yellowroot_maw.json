@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": [
+    "triggered=false" : [
       {
         "model": "rogue_end:block/yellowroot_maw"
       },
@@ -14,6 +14,23 @@
       },
       {
         "model": "rogue_end:block/yellowroot_maw",
+        "y": 270
+      }
+    ],
+    "triggered=true" : [
+      {
+        "model": "rogue_end:block/yellowroot_maw_closed"
+      },
+      {
+        "model": "rogue_end:block/yellowroot_maw_closed",
+        "y": 90
+      },
+      {
+        "model": "rogue_end:block/yellowroot_maw_closed",
+        "y": 180
+      },
+      {
+        "model": "rogue_end:block/yellowroot_maw_closed",
         "y": 270
       }
     ]

@@ -110,7 +110,7 @@ public class ModBlocks {
     public static final Block DARK_PURPUR_BRICK_STAIRS = registerBlock("dark_purpur_brick_stairs",new StairsBlock(END_BONE.getDefaultState(),AbstractBlock.Settings.copy(Blocks.TUFF).mapColor(MapColor.TERRACOTTA_PURPLE)));
 
     public static final Block YELLOWROOT = registerBlock("yellowroot",new Block(AbstractBlock.Settings.copy(Blocks.MOSS_BLOCK).mapColor(MapColor.YELLOW)));
-    public static final Block YELLOWROOT_MAW = registerBlock("yellowroot_maw",new YellowRootMaw(AbstractBlock.Settings.copy(Blocks.MOSS_BLOCK).mapColor(MapColor.YELLOW)));
+    public static final Block YELLOWROOT_MAW = registerBlock("yellowroot_maw",new YellowRootMaw(AbstractBlock.Settings.copy(Blocks.MOSS_BLOCK).ticksRandomly().mapColor(MapColor.YELLOW)));
     public static final Block YELLOWROOT_LICHEN = registerBlock("yellowroot_lichen",new YellowLichenBlock(AbstractBlock.Settings.copy(Blocks.VINE).mapColor(MapColor.YELLOW)));
     public static void register() {
 

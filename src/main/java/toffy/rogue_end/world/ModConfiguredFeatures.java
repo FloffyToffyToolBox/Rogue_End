@@ -6,6 +6,8 @@ import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.structure.processor.StructureProcessor;
+import net.minecraft.structure.processor.StructureProcessorType;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DataPool;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
@@ -22,12 +24,15 @@ import toffy.rogue_end.world.features.ChorusTrunkPlacer;
 import toffy.rogue_end.world.features.LeavesYellowVineTreeDecorator;
 import toffy.rogue_end.world.features.ModFeatures;
 
+import java.util.List;
+
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> ENDSLATE_BLOB_KEY = registerKey("endslate_blob");
     public static final RegistryKey<ConfiguredFeature<?,?>> DARK_PURPUR_BLOB_KEY = registerKey("dark_purpur_blob");
     public static final RegistryKey<ConfiguredFeature<?,?>> END_BONE_KEY = registerKey("end_bone");
     public static final RegistryKey<ConfiguredFeature<?,?>> SMOOTH_END_STONE_BLOBS = registerKey("smooth_end_stone_blobs");
 
+    public static final RegistryKey<ConfiguredFeature<?,?>> YELLOWROOT = registerKey("yellowroot");
 
     public static final RegistryKey<ConfiguredFeature<?,?>> CORRUPTED_TUBE_PATCH_KEY = registerKey("corrupted_tube_patch");
     public static final RegistryKey<ConfiguredFeature<?,?>> ENDER_TUBE_PATCH_KEY = registerKey("ender_tube_patch");
@@ -40,6 +45,8 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> DARK_COLUMN_KEY = registerKey("dark_column");
 
     public static final RegistryKey<ConfiguredFeature<?,?>> YELLOW_TREE_KEY = registerKey("chorus_tree");
+
+    public static final RegistryKey<ConfiguredFeature<?,?>> END_ARCH = registerKey("end_arch");
 
     private static TreeFeatureConfig.Builder chorus() {
         return (new TreeFeatureConfig.Builder(BlockStateProvider.of(ModBlocks.YELLOW_LOG),
@@ -65,6 +72,8 @@ public class ModConfiguredFeatures {
         ConfiguredFeatures.register(context, SMOOTH_END_STONE_BLOBS, Feature.NETHERRACK_REPLACE_BLOBS, new ReplaceBlobsFeatureConfig(Blocks.END_STONE.getDefaultState(), ModBlocks.SMOOTH_ENDSTONE.getDefaultState(), UniformIntProvider.create(7, 11)));
         ConfiguredFeatures.register(context, DARK_PURPUR_BLOB_KEY, Feature.NETHERRACK_REPLACE_BLOBS, new ReplaceBlobsFeatureConfig(Blocks.END_STONE.getDefaultState(), ModBlocks.DARK_PURPUR.getDefaultState(), UniformIntProvider.create(4, 8)));
         ConfiguredFeatures.register(context, END_BONE_KEY, Feature.NETHERRACK_REPLACE_BLOBS, new ReplaceBlobsFeatureConfig(Blocks.END_STONE.getDefaultState(), ModBlocks.END_BONE.getDefaultState(), UniformIntProvider.create(5, 9)));
+        register(context,YELLOWROOT, Feature.BLOCK_PILE, new BlockPileFeatureConfig(BlockStateProvider.of(ModBlocks.YELLOWROOT)));
+        List<Identifier> list = List.of(Identifier.of(RogueEnd.MOD_ID,"end_arch/end_arch_01"), Identifier.of(RogueEnd.MOD_ID,"end_arch/end_arch_02"));
 
         register(context, YELLOW_TREE_KEY, Feature.TREE, chorus().build());
 
