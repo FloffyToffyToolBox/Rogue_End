@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import terrablender.api.SurfaceRuleManager;
 import toffy.rogue_end.entity.EndersentEntity;
+import toffy.rogue_end.entity.EndlingEntity;
 import toffy.rogue_end.init.*;
 import toffy.rogue_end.world.biome.ModSurfaceRules;
 import toffy.rogue_end.world.biome.ModWorldGeneration;
@@ -39,6 +40,7 @@ public class RogueEnd implements ModInitializer {
 		ModBlockEntities.register();
 		ModEntityModelLayers.register();
 		FabricDefaultAttributeRegistry.register(ModEntities.ENDERSENT, EndersentEntity.createEndersentAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.ENDLING, EndlingEntity.createEndersentAttributes());
 		ModWorldGeneration.generateModWorldGen();
 		SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.END,	RogueEnd.MOD_ID, ModSurfaceRules.end());
 		LOGGER.info("Hello Fabric world!");

@@ -39,6 +39,7 @@ public class ModItemGroups {
                     entries.add(ModItems.CORRUPTED_VOID_AMULET);
                     entries.add(ModItems.PURIFIED_VOID_AMULET);
                     entries.add(ModItems.ENDERSENT_SPAWN_EGG);
+                    entries.add(ModItems.ENDLING_SPAWN_EGG);
 
                     entries.add(ModBlocks.ENDER_LINK);
                     entries.add(ModBlocks.ENDER_PORTER);

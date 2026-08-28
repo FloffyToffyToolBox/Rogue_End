@@ -10,18 +10,18 @@ import net.minecraft.util.Identifier;
 import toffy.rogue_end.RogueEnd;
 
 @Environment(EnvType.CLIENT)
-public class EndlingRenderer extends MobEntityRenderer<EndersentEntity, EndlingModel<EndersentEntity>> {
+public class EndlingRenderer extends MobEntityRenderer<EndlingEntity, EndlingModel<EndlingEntity>> {
     public EndlingRenderer(EntityRendererFactory.Context context) {
         super(context, new EndlingModel<>(context.getPart(EndlingModel.LAYER_LOCATION)), 0.75F);
     }
 
     @Override
-    public Identifier getTexture(EndersentEntity entity) {
+    public Identifier getTexture(EndlingEntity entity) {
         return Identifier.of(RogueEnd.MOD_ID, "textures/entity/endling/endling.png");
     }
 
     @Override
-    public void render(EndersentEntity livingEntity, float f, float g, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
+    public void render(EndlingEntity livingEntity, float f, float g, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
         super.render(livingEntity, f, g, matrixStack, vertexConsumerProvider, i);
     }
 }

@@ -11,6 +11,8 @@ import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
 import toffy.rogue_end.entity.EndersentModel;
 import toffy.rogue_end.entity.EndersentRenderer;
+import toffy.rogue_end.entity.EndlingModel;
+import toffy.rogue_end.entity.EndlingRenderer;
 import toffy.rogue_end.init.ModBlockTags;
 import toffy.rogue_end.init.ModBlocks;
 import toffy.rogue_end.init.ModEntities;
@@ -71,5 +73,8 @@ public class RogueEndClient implements ClientModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.YELLOW_LEAVES, RenderLayer.getCutout());
 		EntityModelLayerRegistry.registerModelLayer(EndersentModel.LAYER_LOCATION, EndersentModel::getTexturedModelData);
 		EntityRendererRegistry.register(ModEntities.ENDERSENT, EndersentRenderer::new);
+
+		EntityModelLayerRegistry.registerModelLayer(EndlingModel.LAYER_LOCATION, EndlingModel::getTexturedModelData);
+		EntityRendererRegistry.register(ModEntities.ENDLING, EndlingRenderer::new);
 	}
 }
