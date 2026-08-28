@@ -68,8 +68,8 @@ public class ModPlacedFeatures {
 
         PlacedFeatures.register(context, TOOTH_FOSSIL, tooth_fossil,  new PlacementModifier[]{RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()});
 
-        PlacedFeatures.register(context, END_ARCH, end_arch,  new PlacementModifier[]{RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()});
-        PlacedFeatures.register(context, END_PILLAR, end_pillar,  new PlacementModifier[]{RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()});
+        PlacedFeatures.register(context, END_ARCH, end_arch,  new PlacementModifier[]{RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP, BlockFilterPlacementModifier.of(BlockPredicate.IS_AIR), BiomePlacementModifier.of()});
+        PlacedFeatures.register(context, END_PILLAR, end_pillar,  new PlacementModifier[]{RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP, BlockFilterPlacementModifier.of(BlockPredicate.IS_AIR), BiomePlacementModifier.of()});
 
         PlacedFeatures.register(context, ENDSLATE_BLOBS, endslate_blobs,  new PlacementModifier[]{CountPlacementModifier.of(25), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.aboveBottom(35)), BiomePlacementModifier.of()});
         PlacedFeatures.register(context, DARK_PURPUR_BLOBS, dark_purpur_blobs,  new PlacementModifier[]{CountPlacementModifier.of(25), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.aboveBottom(25)), BiomePlacementModifier.of()});

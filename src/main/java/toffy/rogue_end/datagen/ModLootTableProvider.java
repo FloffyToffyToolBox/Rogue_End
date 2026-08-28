@@ -3,6 +3,7 @@ package toffy.rogue_end.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.DoorBlock;
 import net.minecraft.block.TallPlantBlock;
 import net.minecraft.block.enums.DoubleBlockHalf;
@@ -48,6 +49,15 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.MAGMA_ROOTS);
 
+        addDrop(ModBlocks.YELLOW_LOG);
+        addDrop(ModBlocks.CHORUS_LOG);
+        addDrop(ModBlocks.STRIPPED_CHORUS_LOG);
+
+        addDrop(ModBlocks.CHORUS_LEAVES, (leavesDrops(ModBlocks.CHORUS_LEAVES, Blocks.DEEPSLATE_EMERALD_ORE,.125f)));
+        addDrop(ModBlocks.YELLOW_LEAVES, (leavesDrops(ModBlocks.YELLOW_LEAVES, Blocks.DEEPSLATE_EMERALD_ORE,.125f)));
+
+        addDrop(ModBlocks.YELLOWROOT_MAW, (dropsWithSilkTouch(ModBlocks.YELLOWROOT_MAW)));
+
         addDrop(ModBlocks.CHORUS_BUTTON);
         addDrop(ModBlocks.CHORUS_PRESSURE_PLATE);
         addDrop(ModBlocks.CHORUS_PLANKS);
@@ -72,7 +82,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.PURPUR_WALL);
 
         addDrop(ModBlocks.ENDSTONE_PILLAR);
-        addDrop(ModBlocks.CHORUS_LEAVES);
 
         addDrop(ModBlocks.LICHENROOT);
 

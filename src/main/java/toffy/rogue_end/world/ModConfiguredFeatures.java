@@ -89,7 +89,7 @@ public class ModConfiguredFeatures {
         List<Identifier> arch = List.of(Identifier.of(RogueEnd.MOD_ID,"end_arch/end_arch_01"),Identifier.of(RogueEnd.MOD_ID,"end_arch/end_arch_02"));
         RegistryEntry<StructureProcessorList> registryEntry1 = registryEntryLookup2.getOrThrow(StructureProcessorLists.EMPTY);
         register(context, END_ARCH, ModFeatures.END_STRUCTURE_FEATURE, new EndStructureFeatureConfig(arch, registryEntry1));
-        List<Identifier> pillar = List.of(Identifier.of(RogueEnd.MOD_ID,"end_arch/end_pillar_01"),Identifier.of(RogueEnd.MOD_ID,"end_arch/end_pillar_02"));
+        List<Identifier> pillar = List.of(Identifier.of(RogueEnd.MOD_ID,"end_pillar/end_pillar_01"),Identifier.of(RogueEnd.MOD_ID,"end_pillar/end_pillar_02"));
         RegistryEntry<StructureProcessorList> registryEntry2 = registryEntryLookup2.getOrThrow(StructureProcessorLists.EMPTY);
         register(context, END_PILLAR, ModFeatures.END_STRUCTURE_FEATURE, new EndStructureFeatureConfig(pillar, registryEntry2));
 

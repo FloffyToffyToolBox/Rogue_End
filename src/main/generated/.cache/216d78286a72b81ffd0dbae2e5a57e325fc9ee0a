@@ -1,10 +1,13 @@
-// 1.21.1	2026-08-28T15:34:29.4863612	Rogue End/Tags for minecraft:item
+// 1.21.1	2026-08-28T20:38:53.1262548	Rogue End/Tags for minecraft:item
 2b71119ff8e31abccaab3c05fc7ace95520eb087 data\minecraft\tags\item\foot_armor.json
-ff71132b0bad9cb8f6e7ff60fd26bd7fb695f4b1 data\minecraft\tags\item\hoes.json
 c0376b263004aece17ecbfa07981397be3dbb42e data\minecraft\tags\item\shovels.json
 fb7e51aa9116d292ede15f7a41afbcfa3217a921 data\minecraft\tags\item\leg_armor.json
+dc3a67debc2933860248633526c74f60120e863f data\minecraft\tags\item\planks.json
+305b80afd95bc077c761aad883daadc838c9b969 data\rogue_end\tags\item\yellow_logs.json
 7bc8a51d084280ebfb755b5d7b5690f249e283cd data\minecraft\tags\item\axes.json
 9fc4a25cb6e001db08afa781513e3be15f47b3a8 data\minecraft\tags\item\swords.json
+0803018fe8855d2dac3f375b90acd5078033d0ae data\minecraft\tags\item\head_armor.json
+ff71132b0bad9cb8f6e7ff60fd26bd7fb695f4b1 data\minecraft\tags\item\hoes.json
+dcad64f718b45d4413eef927862ae8aa8fbd2a30 data\rogue_end\tags\item\chorus_logs.json
 f21f695447e07f2c6b3ca91eddb1392445ce81e1 data\minecraft\tags\item\chest_armor.json
 f86b03eff463a3a78cdfd4f8f048eb3bf78701f3 data\minecraft\tags\item\pickaxes.json
-0803018fe8855d2dac3f375b90acd5078033d0ae data\minecraft\tags\item\head_armor.json

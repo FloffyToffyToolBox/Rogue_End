@@ -39,7 +39,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(ModBlockTags.MAGMA_ROOT_PLACEABLE_ON).add(ModBlocks.CHORAL_ENDSLATE).add(ModBlocks.DARK_PURPUR).add(ModBlocks.END_BONE).add(Blocks.END_STONE).add(Blocks.MAGMA_BLOCK).add(ModBlocks.END_MAGMA).add(ModBlocks.ENDSLATE).add(ModBlocks.ENDER_ASH).add(ModBlocks.LICHENROOT).add(ModBlocks.YELLOWROOT);
         getOrCreateTagBuilder(ModBlockTags.DRIES_SPONGE).add(ModBlocks.END_MAGMA).add(Blocks.MAGMA_BLOCK).add(Blocks.LAVA).add(Blocks.LAVA_CAULDRON);
 
-        getOrCreateTagBuilder(BlockTags.LOGS).add(ModBlocks.CHORUS_LOG).add(ModBlocks.STRIPPED_CHORUS_LOG);
+        getOrCreateTagBuilder(BlockTags.LOGS).add(ModBlocks.CHORUS_LOG).add(ModBlocks.STRIPPED_CHORUS_LOG).add(ModBlocks.YELLOW_LOG);
         getOrCreateTagBuilder(BlockTags.WOODEN_DOORS).add(ModBlocks.CHORUS_TRAPDOOR).add(ModBlocks.CORRUPTED_TRAPDOOR);
         getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS).add(ModBlocks.CHORUS_DOOR).add(ModBlocks.CORRUPTED_DOOR);
         getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS).add(ModBlocks.CHORUS_BUTTON).add(ModBlocks.CORRUPTED_BUTTON);
@@ -50,9 +50,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS).add(ModBlocks.CHORUS_PLANK_STAIRS).add(ModBlocks.CORRUPTED_PLANK_STAIRS);
         getOrCreateTagBuilder(BlockTags.PLANKS).add(ModBlocks.CHORUS_PLANKS).add(ModBlocks.CORRUPTED_PLANKS);
         getOrCreateTagBuilder(ModBlockTags.CHORUS_LOGS).add(ModBlocks.CHORUS_LOG).add(ModBlocks.STRIPPED_CHORUS_LOG);
+        getOrCreateTagBuilder(ModBlockTags.YELLOW_LOGS).add(ModBlocks.YELLOW_LOG);
         getOrCreateTagBuilder(ModBlockTags.CHORUS_PLANT_CAN_REPLACE).add(ModBlocks.END_GRASS).add(ModBlocks.DRY_END_GRASS).add(ModBlocks.DRY_END_SHRUB).add(ModBlocks.END_SHRUB).add(ModBlocks.END_BUSH);
         getOrCreateTagBuilder(BlockTags.SWORD_EFFICIENT).add(ModBlocks.END_GRASS,ModBlocks.END_SHRUB,ModBlocks.END_BUSH,ModBlocks.DRY_END_SHRUB,ModBlocks.DRY_END_GRASS,ModBlocks.END_FERN,ModBlocks.TALL_END_FERN);
-        getOrCreateTagBuilder(BlockTags.AXE_MINEABLE).add(ModBlocks.END_GRASS,ModBlocks.END_SHRUB,ModBlocks.END_BUSH,ModBlocks.DRY_END_SHRUB,ModBlocks.DRY_END_GRASS,ModBlocks.END_FERN,ModBlocks.TALL_END_FERN);
+        getOrCreateTagBuilder(BlockTags.HOE_MINEABLE).add(ModBlocks.YELLOWROOT_MAW).add(ModBlocks.CHORUS_LEAVES).add(ModBlocks.YELLOW_LEAVES);
+        getOrCreateTagBuilder(BlockTags.LEAVES).add(ModBlocks.CHORUS_LEAVES).add(ModBlocks.YELLOW_LEAVES);
+        getOrCreateTagBuilder(BlockTags.AXE_MINEABLE).add(ModBlocks.CHORUS_LOG,ModBlocks.STRIPPED_CHORUS_LOG,ModBlocks.YELLOW_LOG,
+                ModBlocks.CHORUS_PLANK_SLAB,ModBlocks.CHORUS_PLANK_STAIRS,ModBlocks.CORRUPTED_PLANK_SLAB,ModBlocks.CORRUPTED_PLANK_STAIRS,
+        ModBlocks.CHORUS_PLANKS,ModBlocks.CORRUPTED_PLANKS,ModBlocks.CORRUPTED_PLANK_SLAB,ModBlocks.CORRUPTED_PLANK_STAIRS);
         getOrCreateTagBuilder(BlockTags.REPLACEABLE).add(ModBlocks.END_GRASS,ModBlocks.END_SHRUB,ModBlocks.END_BUSH,ModBlocks.DRY_END_SHRUB,ModBlocks.DRY_END_GRASS,ModBlocks.END_FERN,ModBlocks.TALL_END_FERN);
     }
 }

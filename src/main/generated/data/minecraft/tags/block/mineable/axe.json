@@ -1,11 +1,15 @@
 {
   "values": [
-    "rogue_end:end_grass",
-    "rogue_end:end_shrub",
-    "rogue_end:end_bush",
-    "rogue_end:dry_end_shrub",
-    "rogue_end:dry_end_grass",
-    "rogue_end:end_fern",
-    "rogue_end:tall_end_fern"
+    "rogue_end:chorus_log",
+    "rogue_end:stripped_chorus_log",
+    "rogue_end:yellow_log",
+    "rogue_end:chorus_plank_slab",
+    "rogue_end:chorus_plank_stairs",
+    "rogue_end:corrupted_plank_slab",
+    "rogue_end:corrupted_plank_stairs",
+    "rogue_end:chorus_planks",
+    "rogue_end:corrupted_planks",
+    "rogue_end:corrupted_plank_slab",
+    "rogue_end:corrupted_plank_stairs"
   ]
 }
