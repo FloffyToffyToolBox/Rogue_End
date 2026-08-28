@@ -4,9 +4,13 @@ import com.google.common.collect.ImmutableList;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
+import net.minecraft.registry.RegistryEntryLookup;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.structure.processor.StructureProcessor;
+import net.minecraft.structure.processor.StructureProcessorList;
+import net.minecraft.structure.processor.StructureProcessorLists;
 import net.minecraft.structure.processor.StructureProcessorType;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DataPool;
@@ -20,9 +24,7 @@ import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.treedecorator.LeavesVineTreeDecorator;
 import toffy.rogue_end.RogueEnd;
 import toffy.rogue_end.init.ModBlocks;
-import toffy.rogue_end.world.features.ChorusTrunkPlacer;
-import toffy.rogue_end.world.features.LeavesYellowVineTreeDecorator;
-import toffy.rogue_end.world.features.ModFeatures;
+import toffy.rogue_end.world.features.*;
 
 import java.util.List;
 
@@ -31,6 +33,8 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> DARK_PURPUR_BLOB_KEY = registerKey("dark_purpur_blob");
     public static final RegistryKey<ConfiguredFeature<?,?>> END_BONE_KEY = registerKey("end_bone");
     public static final RegistryKey<ConfiguredFeature<?,?>> SMOOTH_END_STONE_BLOBS = registerKey("smooth_end_stone_blobs");
+
+    public static final RegistryKey<ConfiguredFeature<?,?>> TOOTH_FOSSIL = registerKey("tooth_fossil");
 
     public static final RegistryKey<ConfiguredFeature<?,?>> YELLOWROOT = registerKey("yellowroot");
 
@@ -47,6 +51,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> YELLOW_TREE_KEY = registerKey("chorus_tree");
 
     public static final RegistryKey<ConfiguredFeature<?,?>> END_ARCH = registerKey("end_arch");
+    public static final RegistryKey<ConfiguredFeature<?,?>> END_PILLAR = registerKey("end_pillar");
 
     private static TreeFeatureConfig.Builder chorus() {
         return (new TreeFeatureConfig.Builder(BlockStateProvider.of(ModBlocks.YELLOW_LOG),
@@ -57,6 +62,8 @@ public class ModConfiguredFeatures {
                 new TwoLayersFeatureSize(1, 0, 2))).decorators(ImmutableList.of(new LeavesYellowVineTreeDecorator(0.25F)));
     }
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
+        RegistryEntryLookup<ConfiguredFeature<?, ?>> registryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
+        RegistryEntryLookup<StructureProcessorList> registryEntryLookup2 = context.getRegistryLookup(RegistryKeys.PROCESSOR_LIST);
         register(context,END_SHRUB_KEY,Feature.RANDOM_PATCH, ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
                 new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(DataPool.<BlockState>builder().add(ModBlocks.DRY_END_GRASS.getDefaultState(), 3).add(ModBlocks.DRY_END_SHRUB.getDefaultState(), 3).add(ModBlocks.END_BUSH.getDefaultState(), 3)))));
 
@@ -73,9 +80,19 @@ public class ModConfiguredFeatures {
         ConfiguredFeatures.register(context, DARK_PURPUR_BLOB_KEY, Feature.NETHERRACK_REPLACE_BLOBS, new ReplaceBlobsFeatureConfig(Blocks.END_STONE.getDefaultState(), ModBlocks.DARK_PURPUR.getDefaultState(), UniformIntProvider.create(4, 8)));
         ConfiguredFeatures.register(context, END_BONE_KEY, Feature.NETHERRACK_REPLACE_BLOBS, new ReplaceBlobsFeatureConfig(Blocks.END_STONE.getDefaultState(), ModBlocks.END_BONE.getDefaultState(), UniformIntProvider.create(5, 9)));
         register(context,YELLOWROOT, Feature.BLOCK_PILE, new BlockPileFeatureConfig(BlockStateProvider.of(ModBlocks.YELLOWROOT)));
-        List<Identifier> list = List.of(Identifier.of(RogueEnd.MOD_ID,"end_arch/end_arch_01"), Identifier.of(RogueEnd.MOD_ID,"end_arch/end_arch_02"));
 
         register(context, YELLOW_TREE_KEY, Feature.TREE, chorus().build());
+        List<Identifier> fossil = List.of(Identifier.of(RogueEnd.MOD_ID,"tooth_fossil/tooth_fossil"));
+        List<Identifier> fossil_overlay = List.of(Identifier.of(RogueEnd.MOD_ID,"tooth_fossil/tooth_fossil_overlay"));
+        RegistryEntry<StructureProcessorList> registryEntry = registryEntryLookup2.getOrThrow(StructureProcessorLists.FOSSIL_ROT);
+        ConfiguredFeatures.register(context, TOOTH_FOSSIL, ModFeatures.END_FOSSIL_FEATURE, new EndFossilFeatureConfig(fossil, fossil_overlay, registryEntry, registryEntryLookup2.getOrThrow(StructureProcessorLists.FOSSIL_COAL)));
+        List<Identifier> arch = List.of(Identifier.of(RogueEnd.MOD_ID,"end_arch/end_arch_01"),Identifier.of(RogueEnd.MOD_ID,"end_arch/end_arch_02"));
+        RegistryEntry<StructureProcessorList> registryEntry1 = registryEntryLookup2.getOrThrow(StructureProcessorLists.EMPTY);
+        register(context, END_ARCH, ModFeatures.END_STRUCTURE_FEATURE, new EndStructureFeatureConfig(arch, registryEntry1));
+        List<Identifier> pillar = List.of(Identifier.of(RogueEnd.MOD_ID,"end_arch/end_pillar_01"),Identifier.of(RogueEnd.MOD_ID,"end_arch/end_pillar_02"));
+        RegistryEntry<StructureProcessorList> registryEntry2 = registryEntryLookup2.getOrThrow(StructureProcessorLists.EMPTY);
+        register(context, END_PILLAR, ModFeatures.END_STRUCTURE_FEATURE, new EndStructureFeatureConfig(pillar, registryEntry2));
+
 
         register(context, MAGMA_ROOT_PATCH_KEY, Feature.RANDOM_PATCH, ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.MAGMA_ROOTS))));
         register(context, CHORAL_BLOOM_KEY, Feature.RANDOM_PATCH, ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.CHORAL_BLOOM))));

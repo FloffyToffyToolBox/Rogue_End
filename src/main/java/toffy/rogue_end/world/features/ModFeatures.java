@@ -20,8 +20,12 @@ import toffy.rogue_end.RogueEnd;
 public class ModFeatures {
 
     public static final Feature<BasaltColumnsFeatureConfig> END_COLUMNS_FEATURE;
+    public static final Feature<EndFossilFeatureConfig> END_FOSSIL_FEATURE;
+    public static final Feature<EndStructureFeatureConfig> END_STRUCTURE_FEATURE;
     static{
         END_COLUMNS_FEATURE = registerFeature("end_columns", new EndColumnsFeature(BasaltColumnsFeatureConfig.CODEC));
+        END_FOSSIL_FEATURE = registerFeature("end_fossil", new EndFossilFeature(EndFossilFeatureConfig.CODEC));
+        END_STRUCTURE_FEATURE = registerFeature("end_structure", new EndStructureFeature(EndStructureFeatureConfig.CODEC));
     }
     private static <C extends FeatureConfig, F extends Feature<C>> F registerFeature(String name, F feature) {
         return (F) Registry.register(Registries.FEATURE, name, feature);

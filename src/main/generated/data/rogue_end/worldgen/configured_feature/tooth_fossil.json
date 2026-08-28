@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:end_fossil",
+  "config": {
+    "fossil_processors": "minecraft:fossil_rot",
+    "fossil_structures": [
+      "rogue_end:tooth_fossil/tooth_fossil"
+    ],
+    "overlay_processors": "minecraft:fossil_coal",
+    "overlay_structures": [
+      "rogue_end:tooth_fossil/tooth_fossil_overlay"
+    ]
+  }
+}

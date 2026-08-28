@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:end_structure",
+  "config": {
+    "fossil_structures": [
+      "rogue_end:end_arch/end_arch_01",
+      "rogue_end:end_arch/end_arch_02"
+    ],
+    "processor": "minecraft:empty"
+  }
+}
