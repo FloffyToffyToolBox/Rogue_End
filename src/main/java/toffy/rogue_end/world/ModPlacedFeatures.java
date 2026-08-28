@@ -26,6 +26,11 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> END_BONE_BLOBS = registerKey("end_bone_blobs");
     public static final RegistryKey<PlacedFeature> SMOOTH_END_STONE_BLOBS = registerKey("smooth_end_stone_blobs");
 
+    public static final RegistryKey<PlacedFeature> TOOTH_FOSSIL = registerKey("tooth_fossil");
+
+    public static final RegistryKey<PlacedFeature> END_ARCH = registerKey("end_arch");
+    public static final RegistryKey<PlacedFeature> END_PILLAR = registerKey("end_pillar");
+
     public static final RegistryKey<PlacedFeature> CHORAL_BLOOMS = registerKey("choral_blooms");
 
 
@@ -46,6 +51,10 @@ public class ModPlacedFeatures {
         RegistryEntry<ConfiguredFeature<?, ?>> dark_purpur_blobs = configuredFeatures.getOrThrow(ModConfiguredFeatures.DARK_PURPUR_BLOB_KEY);
         RegistryEntry<ConfiguredFeature<?, ?>> end_bone_blobs = configuredFeatures.getOrThrow(ModConfiguredFeatures.END_BONE_KEY);
         RegistryEntry<ConfiguredFeature<?, ?>> smooth_end_stone_blobs = configuredFeatures.getOrThrow(ModConfiguredFeatures.SMOOTH_END_STONE_BLOBS);
+        RegistryEntry<ConfiguredFeature<?, ?>> tooth_fossil = configuredFeatures.getOrThrow(ModConfiguredFeatures.TOOTH_FOSSIL);
+
+        RegistryEntry<ConfiguredFeature<?, ?>> end_arch = configuredFeatures.getOrThrow(ModConfiguredFeatures.END_ARCH);
+        RegistryEntry<ConfiguredFeature<?, ?>> end_pillar = configuredFeatures.getOrThrow(ModConfiguredFeatures.END_PILLAR);
 
         RegistryEntry<ConfiguredFeature<?, ?>> choral_blooms = configuredFeatures.getOrThrow(ModConfiguredFeatures.CHORAL_BLOOM_KEY);
         RegistryEntry<ConfiguredFeature<?, ?>> corrupted_tubes = configuredFeatures.getOrThrow(ModConfiguredFeatures.CORRUPTED_TUBE_PATCH_KEY);
@@ -56,6 +65,12 @@ public class ModPlacedFeatures {
         PlacedFeatures.register(context, END_DELTA, registryEntry, new PlacementModifier[]{CountPlacementModifier.of(75),SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()});
         PlacedFeatures.register(context, DELTA_COLUMN, registryEntry2, new PlacementModifier[]{CountPlacementModifier.of(6), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()});
         PlacedFeatures.register(context, SMOOTH_END_STONE_BLOBS, smooth_end_stone_blobs,  new PlacementModifier[]{CountPlacementModifier.of(10), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(25), YOffset.aboveBottom(50)), BiomePlacementModifier.of()});
+
+        PlacedFeatures.register(context, TOOTH_FOSSIL, tooth_fossil,  new PlacementModifier[]{RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()});
+
+        PlacedFeatures.register(context, END_ARCH, end_arch,  new PlacementModifier[]{RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()});
+        PlacedFeatures.register(context, END_PILLAR, end_pillar,  new PlacementModifier[]{RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()});
+
         PlacedFeatures.register(context, ENDSLATE_BLOBS, endslate_blobs,  new PlacementModifier[]{CountPlacementModifier.of(25), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.aboveBottom(35)), BiomePlacementModifier.of()});
         PlacedFeatures.register(context, DARK_PURPUR_BLOBS, dark_purpur_blobs,  new PlacementModifier[]{CountPlacementModifier.of(25), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.aboveBottom(25)), BiomePlacementModifier.of()});
         PlacedFeatures.register(context, END_BONE_BLOBS, end_bone_blobs,  new PlacementModifier[]{CountPlacementModifier.of(25), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.aboveBottom(15)), BiomePlacementModifier.of()});

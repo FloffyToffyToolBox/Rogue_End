@@ -37,6 +37,12 @@ public class ModWorldGeneration {
         //end wilds
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomes.ENDER_WILDS),
                 GenerationStep.Feature.RAW_GENERATION,
+                ModPlacedFeatures.END_ARCH);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomes.ENDER_WILDS),
+                GenerationStep.Feature.RAW_GENERATION,
+                ModPlacedFeatures.END_PILLAR);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomes.ENDER_WILDS),
+                GenerationStep.Feature.RAW_GENERATION,
                 ModPlacedFeatures.YELLOW_TREES);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomes.ENDER_WILDS),
                 GenerationStep.Feature.VEGETAL_DECORATION,
@@ -63,5 +69,8 @@ public class ModWorldGeneration {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomes.END_DELTAS),
                 GenerationStep.Feature.RAW_GENERATION,
                 ModPlacedFeatures.DELTA_COLUMN);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomes.END_DELTAS),
+                GenerationStep.Feature.RAW_GENERATION,
+                ModPlacedFeatures.TOOTH_FOSSIL);
     }
 }
