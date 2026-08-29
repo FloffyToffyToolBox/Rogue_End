@@ -13,6 +13,7 @@ import toffy.rogue_end.RogueEnd;
 public class EndlingRenderer extends MobEntityRenderer<EndlingEntity, EndlingModel<EndlingEntity>> {
     public EndlingRenderer(EntityRendererFactory.Context context) {
         super(context, new EndlingModel<>(context.getPart(EndlingModel.LAYER_LOCATION)), 0.75F);
+        this.addFeature(new EndlingEmissiveRenderer<>(this));
     }
 
     @Override

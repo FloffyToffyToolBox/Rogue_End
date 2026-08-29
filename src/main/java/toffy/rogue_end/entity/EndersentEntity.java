@@ -60,7 +60,8 @@ public class EndersentEntity extends HostileEntity {
         this.goalSelector.add(2, new EndersentMeleeAttack(this, 1, true));
         this.goalSelector.add(3, new EndersentTeleportAndAttack(this,40));
         this.goalSelector.add(4, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
-        this.targetSelector.add(4, new ActiveTargetGoal(this, PlayerEntity.class, true));
+        this.targetSelector.add(1, new RevengeGoal(this, new Class[0]));
+        this.targetSelector.add(2, new ActiveTargetGoal(this, PlayerEntity.class, true));
     }
     @Override
     protected void mobTick() {

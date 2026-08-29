@@ -1,5 +1,7 @@
 package toffy.rogue_end.world.biome;
 
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -9,8 +11,10 @@ import net.minecraft.world.biome.BiomeEffects;
 import net.minecraft.world.biome.GenerationSettings;
 import net.minecraft.world.biome.SpawnSettings;
 import net.minecraft.world.biome.source.BiomeSupplier;
+import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 import terrablender.api.EndBiomeRegistry;
 import toffy.rogue_end.RogueEnd;
+import toffy.rogue_end.init.ModEntities;
 
 public class ModBiomes {
     public static final RegistryKey<Biome> CORRUPTED_FOREST = RegistryKey.of(RegistryKeys.BIOME, Identifier.of(RogueEnd.MOD_ID, "corrupted_forest"));

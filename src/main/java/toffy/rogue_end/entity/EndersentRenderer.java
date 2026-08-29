@@ -5,6 +5,7 @@ import net.fabricmc.api.Environment;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
+import net.minecraft.client.render.entity.feature.PhantomEyesFeatureRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import toffy.rogue_end.RogueEnd;
@@ -13,6 +14,7 @@ import toffy.rogue_end.RogueEnd;
 public class EndersentRenderer extends MobEntityRenderer<EndersentEntity, EndersentModel<EndersentEntity>> {
     public EndersentRenderer(EntityRendererFactory.Context context) {
         super(context, new EndersentModel<>(context.getPart(EndersentModel.LAYER_LOCATION)), 0.75F);
+        this.addFeature(new EndersentEmissiveRenderer<>(this));
     }
 
     @Override

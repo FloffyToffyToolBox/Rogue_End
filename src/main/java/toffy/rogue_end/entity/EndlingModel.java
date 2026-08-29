@@ -20,7 +20,7 @@ import org.joml.Vector3f;
 import toffy.rogue_end.RogueEnd;
 import toffy.rogue_end.entity.EndersentEntity;
 
-public class EndlingModel<T extends LivingEntity> extends SinglePartEntityModel<EndlingEntity> {
+public class EndlingModel<T extends EndlingEntity> extends SinglePartEntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
 	public static final EntityModelLayer LAYER_LOCATION = new EntityModelLayer(Identifier.of(RogueEnd.MOD_ID, "endling"), "main");
 	private final ModelPart root;
@@ -32,18 +32,18 @@ public class EndlingModel<T extends LivingEntity> extends SinglePartEntityModel<
 	private final ModelPart left_leg;
 
 	public EndlingModel(ModelPart root) {
-		this.root = root;
-		this.body = root.getChild("body");
-		this.head = root.getChild("head");
-		this.right_arm = root.getChild("right_arm");
-		this.left_arm = root.getChild("left_arm");
-		this.right_leg = root.getChild("right_leg");
-		this.left_leg = root.getChild("left_leg");
+		this.root = root.getChild("root");
+		this.body = this.root.getChild("body");
+		this.head = this.root.getChild("head");
+		this.right_arm = this.root.getChild("right_arm");
+		this.left_arm = this.root.getChild("left_arm");
+		this.right_leg = this.root.getChild("right_leg");
+		this.left_leg = this.root.getChild("left_leg");
 	}
 
 	public static TexturedModelData getTexturedModelData() {
 		ModelData modelData = new ModelData();
-		ModelPartData modelPartData = modelData.getRoot();
+		ModelPartData modelPartData = modelData.getRoot().addChild("root", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
 
 		ModelPartData body = modelPartData.addChild("body", ModelPartBuilder.create().uv(0, 26).mirrored().cuboid(-5.5F, -3.0F, -3.0F, 11.0F, 15.0F, 6.0F), ModelTransform.pivot(0.0F, -5.0F, 0.0F));
 
@@ -67,10 +67,9 @@ public class EndlingModel<T extends LivingEntity> extends SinglePartEntityModel<
 	public void setAngles(EndlingEntity entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch) {
 		this.getPart().traverse().forEach(ModelPart::resetTransform);
 		this.setHeadAngle(headYaw, headPitch);
-		this.animateMovement(EndlingRendererAnimations.walk, limbAngle, limbDistance, 1f, 2.5f);
+		this.animateMovement(EndlingRendererAnimations.walk, limbAngle, limbDistance, 5, 15);
 		if (entity.isAttacking())AnimationHelper.animate(this,EndlingRendererAnimations.attack, (long) (entity.handSwingProgress* 2000),1,new Vector3f());
-		AnimationHelper.animate(this,EndlingRendererAnimations.walk, entity.idleAnimationState.getTimeRunning(),1,new Vector3f());
-		entity.idleAnimationState.setRunning(true, (int) (entity.idleAnimationState.getTimeRunning()+1));
+		this.updateAnimation(entity.idleAnimationState, EndlingRendererAnimations.walk, animationProgress,2f);
 		this.updateAnimation(entity.attackingAnimationState, EndlingRendererAnimations.attack, animationProgress);
 	}
 	private void setHeadAngle(float yaw, float pitch) {

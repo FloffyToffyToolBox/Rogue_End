@@ -12,6 +12,7 @@ import terrablender.api.SurfaceRuleManager;
 import toffy.rogue_end.entity.EndersentEntity;
 import toffy.rogue_end.entity.EndlingEntity;
 import toffy.rogue_end.init.*;
+import toffy.rogue_end.world.biome.ModSpawns;
 import toffy.rogue_end.world.biome.ModSurfaceRules;
 import toffy.rogue_end.world.biome.ModWorldGeneration;
 import toffy.rogue_end.world.features.ModFeatures;
@@ -43,6 +44,7 @@ public class RogueEnd implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ModEntities.ENDERSENT, EndersentEntity.createEndersentAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.ENDLING, EndlingEntity.createEndersentAttributes());
 		ModWorldGeneration.generateModWorldGen();
+		ModSpawns.addSpawns();
 		SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.END,	RogueEnd.MOD_ID, ModSurfaceRules.end());
 		LOGGER.info("Hello Fabric world!");
 	}

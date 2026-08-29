@@ -13,12 +13,13 @@ import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.client.render.entity.model.SinglePartEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.mob.EndermanEntity;
 import net.minecraft.util.Identifier;
 import org.joml.Vector3f;
 import toffy.rogue_end.RogueEnd;
 
 @Environment(EnvType.CLIENT)
-public class EndersentModel<T extends LivingEntity> extends SinglePartEntityModel<EndersentEntity> {
+public class EndersentModel<T extends EndersentEntity> extends SinglePartEntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
 	public static final EntityModelLayer LAYER_LOCATION = new EntityModelLayer(Identifier.of(RogueEnd.MOD_ID, "endersent"), "main");
 	private static final RenderLayer EYES = RenderLayer.getEyes(Identifier.of(RogueEnd.MOD_ID, "textures/entity/endersent/endersent_eyes.png"));

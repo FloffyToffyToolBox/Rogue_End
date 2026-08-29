@@ -7,6 +7,7 @@
     "BrewingRecipeRegistryMixin",
     "ChorusPlantFeatureMixin",
     "EnderEyeItemMixin",
+    "EndermanEntityMixin",
     "ExampleMixin",
     "ItemMixin",
     "PlayerMixin",
