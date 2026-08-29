@@ -32,6 +32,8 @@ import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerChunkManager;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
@@ -50,6 +52,7 @@ import net.minecraft.world.event.GameEvent;
 import net.minecraft.world.event.GameEvent.Emitter;
 import net.minecraft.world.explosion.AdvancedExplosionBehavior;
 import org.jetbrains.annotations.Nullable;
+import toffy.rogue_end.init.ModSoundEvents;
 
 import java.util.EnumSet;
 import java.util.Objects;
@@ -82,6 +85,12 @@ public class EndlingEntity extends EndermanEntity implements Angerable {
     }
 
 
+    protected SoundEvent getHurtSound(DamageSource source) {
+        return ModSoundEvents.ENTITY_ENDLING_HURT;
+    }
+    protected SoundEvent getDeathSound() {
+        return ModSoundEvents.ENTITY_ENDLING_DEATH;
+    }
     @Override
     protected void mobTick() {
         super.mobTick();
@@ -257,6 +266,7 @@ public class EndlingEntity extends EndermanEntity implements Angerable {
         protected void attack(LivingEntity target) {
             if (this.canAttack(target)) {
                 this.mob.tryAttack(target);
+                this.mob.getWorld().playSound(this.mob,this.mob.getBlockPos(), ModSoundEvents.ENTITY_ENDLING_ATTACK, SoundCategory.HOSTILE,1,1);
             }
         }
         protected boolean canAttack(LivingEntity target) {

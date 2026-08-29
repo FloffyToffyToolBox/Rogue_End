@@ -29,6 +29,8 @@ import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerChunkManager;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
@@ -41,6 +43,7 @@ import net.minecraft.world.event.GameEvent.Emitter;
 import net.minecraft.world.explosion.AdvancedExplosionBehavior;
 import net.minecraft.world.explosion.Explosion;
 import net.minecraft.world.explosion.ExplosionBehavior;
+import toffy.rogue_end.init.ModSoundEvents;
 
 public class EndersentEntity extends HostileEntity {
     public final AnimationState idleAnimationState = new AnimationState();
@@ -76,6 +79,15 @@ public class EndersentEntity extends HostileEntity {
         super.onStoppedTrackingBy(player);
         this.bossBar.removePlayer(player);
     }
+
+    protected SoundEvent getHurtSound(DamageSource source) {
+        return ModSoundEvents.ENTITY_ENDERSENT_IDLE_VOCAL;
+    }
+
+    protected SoundEvent getDeathSound() {
+        return ModSoundEvents.ENTITY_ENDERSENT_DEATH;
+    }
+
     boolean teleportTo(Entity entity) {
         Vec3d vec3d = new Vec3d(this.getX() - entity.getX(), this.getBodyY(0.5) - entity.getEyeY(), this.getZ() - entity.getZ());
         vec3d = vec3d.normalize();
@@ -160,10 +172,15 @@ public class EndersentEntity extends HostileEntity {
                 this.targetY = livingEntity.getY();
                 this.targetZ = livingEntity.getZ();
                 if (mob.squaredDistanceTo(this.targetX, this.targetY, this.targetZ) >= 16 ) {
-                    this.mob.teleport(targetX,targetY,targetZ,true);
+                    if(this.mob.teleport(targetX,targetY,targetZ,true)){
+                        this.mob.getWorld().playSound(this.mob,this.mob.getBlockPos(), ModSoundEvents.ENTITY_MISC_TELEPORT_IN, SoundCategory.HOSTILE,1,1);
+                    }
                 }
             }
         }
+    }
+    protected void playStepSound(BlockPos pos, BlockState state) {
+        this.playSound(ModSoundEvents.ENTITY_ENDERSENT_STEP, 1.0F, 1.0F);
     }
     public static class EndersentMeleeAttack extends Goal {
         protected final EndersentEntity mob;
@@ -340,7 +357,7 @@ public class EndersentEntity extends HostileEntity {
         public void tick() {
             if (mob.getTarget()!=null)this.mob.getLookControl().lookAt(mob.getTarget(), 30.0F, 30.0F);
             if (progress==15){
-
+                this.mob.getWorld().playSound(this.mob,this.mob.getBlockPos(), ModSoundEvents.ENTITY_ENDERSENT_IDLE_SMASH, SoundCategory.HOSTILE,1,1);
                 this.mob.getWorld().createExplosion(this.mob, (DamageSource)null, new AdvancedExplosionBehavior(false, true, Optional.of(2F), Registries.BLOCK.getEntryList(BlockTags.BLOCKS_WIND_CHARGE_EXPLOSIONS).map(Function.identity())), this.mob.getX(), this.mob.getY(), this.mob.getZ(), 2F, false, World.ExplosionSourceType.TRIGGER, ParticleTypes.GUST_EMITTER_SMALL, ParticleTypes.GUST_EMITTER_LARGE, SoundEvents.ENTITY_WIND_CHARGE_WIND_BURST);
             }
             progress++;

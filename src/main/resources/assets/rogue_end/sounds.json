@@ -12,90 +12,131 @@
     ]
   },
 
-  "entity:endersent.attack": {
+  "entity.endersent.attack": {
     "subtitle": "subtitles.entity.endersent.attack",
     "sounds": [
-      "rogue_end:entity.endersent.attack1_001",
-      "rogue_end:entity.endersent.attack1_002",
-      "rogue_end:entity.endersent.attack1_003",
-      "rogue_end:entity.endersent.attack1_004"
+        "rogue_end:entity/endersent/attack1_001",
+        "rogue_end:entity/endersent/attack1_002",
+        "rogue_end:entity/endersent/attack1_003",
+        "rogue_end:entity/endersent/attack1_004"
     ]
   },
-  "entity:endersent.attack_alt": {
+  "entity.endersent.attack_alt": {
     "subtitle": "subtitles.entity.endersent.attack_alt",
     "sounds": [
-      "rogue_end:entity.endersent.attack2_001",
-      "rogue_end:entity.endersent.attack2_002",
-      "rogue_end:entity.endersent.attack2_003",
-      "rogue_end:entity.endersent.attack2_004"
+      "rogue_end:entity/endersent/attack2_001",
+      "rogue_end:entity/endersent/attack2_002",
+      "rogue_end:entity/endersent/attack2_003",
+      "rogue_end:entity/endersent/attack2_004"
     ]
   },
-  "entity:endersent.deadly_escape": {
+  "entity.endersent.deadly_escape": {
     "subtitle": "subtitles.entity.endersent.deadly_escape",
     "sounds": [
-      "rogue_end:entity.endersent.deadlyescape_001",
-      "rogue_end:entity.endersent.deadlyescape_002",
-      "rogue_end:entity.endersent.deadlyescape_003",
-      "rogue_end:entity.endersent.deadlyescape_004"
+      "rogue_end:entity/endersent/deadlyescape_001",
+      "rogue_end:entity/endersent/deadlyescape_002",
+      "rogue_end:entity/endersent/deadlyescape_003",
+      "rogue_end:entity/endersent/deadlyescape_004"
     ]
   },
-    "entity:endersent.death": {
+    "entity.endersent.death": {
       "subtitle": "subtitles.entity.endersent.death",
     "sounds": [
-      "rogue_end:entity.endersent.death_001",
-      "rogue_end:entity.endersent.death_002",
-      "rogue_end:entity.endersent.death_003"
+      "rogue_end:entity/endersent/death_001",
+      "rogue_end:entity/endersent/death_002",
+      "rogue_end:entity/endersent/death_003"
     ]
   },
-  "entity:endersent.hurt": {
+  "entity.endersent.hurt": {
     "subtitle": "subtitles.entity.endersent.hurt",
     "sounds": [
-      "rogue_end:entity.endersent.death_001",
-      "rogue_end:entity.endersent.death_002",
-      "rogue_end:entity.endersent.death_003",
-      "rogue_end:entity.endersent.death_004",
-      "rogue_end:entity.endersent.death_005",
-      "rogue_end:entity.endersent.death_006",
-      "rogue_end:entity.endersent.death_007",
-      "rogue_end:entity.endersent.death_008"
+      "rogue_end:entity/endersent/death_001",
+      "rogue_end:entity/endersent/death_002",
+      "rogue_end:entity/endersent/death_003",
+      "rogue_end:entity/endersent/death_004",
+      "rogue_end:entity/endersent/death_005",
+      "rogue_end:entity/endersent/death_006",
+      "rogue_end:entity/endersent/death_007",
+      "rogue_end:entity/endersent/death_008"
     ]
   },
-  "entity:endersent.idle_smash": {
+  "entity.endersent.idle_smash": {
     "subtitle": "subtitles.entity.endersent.idle_smash",
     "sounds": [
-      "rogue_end:entity.endersent.idlesmash_001",
-      "rogue_end:entity.endersent.idlesmash_002",
-      "rogue_end:entity.endersent.idlesmash_003",
-      "rogue_end:entity.endersent.idlesmash_004"
+      "rogue_end:entity/endersent/idlesmash_001",
+      "rogue_end:entity/endersent/idlesmash_002",
+      "rogue_end:entity/endersent/idlesmash_003",
+      "rogue_end:entity/endersent/idlesmash_004"
     ]
   },
-  "entity:endersent.idle_vocal": {
+  "entity.endersent.idle_vocal": {
     "subtitle": "subtitles.entity.endersent.idle_vocal",
     "sounds": [
-      "rogue_end:entity.endersent.idlevocal_001",
-      "rogue_end:entity.endersent.idlevocal_002",
-      "rogue_end:entity.endersent.idlevocal_003",
-      "rogue_end:entity.endersent.idlevocal_004"
+      "rogue_end:entity/endersent/idlevocal_001",
+      "rogue_end:entity/endersent/idlevocal_002",
+      "rogue_end:entity/endersent/idlevocal_003",
+      "rogue_end:entity/endersent/idlevocal_004"
     ]
   },
-  "entity:endersent.step": {
+  "entity.endersent.step": {
     "subtitle": "subtitles.entity.endersent.step",
     "sounds": [
-      "rogue_end:entity.endersent.step_001",
-      "rogue_end:entity.endersent.step_002",
-      "rogue_end:entity.endersent.step_003",
-      "rogue_end:entity.endersent.step_004",
-      "rogue_end:entity.endersent.step_005",
-      "rogue_end:entity.endersent.step_006"
+      "rogue_end:entity/endersent/step_001",
+      "rogue_end:entity/endersent/step_002",
+      "rogue_end:entity/endersent/step_003",
+      "rogue_end:entity/endersent/step_004",
+      "rogue_end:entity/endersent/step_005",
+      "rogue_end:entity/endersent/step_006"
     ]
   },
-  "entity:endersent.teleport_smash": {
+  "entity.endersent.teleport_smash": {
     "subtitle": "subtitles.entity.endersent.teleport_smash",
     "sounds": [
-      "rogue_end:entity.endersent.teleportsmash_001",
-      "rogue_end:entity.endersent.teleportsmash_002",
-      "rogue_end:entity.endersent.teleportsmash_003",
-      "rogue_end:entity.endersent.teleportsmash_004"
+      "rogue_end:entity/endersent/teleportsmash_001",
+      "rogue_end:entity/endersent/teleportsmash_002",
+      "rogue_end:entity/endersent/teleportsmash_003",
+      "rogue_end:entity/endersent/teleportsmash_004"
+    ]
+  },
+  "entity.misc.teleport_in": {
+    "subtitle": "subtitles.entity.misc.teleport_in",
+    "sounds": [
+      "rogue_end:entity/misc/teleportin-001",
+      "rogue_end:entity/misc/teleportin-002",
+      "rogue_end:entity/misc/teleportin-003",
+      "rogue_end:entity/misc/teleportin-004"
+    ]
+  },
+  "entity.endling.attack": {
+    "subtitle": "subtitles.entity.endling.attack",
+    "sounds": [
+      "rogue_end:entity/endling/attack_001",
+      "rogue_end:entity/endling/attack_002",
+      "rogue_end:entity/endling/attack_003",
+      "rogue_end:entity/endling/attack_004",
+      "rogue_end:entity/endling/attack_005",
+      "rogue_end:entity/endling/attack_006"
+    ]
+  },
+  "entity.endling.death": {
+    "subtitle": "subtitles.entity.endling.death",
+    "sounds": [
+      "rogue_end:entity/endling/death_001",
+      "rogue_end:entity/endling/death_002",
+      "rogue_end:entity/endling/death_003",
+      "rogue_end:entity/endling/death_004",
+      "rogue_end:entity/endling/death_005"
+    ]
+  },
+  "entity.endling.hurt": {
+    "subtitle": "subtitles.entity.endling.hurt",
+    "sounds": [
+      "rogue_end:entity/endling/hurt_001",
+      "rogue_end:entity/endling/hurt_002",
+      "rogue_end:entity/endling/hurt_003",
+      "rogue_end:entity/endling/hurt_004",
+      "rogue_end:entity/endling/hurt_005",
+      "rogue_end:entity/endling/hurt_006"
     ]
   }
 }
