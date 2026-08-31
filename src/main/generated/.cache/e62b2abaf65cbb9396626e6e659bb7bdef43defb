@@ -1,6 +1,7 @@
-// 1.21.1	2026-08-28T20:38:53.1382231	Rogue End/Tags for minecraft:block
+// 1.21.1	2026-08-31T17:19:31.3332029	Rogue End/Tags for minecraft:block
 00028f13e0b8a1cd36f116a8f27187858da79a12 data\minecraft\tags\block\wooden_doors.json
 f31db6adb618d6e429ab8cf11496868ae7c6bd30 data\minecraft\tags\block\wooden_slabs.json
+536d423a7d0ad1043abd70fed2b01a16f7f5d25a data\minecraft\tags\block\replaceable_by_trees.json
 bb9d339b9cd2db00c728023d2e03e54c4ff4905f data\minecraft\tags\block\walls.json
 75ee0584ac0c92cfaa24dc14df94c264cb4ba0b8 data\minecraft\tags\block\fence_gates.json
 84f980ca7f535f71d5067b9ead8e654a1d5069ed data\rogue_end\tags\block\magma_root_placeable_on.json

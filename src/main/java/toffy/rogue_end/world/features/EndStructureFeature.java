@@ -30,7 +30,7 @@ public class EndStructureFeature extends Feature<EndStructureFeatureConfig> {
     public boolean generate(FeatureContext<EndStructureFeatureConfig> context) {
         Random random = context.getRandom();
         StructureWorldAccess structureWorldAccess = context.getWorld();
-        BlockPos blockPos = context.getOrigin();
+        BlockPos blockPos = context.getOrigin().down(2);
         BlockRotation blockRotation = BlockRotation.random(random);
         EndStructureFeatureConfig fossilFeatureConfig = (EndStructureFeatureConfig)context.getConfig();
         int i = random.nextInt(fossilFeatureConfig.fossilStructures.size());

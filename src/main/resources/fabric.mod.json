@@ -3,9 +3,9 @@
 	"id": "rogue_end",
 	"version": "${version}",
 	"name": "Rogue End",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "The End Update we've all been waiting for. Enhances the run-based gameloop of the end with more structures, biomes, upgrades, bosses and enemies in a Rogue-Like inspired experience. Return to base or risk it all for greater loop by venturing deeper into the end?, The Choice is yours alone.",
 	"authors": [
-		"Me!"
+		"FloffyToffy"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",

@@ -39,6 +39,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(ModBlockTags.MAGMA_ROOT_PLACEABLE_ON).add(ModBlocks.CHORAL_ENDSLATE).add(ModBlocks.DARK_PURPUR).add(ModBlocks.END_BONE).add(Blocks.END_STONE).add(Blocks.MAGMA_BLOCK).add(ModBlocks.END_MAGMA).add(ModBlocks.ENDSLATE).add(ModBlocks.ENDER_ASH).add(ModBlocks.LICHENROOT).add(ModBlocks.YELLOWROOT);
         getOrCreateTagBuilder(ModBlockTags.DRIES_SPONGE).add(ModBlocks.END_MAGMA).add(Blocks.MAGMA_BLOCK).add(Blocks.LAVA).add(Blocks.LAVA_CAULDRON);
 
+        getOrCreateTagBuilder(BlockTags.REPLACEABLE_BY_TREES).add(ModBlocks.END_FERN).add(ModBlocks.TALL_END_FERN).add(ModBlocks.DRY_END_GRASS)
+        .add(ModBlocks.END_GRASS).add(ModBlocks.DRY_END_SHRUB).add(ModBlocks.END_SHRUB);
         getOrCreateTagBuilder(BlockTags.LOGS).add(ModBlocks.CHORUS_LOG).add(ModBlocks.STRIPPED_CHORUS_LOG).add(ModBlocks.YELLOW_LOG);
         getOrCreateTagBuilder(BlockTags.WOODEN_DOORS).add(ModBlocks.CHORUS_TRAPDOOR).add(ModBlocks.CORRUPTED_TRAPDOOR);
         getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS).add(ModBlocks.CHORUS_DOOR).add(ModBlocks.CORRUPTED_DOOR);

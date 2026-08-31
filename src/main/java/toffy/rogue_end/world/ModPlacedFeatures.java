@@ -75,13 +75,13 @@ public class ModPlacedFeatures {
         PlacedFeatures.register(context, DARK_PURPUR_BLOBS, dark_purpur_blobs,  new PlacementModifier[]{CountPlacementModifier.of(25), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.aboveBottom(25)), BiomePlacementModifier.of()});
         PlacedFeatures.register(context, END_BONE_BLOBS, end_bone_blobs,  new PlacementModifier[]{CountPlacementModifier.of(25), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.aboveBottom(15)), BiomePlacementModifier.of()});
 
-        PlacedFeatures.register(context, CHORAL_BLOOMS, choral_blooms, new PlacementModifier[]{RarityFilterPlacementModifier.of(32), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()});
-        PlacedFeatures.register(context, CORRUPTED_TUBES, corrupted_tubes, new PlacementModifier[]{RarityFilterPlacementModifier.of(32), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()});
-        PlacedFeatures.register(context, ENDER_TUBES, ender_tubes, new PlacementModifier[]{RarityFilterPlacementModifier.of(32), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()});
+        PlacedFeatures.register(context, CHORAL_BLOOMS, choral_blooms, new PlacementModifier[]{RarityFilterPlacementModifier.of(32), SquarePlacementModifier.of(), PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP, BiomePlacementModifier.of()});
+        PlacedFeatures.register(context, CORRUPTED_TUBES, corrupted_tubes, new PlacementModifier[]{RarityFilterPlacementModifier.of(32), SquarePlacementModifier.of(), PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP, BiomePlacementModifier.of()});
+        PlacedFeatures.register(context, ENDER_TUBES, ender_tubes, new PlacementModifier[]{RarityFilterPlacementModifier.of(32), SquarePlacementModifier.of(), PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP, BiomePlacementModifier.of()});
         PlacedFeatures.register(context, YELLOW_TREES, registryEntry3, new PlacementModifier[]{PlacedFeatures.createCountExtraModifier(3, 0.1F, 1), SquarePlacementModifier.of(), PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP, BiomePlacementModifier.of()});
         PlacedFeatures.register(context, END_SHRUB, end_shrub, new PlacementModifier[]{NoiseThresholdCountPlacementModifier.of(-0.8, 5, 10), SquarePlacementModifier.of(), PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP, BlockFilterPlacementModifier.of(BlockPredicate.IS_AIR), BiomePlacementModifier.of()});
         PlacedFeatures.register(context, END_GRASS, end_grass, new PlacementModifier[]{NoiseThresholdCountPlacementModifier.of(-0.8, 5, 10), SquarePlacementModifier.of(), PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP, BlockFilterPlacementModifier.of(BlockPredicate.IS_AIR), BiomePlacementModifier.of()});
-        PlacedFeatures.register(context, END_FERN, end_fern, new PlacementModifier[]{RarityFilterPlacementModifier.of(32), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BlockFilterPlacementModifier.of(BlockPredicate.IS_AIR), BiomePlacementModifier.of()});
+        PlacedFeatures.register(context, END_FERN, end_fern, new PlacementModifier[]{RarityFilterPlacementModifier.of(32), SquarePlacementModifier.of(), PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP, BlockFilterPlacementModifier.of(BlockPredicate.IS_AIR), BiomePlacementModifier.of()});
     }
 
 

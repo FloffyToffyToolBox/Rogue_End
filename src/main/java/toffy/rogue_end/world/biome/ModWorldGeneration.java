@@ -44,7 +44,7 @@ public class ModWorldGeneration {
                 GenerationStep.Feature.RAW_GENERATION,
                 ModPlacedFeatures.END_PILLAR);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomes.ENDER_WILDS),
-                GenerationStep.Feature.RAW_GENERATION,
+                GenerationStep.Feature.VEGETAL_DECORATION,
                 ModPlacedFeatures.YELLOW_TREES);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomes.ENDER_WILDS),
                 GenerationStep.Feature.VEGETAL_DECORATION,
