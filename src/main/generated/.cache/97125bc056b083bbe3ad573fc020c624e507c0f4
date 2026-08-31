@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-31T17:19:31.325224	Rogue End/Model Definitions
+// 1.21.1	2026-08-31T17:58:53.18766	Rogue End/Model Definitions
 c8f4498867ab82bc38d000ef5bc9544fa882f523 assets\rogue_end\blockstates\end_fern.json
 68bb0b1e3f58d707cb409e74c1fa0748026a310a assets\rogue_end\blockstates\corrupted_planks.json
 ecb532dd36eb2326fbf8f259b4c0267dde1438bd assets\rogue_end\models\block\yellow_leaves.json
@@ -227,7 +227,7 @@ d9d76801e6d1799ca94a28aecc35f94403f50775 assets\rogue_end\blockstates\chorus_pla
 69ef12979d3c57ead23c6b038c8063f18ea1f661 assets\rogue_end\models\block\dark_purpur_brick_stairs_outer.json
 1532b5ed64cd0da3c7884482926c110cb5f8352e assets\rogue_end\models\block\chorus_fence_inventory.json
 c47a93a20169632bb85d5c59efef3cf362e01a9f assets\rogue_end\models\item\yellow_leaves.json
-a2c0d99e5f8aa701d4c64f5918cf843a0dec8019 assets\rogue_end\models\item\end_bone.json
 b78a7ea7a1d8580d0d7433102930a444a6e333e1 assets\rogue_end\models\block\end_bone_stairs_inner.json
+a2c0d99e5f8aa701d4c64f5918cf843a0dec8019 assets\rogue_end\models\item\end_bone.json
 11aa97d12d973b307e6337b975249baea937e2e2 assets\rogue_end\blockstates\smooth_endstone_wall.json
 3d8c82a2e7c732c1328ab3f6ecf685c10ea3801e assets\rogue_end\models\item\ender_tubes.json

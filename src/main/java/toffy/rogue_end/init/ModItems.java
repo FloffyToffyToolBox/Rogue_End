@@ -35,8 +35,8 @@ public class ModItems {
 
     public static final Item BACK_STABBER = registerItem("backstabber", (new BackstabberItem((new Item.Settings()).rarity(Rarity.EPIC).maxDamage(500).fireproof().component(DataComponentTypes.TOOL, BackstabberItem.createToolComponent()).attributeModifiers(BackstabberItem.createAttributeModifiers()))));
     public static final Item ENDSTEEL_INGOT = registerItem("endsteel_ingot", (new Item(new Item.Settings())));
-    public static final Item ENDERSENT_SPAWN_EGG= registerItem("endersent_spawn_egg", (new SpawnEggItem(ModEntities.ENDERSENT,0,1447446, new Item.Settings())));
-    public static final Item ENDLING_SPAWN_EGG= registerItem("endling_spawn_egg", (new SpawnEggItem(ModEntities.ENDLING,0,1457550, new Item.Settings())));
+    public static final Item ENDERSENT_SPAWN_EGG= registerItem("endersent_spawn_egg", (new SpawnEggItem(ModEntities.ENDERSENT,16777215,16777215, new Item.Settings())));
+    public static final Item ENDLING_SPAWN_EGG= registerItem("endling_spawn_egg", (new SpawnEggItem(ModEntities.ENDLING,16777215,16777215, new Item.Settings())));
 
     public static final Item PURIFIED_VOID_AMULET = registerItem("purified_void_amulet", (new PurifiedAmuletItem(new Item.Settings().maxCount(1).fireproof())));
     public static final Item CORRUPTED_VOID_AMULET = registerItem("corrupted_void_amulet", (new CorruptedAmuletItem(new Item.Settings().maxCount(1).fireproof())));

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "rogue_end:item/endersent_spawn_egg"
+    "layer0": "rogue_end:item/endling_spawn_egg"
   }
 }

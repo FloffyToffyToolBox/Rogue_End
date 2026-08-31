@@ -8,10 +8,7 @@ import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.TexturedModel;
 import net.minecraft.registry.RegistryWrapper;
-import toffy.rogue_end.init.ModBlocks;
-import toffy.rogue_end.init.ModItemGroups;
-import toffy.rogue_end.init.ModItems;
-import toffy.rogue_end.init.ModSoundEvents;
+import toffy.rogue_end.init.*;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -26,6 +23,21 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 
         translationBuilder.add("sounds.rogue_end.bounce_bloom_jump","Player jumps on Bounce Bloom");
         translationBuilder.add("sounds.rogue_end.bounce_bloom_land","Player lands on Bounce Bloom");
+
+
+        translationBuilder.add("subtitles." + ModSoundEvents.ENTITY_ENDERSENT_ATTACK.getId().getPath(),"Endersent Attacks");
+        translationBuilder.add("subtitles." + ModSoundEvents.ENTITY_ENDERSENT_IDLE_VOCAL.getId().getPath(),"Endersent Hurts");
+        translationBuilder.add("subtitles." + ModSoundEvents.ENTITY_ENDERSENT_ATTACK_ALT.getId().getPath(),"Endersent Attacks");
+        translationBuilder.add("subtitles." + ModSoundEvents.ENTITY_ENDERSENT_STEP.getId().getPath(),"Endersent Walks");
+        translationBuilder.add("subtitles." + ModSoundEvents.ENTITY_MISC_TELEPORT_IN.getId().getPath(),"Enderling Teleports");
+        translationBuilder.add("subtitles." + ModSoundEvents.ENTITY_ENDLING_HURT.getId().getPath(),"Endling Hurts");
+        translationBuilder.add("subtitles." + ModSoundEvents.ENTITY_ENDLING_ATTACK.getId().getPath(),"Endling Attacks");
+        translationBuilder.add("subtitles." + ModSoundEvents.ENTITY_ENDERSENT_DEATH.getId().getPath(),"Endersent Dies");
+        translationBuilder.add("subtitles." + ModSoundEvents.ENTITY_ENDLING_DEATH.getId().getPath(),"Endling Dies");
+        translationBuilder.add("subtitles." + ModSoundEvents.ENTITY_ENDERSENT_IDLE_SMASH.getId().getPath(),"Endersent Slams Ground");
+
+        translationBuilder.add(ModEntities.ENDERSENT,"Endersent");
+        translationBuilder.add(ModEntities.ENDLING,"Endling");
 
         translationBuilder.add(ModItems.ENDSTEEL_SWORD,"Endsteel Sword");
         translationBuilder.add(ModItems.ENDSTEEL_PICKAXE,"Endsteel Pickaxe");
@@ -42,6 +54,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("tooltip.rogue_end.backstabber.tooltip","+Backstab Damage");
         translationBuilder.add(ModItems.CORRUPTED_VOID_AMULET,"Corrupted Void Amulet");
         translationBuilder.add(ModItems.ENDERSENT_SPAWN_EGG,"Endersent Spawn Egg");
+        translationBuilder.add(ModItems.ENDLING_SPAWN_EGG,"Endling Spawn Egg");
         translationBuilder.add(ModItems.ENDSTEEL_INGOT,"Endsteel Ingot");
         translationBuilder.add(ModItems.PURIFIED_VOID_AMULET,"Purified Void Amulet");
 
@@ -92,6 +105,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.END_BONE_WALL,"Endbone Wall");
 
         translationBuilder.add(ModBlocks.YELLOWROOT,"Yellowroot");
+        translationBuilder.add(ModBlocks.YELLOWROOT_MAW,"Yellowroot Maw");
         translationBuilder.add(ModBlocks.YELLOWROOT_LICHEN,"Yellowroot Lichen");
         translationBuilder.add(ModBlocks.LICHENROOT,"Lichenroot");
 
